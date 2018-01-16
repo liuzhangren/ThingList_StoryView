@@ -4,7 +4,10 @@ import 'antd/dist/antd.css'
 import './style.css'
 
 import Welcome from './Welcome'
-import Login from './Login'
+import Home from './Home'
+import Header from './Header'
+
 
 Welcome()
-Login()
+Home()
+Header()
