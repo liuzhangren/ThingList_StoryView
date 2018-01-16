@@ -42,7 +42,7 @@ class StoryList extends Component
         renderItem:
           item = =>
             c_Item {}
-            , item
+            , data
 
 export default StoryList
 
