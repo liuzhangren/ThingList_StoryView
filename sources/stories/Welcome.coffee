@@ -5,7 +5,7 @@ import { prefixDom } from 'cfx.dom'
 
 CFX = prefixDom { Welcome }
 
-export default ->
+export default =>
 
   storiesOf 'Welcome', module
 
