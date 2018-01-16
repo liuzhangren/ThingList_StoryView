@@ -6,6 +6,7 @@ Item = List.Item
 CFX = prefixDom {
   'div'
   List
+  Item
 }
 
 class StoryList extends Component
@@ -15,6 +16,7 @@ class StoryList extends Component
     {
       c_div
       c_List
+      c_Item
     } = CFX
 
     data = [
@@ -28,6 +30,7 @@ class StoryList extends Component
     c_div {}
     ,
       c_List
+        size: 'large'
         header:
           c_div {}
           , 'Header'
@@ -35,12 +38,11 @@ class StoryList extends Component
           c_div {}
           , 'Footer'
         bordered: true
-        # dataSource: data
-        # renderItem:
-        #   item ->
-        #     c_Item
-        #   , 'item'
-
+        dataSource: data
+        renderItem:
+          item = =>
+            c_Item {}
+            , item
 
 export default StoryList
 
