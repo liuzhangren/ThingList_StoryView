@@ -27,7 +27,7 @@ class StorySteps extends Component
     } = CFX
 
     c_Steps
-      current: 3
+      current: 1
         c_Step
           title: '个人信息'
           icon:
