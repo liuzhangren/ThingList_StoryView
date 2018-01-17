@@ -1,11 +1,11 @@
 import { prefixDom } from 'cfx.dom'
 import Dropdown from './Dropdown'
-import List from './List'
+import Table from './Table'
 
 CFX = prefixDom {
   'div'
   Dropdown
-  List
+  Table
 }
 
 export default ->
@@ -13,13 +13,13 @@ export default ->
   {
     c_div
     c_Dropdown
-    c_List
+    c_Table
   } = CFX
 
   c_div {}
   ,
     c_Dropdown {}
-    c_List
+    c_Table
       style:
         marginTop: '20px'    
 
