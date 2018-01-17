@@ -1,24 +1,24 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 
-import Home from '../components/Home/Home'
+import Index from '../components/Home/Home'
 
 CFX = prefixDom {
-  Home
+  Index
 }
 
 export default =>
 
-  storiesOf 'Home', module
+  storiesOf 'Layout', module
 
-  .add 'Home'
+  .add 'Index'
 
   , =>
 
     {
-      c_Home
+      c_Index
     } = CFX
     
-    c_Home {}
+    c_Index {}
 
  

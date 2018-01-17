@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 
-import Header from '../components/NewLayout/Header'
+import Header from '../components/Home/Header'
 
 CFX = prefixDom {
   Header
@@ -9,7 +9,7 @@ CFX = prefixDom {
 
 export default =>
 
-  storiesOf 'Header', module
+  storiesOf 'Layout', module
 
   .add 'Header'
 

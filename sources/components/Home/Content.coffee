@@ -12,7 +12,7 @@ export default =>
   } = CFX
 
   c_Content
-    header: ''
+    header: '武汉和风和乐'
     breadcrumb: [
       'User'
       '陈欢'

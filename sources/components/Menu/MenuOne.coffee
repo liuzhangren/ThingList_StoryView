@@ -4,12 +4,14 @@ import Menu from '../Navigation/Menu'
 
 CFX = prefixDom {
   Menu
+  'div'
 }
 
 export default =>
 
   {
     c_Menu
+    c_div
   } = CFX
 
   c_Menu
@@ -24,9 +26,9 @@ export default =>
       '人员管理':
         k: 'sub2'
         i: 'user'
-        '房客':
+        '房东管理':
           k: '6'
-        '房东':
+        '房客管理':
           k: '8'
       '流水管理':
         k: '9'
