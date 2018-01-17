@@ -92,16 +92,19 @@ class StoryList extends Component
               style: 
                 color: '#F00'
               href: '#'
-            , '删除'
+            ,
+              c_Icon
+                type: 'close-circle'
             c_Divider
               type: 'vertical'
             c_a       
+              style: 
+                color: '#959595'
               href: '#'
               className: 'ant-dropdown-link'
             ,
-              '更多 操作'
               c_Icon
-                type: 'down'
+                type: 'edit'
 
 
 
