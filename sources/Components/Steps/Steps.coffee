@@ -7,6 +7,7 @@ import {
 Step = Steps.Step
 
 CFX = prefixDom {
+  'a'
   'div'
   Steps
   Step
@@ -20,6 +21,7 @@ class StorySteps extends Component
   render: ->
 
     {
+      c_a
       c_div
       c_Steps
       c_Step
