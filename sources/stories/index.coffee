@@ -7,8 +7,10 @@ import Welcome from './Welcome'
 import Login from './Login'
 import Canvas from './Canvas'
 import Content from './Content'
+import Steps from './Steps'
 
 Welcome()
 Login()
 Canvas()
 Content()
+Steps()

@@ -106,9 +106,6 @@ class StoryList extends Component
               c_Icon
                 type: 'edit'
 
-
-
-
 export default StoryList
 
 
