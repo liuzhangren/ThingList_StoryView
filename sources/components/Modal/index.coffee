@@ -58,3 +58,5 @@ class PopModal extends Component
       ,  
         c_p
         , @state.ModalText
+
+export default PopModal
