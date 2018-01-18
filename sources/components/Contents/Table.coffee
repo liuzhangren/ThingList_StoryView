@@ -4,6 +4,7 @@ import {
   Table
   Icon
   Divider
+  Card
 } from 'antd'
 
 {
@@ -19,7 +20,7 @@ CFX = prefixDom {
   Icon
   Divider
   Column
-  ColumnGroup  
+  ColumnGroup
 }
 
 class StoryList extends Component
@@ -27,18 +28,27 @@ class StoryList extends Component
   data: [
       key: '1'
       age: 0
+      address: '武汉'
       name: '刘章仁'
       house: '北京市朝阳区'
     ,
       key: '2'
       age: 0
+      address: '武汉'      
       name: '何文涛'
       house: '武汉市武昌区'
     ,
       key: '3'
       name: '刘本义'
+      address: '武汉'      
       age: 0
-      house: '武汉市江汉区'   
+      house: '武汉市江汉区'
+    ,
+      key: '4'
+      age: 0
+      address: '武汉'      
+      name: '刘章仁'
+      house: '北京市朝阳区'          
   ]
 
   rowSelection:
@@ -67,9 +77,16 @@ class StoryList extends Component
     ,
   
       c_Column
-        title: '地址'
+        title: '名字'
         dataIndex: 'name'
         key: 'name'
+      c_Column
+        title: '地址'
+        dataIndex: 'address'
+        key: 'address'
+        style:
+          background: 'red'
+           
     
       c_Column
         title: '价格'
@@ -84,7 +101,7 @@ class StoryList extends Component
       c_Column
         title: '详细信息'
         key: 'address2'
-        render :( text, record ) =>
+        render: ( text, record ) =>
           c_span {}
           ,
             c_a

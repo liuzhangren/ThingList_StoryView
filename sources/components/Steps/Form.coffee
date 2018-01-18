@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
+import { FormField } from '../Form'
 import {
   Form
   Input
@@ -16,17 +17,10 @@ CFX = prefixDom {
   Button
   Radio
   FormItem 
+  FormField
 }
 
 class Drop extends Component
-
-  constructor: (props) ->
-    super props
-    @state = 
-      formLayout: 'horizontal'
-
-  handleFormLayoutChange: (e) =>
-    @setState({ formLayout: e.target.value })
 
   render: ->
 
@@ -38,10 +32,11 @@ class Drop extends Component
       c_Button
       c_Radio
       c_FormItem
+      c_FormField
     } = CFX
-    console.log @, @handleFormLayoutChange
-    
+
     c_div {}
+
 
 
 export default Drop
