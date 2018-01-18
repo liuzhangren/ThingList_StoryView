@@ -1,22 +1,24 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 
-import Login from '../Components/Login'
+import Steps from '../components/Steps'
 
 CFX = prefixDom {
-  Login
+  Steps
 }
 
 export default =>
 
-  storiesOf 'Login', module
+  storiesOf 'Steps', module
 
-  .add 'Login'
+  .add 'Steps'
 
   , =>
 
     {
-      c_Login
+      c_Steps
     } = CFX
     
-    c_Login {}
+    c_Steps {}
+
+ 

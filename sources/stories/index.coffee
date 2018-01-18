@@ -6,15 +6,10 @@ import './style.css'
 import Welcome from './Welcome'
 import Home from './Home'
 import Content from './Content'
-# import Header from './Header'
-# import Body from './Body'
-# import Footer from './Footer'
-# import ContentIndex from './ContentIndex'
-# import Modal from './Modal'
-# import Table from './Tabel'
+import Steps from './Steps'
 
 Welcome()
 Home()
 Content()
-# Modal()
-# Table()
+Steps()
+

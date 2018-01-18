@@ -69,7 +69,7 @@ class Drop extends Component
         justify: 'end'
       ,
         c_Col
-          span: 4
+          span: 8
         ,  
           c_Dropdown
             overlay: menu

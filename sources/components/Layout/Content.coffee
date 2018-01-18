@@ -46,60 +46,64 @@ export default ({
     (
       if header
       then [
-        c_Row
-          key: 'row1'
-          type: 'flex'
-          justify: 'start'
+        c_div
+          style:
+            background: '#eef0f4'
         ,
-          c_Col
-            key:'col1'
-            span: 6
-            offset: 1
+          c_Row
+            key: 'row1'
+            type: 'flex'
+            justify: 'start'
           ,
-            c_Header
-              key: 'MainContentHeader'
-              style:
-                background: '#eef0f4'
-                padding: 0
-            , header
-        c_Row
-          key: 'row2'
-          type: 'flex'
-          justify: 'end'
-        ,
-          c_Col
-            key: 'col2'
-            span: 4
+            c_Col
+              key:'col1'
+              span: 6
+              offset: 1
+            ,
+              c_Header
+                key: 'MainContentHeader'
+                style:
+                  background: '#eef0f4'
+                  padding: 0
+              , header
+          c_Row
+            key: 'row2'
+            type: 'flex'
+            justify: 'end'
           ,
-            c_Icon
-              key: 'message'
-              type:"bell"
-              style:
-                position: 'relative'
-                bottom: '50px'
-              #   left: '400px'
-            c_Icon
-              key: 'UserIcon'
-              type:"user"
-              style:
-                position: 'relative'
-                bottom: '50px'
-                left: '15px'
-            c_div
-              key: 'MsgNum'
-              style:
-                width: '10px'
-                height: '10px'
-                borderRadius: '5px'
-                background: 'red'
-                color: '#FFF'
-                textAlign: 'center'
-                fontSize: '10px'
-                lineHeight: '10px'
-                position: 'relative'
-                bottom: '60px'
-                left: '10px'
-            , '1'
+            c_Col
+              key: 'col2'
+              span: 4
+            ,
+              c_Icon
+                key: 'message'
+                type:"bell"
+                style:
+                  position: 'relative'
+                  bottom: '50px'
+                #   left: '400px'
+              c_Icon
+                key: 'UserIcon'
+                type:"user"
+                style:
+                  position: 'relative'
+                  bottom: '50px'
+                  left: '15px'
+              c_div
+                key: 'MsgNum'
+                style:
+                  width: '10px'
+                  height: '10px'
+                  borderRadius: '5px'
+                  background: 'red'
+                  color: '#FFF'
+                  textAlign: 'center'
+                  fontSize: '10px'
+                  lineHeight: '10px'
+                  position: 'relative'
+                  bottom: '60px'
+                  left: '10px'
+              , '1'
       ]
       else []
     )...
@@ -132,12 +136,15 @@ export default ({
         ]
         else []
       )...
-
-      c_NewContent
-        style: 
-          padding: 24
-          minHeight: 580
-      , content
+      if content
+      then [
+        c_NewContent
+          style: 
+            padding: 24
+            minHeight: 580
+        , content
+      ]
+      else []
     ]
 
     (
