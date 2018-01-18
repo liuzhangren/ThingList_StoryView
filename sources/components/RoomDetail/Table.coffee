@@ -26,19 +26,19 @@ class StoryList extends Component
 
   data: [
       key: '1'
-      age: 0
-      name: '刘章仁'
-      house: '北京市朝阳区'
+      age: 2
+      name: '110'
+      house: '30平米'
     ,
       key: '2'
-      age: 0
-      name: '何文涛'
-      house: '武汉市武昌区'
+      age: 6
+      name: '119'
+      house: '35平米'
     ,
       key: '3'
-      name: '刘本义'
-      age: 0
-      house: '武汉市江汉区'   
+      name: '120'
+      age: 4
+      house: '30平米'   
   ]
 
   rowSelection:
@@ -61,55 +61,49 @@ class StoryList extends Component
     } = CFX
 
     c_Table
-      key: 'Table'
       dataSource: @data
       rowSelection: @rowSelection
     ,
   
       c_Column
-        title: '地址'
+        title: '房号'
         dataIndex: 'name'
-        key: 'name'
-    
+        key: 'name'      
       c_Column
-        title: '价格'
+        title: '/人间'
         dataIndex: 'age'
         key: 'age'
-
       c_Column
-        title: '房源'
+        title: '房间配置'
         dataIndex: 'house'
         key: 'house'
-
       c_Column
-        title: '详细信息'
+        title: '详情'
         key: 'address2'
         render :( text, record ) =>
           c_span {}
           ,
             c_a
-              key: 'a1'
               href: '#'            
-            , 'Action —— ', record.name
+            , '点击获取床位信息'
             c_Divider
-              key: 'Divider'            
               type: 'vertical'
             c_a
-              key: 'a2'            
               style: 
                 color: '#F00'
               href: '#'
-            , '删除'
+            ,
+              c_Icon
+                type: 'close-circle'
             c_Divider
-              key: 'Divider2'            
               type: 'vertical'
-            c_a
-              key: 'a3' 
+            c_a       
               style: 
                 color: '#959595'
               href: '#'
               className: 'ant-dropdown-link'
-            , '修改'
-             
+            ,
+              c_Icon
+                type: 'edit'
 
 export default StoryList

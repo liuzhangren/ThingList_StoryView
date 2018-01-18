@@ -47,6 +47,7 @@ export default ({
       if header
       then [
         c_div
+          key: 'div'
           style:
             background: '#eef0f4'
         ,
@@ -84,7 +85,7 @@ export default ({
                 #   left: '400px'
               c_Icon
                 key: 'UserIcon'
-                type:"user"
+                type: 'user'
                 style:
                   position: 'relative'
                   bottom: '50px'

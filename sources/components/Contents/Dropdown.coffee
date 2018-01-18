@@ -59,19 +59,23 @@ class Drop extends Component
         c_Item
           key: '3'
         , '新建分组3'
-    )   
+    )
     c_div
+      key: 'div'
       style:
         background: '#FAFAFA'
     ,
       c_Row
+        key: 'Row'
         type: 'flex'
         justify: 'end'
       ,
         c_Col
-          span: 8
+          key: 'Col'
+          span: 6
         ,  
           c_Dropdown
+            key: 'Dropdown'
             overlay: menu
           ,
             c_Button

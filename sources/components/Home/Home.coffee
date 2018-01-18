@@ -2,7 +2,7 @@ import React from 'react'
 import { prefixDom } from 'cfx.dom'
 import SiderContent from '../Layout/SiderContent'
 import { Row, Col } from 'antd'
-import Menu from '../Menu/MenuOne'
+import Menu from '../Menu'
 import Content from './Content'
 
 CFX = prefixDom {
