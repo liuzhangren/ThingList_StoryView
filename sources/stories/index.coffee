@@ -6,15 +6,13 @@ import './style.css'
 import Welcome from './Welcome'
 import Login from './Login'
 import Canvas from './Canvas'
-import Content from './Content'
+import Main from './Main'
 import Steps from './Steps'
 import Home from './Home'
-import Modal from './Modal'
 
 Welcome()
 Home()
-Modal()
 Login()
 Canvas()
-Content()
+Main()
 Steps()

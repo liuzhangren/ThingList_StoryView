@@ -1,29 +1,29 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 
-import Content from '../Components/Content'
-import Table from '../Components/Content/Table'
-import Dropdown from '../Components/Content/Dropdown'
+import Main from '../Components/Main'
+import Table from '../Components/Main/Table'
+import Dropdown from '../Components/Main/Dropdown'
 
 CFX = prefixDom {
-  Content
+  Main
   Table
   Dropdown
 }
 
 export default =>
 
-  storiesOf 'Content', module
+  storiesOf 'Main', module
 
-  .add 'Content'
+  .add 'Main'
 
   , =>
 
     {
-      c_Content
+      c_Main
     } = CFX
     
-    c_Content {}
+    c_Main {}
 
   .add 'Table'
 
