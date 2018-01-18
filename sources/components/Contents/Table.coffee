@@ -107,9 +107,3 @@ class StoryList extends Component
                 type: 'edit'
 
 export default StoryList
-
-
-
-
-
-

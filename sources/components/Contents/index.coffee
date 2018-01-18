@@ -16,10 +16,12 @@ export default ->
     c_Table
   } = CFX
 
-  c_div {}
+  c_div
+    style:
+      minHeight: 570
+      background: '#FAFAFA'
   ,
     c_Dropdown {}
     c_Table
       style:
-        marginTop: '20px'    
-
+        marginTop: '20px'

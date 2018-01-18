@@ -1,24 +1,24 @@
-# import { storiesOf } from '@storybook/react'
-# import { prefixDom } from 'cfx.dom'
+import { storiesOf } from '@storybook/react'
+import { prefixDom } from 'cfx.dom'
 
-# import Header from '../components/Home/Header'
+import Header from '../components/Home/Header'
 
-# CFX = prefixDom {
-#   Header
-# }
+CFX = prefixDom {
+  Header
+}
 
-# export default =>
+export default =>
 
-#   storiesOf 'Layout', module
+  storiesOf 'Layout', module
 
-#   .add 'Header'
+  .add 'Header'
 
-#   , =>
+  , =>
 
-#     {
-#       c_Header
-#     } = CFX
+    {
+      c_Header
+    } = CFX
     
-#     c_Header {}
+    c_Header {}
 
  

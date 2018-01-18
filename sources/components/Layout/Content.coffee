@@ -1,6 +1,7 @@
 # import { ddbs as dd } from 'ddeyes'
 import { prefixDom } from 'cfx.dom'
 import { Layout, Breadcrumb, Icon, Row, Col } from 'antd'
+import NewContent from '../Contents/index'
 { Header, Content, Footer } = Layout
 BreadcrumbItem = Breadcrumb.Item
 
@@ -9,6 +10,7 @@ CFX = prefixDom {
   Breadcrumb
   BreadcrumbItem
   Header
+  NewContent
   Content
   Footer
   Icon
@@ -33,6 +35,7 @@ export default ({
     c_BreadcrumbItem
     c_Header
     c_Content
+    c_NewContent
     c_Footer
     c_Icon
     c_Row
@@ -130,10 +133,9 @@ export default ({
         else []
       )...
 
-      c_div
+      c_NewContent
         style: 
           padding: 24
-          background: '#fff'
           minHeight: 580
       , content
     ]
