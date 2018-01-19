@@ -3,7 +3,7 @@
     "@storybook/addon-info": "^3.2.19",
     "@storybook/addon-options": "^3.2.19",
     "@storybook/react": "^3.2.19",
-    "cfx.simple-build-tool": "^0.0.3",
+    "cfx.simple-build-tool": "^0.0.6",
     "ddeyes": "^0.0.6",
     "stylus": "^0.54.5"
   },
@@ -11,11 +11,9 @@
     "antd": "^3.0.3",
     "cfx.antd-wrapper": "git+https://github.com/react-cfx/cfx.antd-wrapper",
     "cfx.dom": "^0.0.3",
-    "konva": "^1.7.6",
     "normalize.css": "^7.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-konva": "^1.6.5",
     "react-particles-js": "^2.1.0",
     "reset-css": "^2.2.1"
   }
