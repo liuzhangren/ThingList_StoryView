@@ -37,12 +37,13 @@ export default ->
               key: 'logo'
               span: 8
               style:
-                background: '#eef0f4'
-                width: '100px'
-                height: '80px'
-                margin:'0 auto'
-                marginTop: '15px'
-                marginBottom: '20px'
+                height: '64px'
+                position: 'relative'
+                lineHeight: '64px'
+                paddingLeft: '24px'
+                transition: 'all .3s'
+                background: 'gray'
+                overflow: 'hidden'
           ,
             c_Menu
               key: 'menu'

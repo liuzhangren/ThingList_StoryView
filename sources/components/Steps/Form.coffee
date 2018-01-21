@@ -2,22 +2,23 @@ import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
 import { FormField } from '../Form'
 import {
-  Form
-  Input
-  Button
-  Radio
+  Layout
 } from 'antd'
 
-FormItem = Form.Item
+{
+  Header
+  Sider
+  Content
+  Card
+} = Layout
 
 CFX = prefixDom {
   'div'
-  Form
-  Input
-  Button
-  Radio
-  FormItem 
-  FormField
+  Layout
+  Header
+  Sider
+  Content
+  Card
 }
 
 class Drop extends Component
@@ -25,18 +26,25 @@ class Drop extends Component
   render: ->
 
     {
-      c_a
       c_div
-      c_Form
-      c_Input
-      c_Button
-      c_Radio
-      c_FormItem
-      c_FormField
+      c_Layout
+      c_Header
+      c_Sider
+      c_Content
+      c_Card
     } = CFX
 
     c_div {}
-
-
+    ,
+      c_Layout {}
+      ,
+        c_Content
+          style:
+            margin: '16px'
+            padding: '24px'
+            background: '#fff'
+          , 'Content'
+        ,
+          c_Card
 
 export default Drop

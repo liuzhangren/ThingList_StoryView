@@ -12,11 +12,14 @@ export default =>
   } = CFX
 
   c_Content
-    header: '武汉和风和乐'
-    pageHeader: 'Hello'    
+    header: ' '
+    pageHeader: ' '    
     breadcrumb: [
       'User'
       '陈欢'
     ]
+    title: '标题1'
+    sub: '这是一行描述'
+    pageDetail: '房源信息列表'
     content: '1'
     footer: 'This Website ©2018 Created by JSBZ UED'
