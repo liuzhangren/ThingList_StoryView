@@ -86,8 +86,7 @@ class StoryList extends Component
         key: 'address'
         style:
           background: 'red'
-           
-    
+
       c_Column
         title: '价格'
         dataIndex: 'age'
@@ -108,25 +107,28 @@ class StoryList extends Component
               key: 'a1'
               href: '#'            
             , 'Action —— ', record.name
-            c_Divider
-              key: 'Divider'            
-              type: 'vertical'
+
+      c_Column
+        title: '操作'
+        key: 'operating'
+        render: =>
+          c_span {}
+          ,
             c_a
-              key: 'a2'            
-              style: 
-                color: '#F00'
-              href: '#'
-            , '删除'
-            c_Divider
-              key: 'Divider2'            
-              type: 'vertical'
-            c_a
-              key: 'a3' 
+              key: 'a2' 
               style: 
                 color: '#959595'
               href: '#'
               className: 'ant-dropdown-link'
             , '修改'
-             
+            c_Divider
+              key: 'Divider'            
+              type: 'vertical'            
+            c_a
+              key: 'a3'            
+              style: 
+                color: '#F00'
+              href: '#'
+            , '删除'          
 
 export default StoryList

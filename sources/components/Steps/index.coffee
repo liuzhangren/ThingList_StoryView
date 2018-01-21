@@ -3,6 +3,7 @@ import { prefixDom } from 'cfx.dom'
 import {
   Steps
   Icon
+  
 } from 'antd'
 Step = Steps.Step
 
@@ -27,6 +28,9 @@ class StorySteps extends Component
     } = CFX
 
     c_Steps
+      style:
+        maxWidth: '750px'
+        margin: '16px auto'
       current: 1
         c_Step
           title: '个人信息'
@@ -38,16 +42,16 @@ class StorySteps extends Component
           icon:
             c_Icon
               type: 'home'
-        c_Step
-          title: '人员'
-          icon:
-            c_Icon
-              type: 'team'
-        c_Step
-          title: '支付'
-          icon:
-            c_Icon
-              type: 'pay-circle-o'          
+        # c_Step
+        #   title: '人员'
+        #   icon:
+        #     c_Icon
+        #       type: 'team'
+        # c_Step
+        #   title: '支付'
+        #   icon:
+        #     c_Icon
+        #       type: 'pay-circle-o'
         c_Step
           title: '完成'
           icon:

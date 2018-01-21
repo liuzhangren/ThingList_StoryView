@@ -64,33 +64,41 @@ class Drop extends Component
       key: 'div'
       style:
         background: '#FAFAFA'
+        height: '32px'
+        marginBottom: '16px'
     ,
-      c_Row
-        key: 'Row'
-        type: 'flex'
-        justify: 'end'
+      # c_Row
+      #   key: 'Row'
+      #   type: 'flex'
+      #   justify: 'end'
+      # ,
+      #   c_Col
+      #     key: 'Col'
+      #     span: 6
+      #     pull: '1'
+      #   ,
+      c_div
+        style:
+          height: '32px'
+          float: 'right'
       ,
-        c_Col
-          key: 'Col'
-          span: 6
-        ,  
-          c_Dropdown
-            key: 'Dropdown'
-            overlay: menu
-          ,
-            c_Button
-              key: 'buttonw'
-              style:
-                marginRight: '20px'
-            ,
-              '未分组'
-              c_Icon
-                key: 'icon'
-                type: 'down'
-
+        c_Dropdown
+          key: 'Dropdown'
+          overlay: menu
+        ,
           c_Button
-            key: 'primary'
-            type: 'primary'
-          , '添加房源'
+            key: 'buttonw'
+            style:
+              marginRight: '20px'
+          ,
+            '未分组'
+            c_Icon
+              key: 'icon'
+              type: 'down'
+
+        c_Button
+          key: 'primary'
+          type: 'primary'   
+        , '添加房源'
 
 export default Drop
