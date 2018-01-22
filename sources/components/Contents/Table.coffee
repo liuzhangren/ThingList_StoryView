@@ -111,12 +111,15 @@ class StoryList extends Component
       c_Column
         title: '操作'
         key: 'operating'
+
         render: =>
-          c_span {}
+          c_span
+            style:
+              float: 'right'
           ,
             c_a
               key: 'a2' 
-              style: 
+              style:
                 color: '#959595'
               href: '#'
               className: 'ant-dropdown-link'

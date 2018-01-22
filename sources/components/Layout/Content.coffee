@@ -84,7 +84,7 @@ export default ({
             ,
               c_Icon
                 key: 'message'
-                type:"bell"
+                type: "bell"
                 style:
                   fontSize: 25
           c_Col
@@ -93,7 +93,7 @@ export default ({
           ,
             c_Icon
               key: 'UserIcon'
-              type:"user"
+              type: "user"
               style:
                 marginLeft: 20
                 fontSize: 25

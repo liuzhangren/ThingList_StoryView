@@ -91,7 +91,7 @@ class Drop extends Component
             style:
               marginRight: '20px'
           ,
-            '未分组'
+            '分组'
             c_Icon
               key: 'icon'
               type: 'down'

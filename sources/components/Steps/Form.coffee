@@ -10,8 +10,11 @@ import {
   Button
   Row
   Col
+  Select
 } from 'antd'
 FormItem = Form.Item
+InputGrounp = Input.Grounp
+Option = Select.Option
 {
   Header
   Sider
@@ -33,6 +36,9 @@ CFX = prefixDom {
   Button
   Row
   Col
+  InputGrounp
+  Option
+  Select
 }
 
 export default ->
@@ -54,6 +60,9 @@ export default ->
       c_Button
       c_Row
       c_Col
+      c_InputGrounp
+      c_Option
+      c_Select
     } = CFX
 
     c_div {}

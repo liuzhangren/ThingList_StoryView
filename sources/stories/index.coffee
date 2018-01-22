@@ -7,13 +7,10 @@ import Welcome from './Welcome'
 import Home from './Home'
 import Content from './Content'
 import Steps from './Steps'
-import RoomDetail from './RoomDetail'
-import BedDetail from './BedDetail'
+import Modal from './Modal'
 
 Welcome()
 Home()
 Content()
 Steps()
-RoomDetail()
-BedDetail()
-
+Modal()
