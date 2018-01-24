@@ -5,6 +5,7 @@ import { prefixDom } from 'cfx.dom'
 CFX = prefixDom {
   'div'
   'p'
+  'a'
   Modal
   Button
 }
@@ -14,21 +15,26 @@ class PopModal extends Component
   constructor: (props) ->
     super props
     @state =
-      ModalText: 'Content of the modal'
+      address: '地址:'
+      user: '房东:'
+      rent: '出租方式'
+      charge: '押付方式'
+      money: '出租金额'
+      status: '出租状态'
       visible: false
       confirmLoading: false
     @
-  showModal: () => 
+  showModal: () =>
     @setState {
       visible: true
     }
 
-  handleOk: () => 
+  handleOk: () =>
     @setState {
       ModalText: '提交表单'
       confirmLoading: true
     }
-  handleCancel: () => 
+  handleCancel: () =>
     console.log 'Clicked cancel button'
     @setState {
       visible: false
@@ -37,6 +43,7 @@ class PopModal extends Component
 
     {
       c_div
+      c_a
       c_Modal
       c_Button
       c_p
@@ -47,16 +54,26 @@ class PopModal extends Component
       c_Button
         type: 'primary'
         onClick: @.showModal
-      , 'Open'
+      , '房源详细信息'
 
       c_Modal
-        title: 'Title'
+        title: '房源详细信息'
         visible: @state.visible
         onOk: @.handleOk
         confirmLoading: @state.confirmLoading
         onCancel: @.onCancel
-      ,  
-        c_p
-        , @state.ModalText
+      ,
+        c_p {}
+        , @state.address
+        c_a {}
+        , @state.rent
+        c_a {}
+        , @state.user
+        c_p {}
+        , @state.charge
+        c_p {}
+        , @state.money
+        c_p {}
+        , @state.status
 
 export default PopModal

@@ -1,4 +1,3 @@
-import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
 import {
   Table
@@ -23,32 +22,42 @@ CFX = prefixDom {
   ColumnGroup
 }
 
-class StoryList extends Component
+export default =>
 
   data: [
       key: '1'
-      age: 0
       address: '武汉'
       name: '刘章仁'
-      house: '北京市朝阳区'
+      rent: '套租'      
+      pay: '押一付三'
+      money: '1000'
+      status: '已租'
     ,
       key: '2'
-      age: 0
-      address: '武汉'      
+      address: '武汉'
       name: '何文涛'
-      house: '武汉市武昌区'
+      rent: '套租'      
+      pay: '押一付三'
+      money: '2000'
+      status: '已租'           
     ,
       key: '3'
-      name: '刘本义'
-      address: '武汉'      
-      age: 0
+      address: '武汉'
+      name: '张三'
+      rent: '套租'      
       house: '武汉市江汉区'
+      pay: '押一付三'
+      money: '3000'  
+      status: '未租'      
     ,
       key: '4'
-      age: 0
-      address: '武汉'      
-      name: '刘章仁'
-      house: '北京市朝阳区'          
+      address: '武汉'
+      name: '刘本义'
+      rent: '套租'      
+      house: '北京市朝阳区'
+      pay: '押一付三'
+      money: '4000'
+      status: '已租'        
   ]
 
   rowSelection:
@@ -64,10 +73,10 @@ class StoryList extends Component
       c_span
       c_Table
       c_Icon
-      c_Divider      
+      c_Divider
       c_div
       c_Column
-      c_ColumnGroup      
+      c_ColumnGroup
     } = CFX
 
     c_Table
@@ -75,27 +84,30 @@ class StoryList extends Component
       dataSource: @data
       rowSelection: @rowSelection
     ,
-  
-      c_Column
-        title: '名字'
-        dataIndex: 'name'
-        key: 'name'
+
       c_Column
         title: '地址'
         dataIndex: 'address'
-        key: 'address'
-        style:
-          background: 'red'
 
       c_Column
-        title: '价格'
-        dataIndex: 'age'
-        key: 'age'
+        title: '房东'
+        dataIndex: 'name'
 
       c_Column
-        title: '房源'
-        dataIndex: 'house'
-        key: 'house'
+        title: '出租方式'
+        dataIndex: 'rent'
+
+      c_Column
+        title: '押付方式'
+        dataIndex: 'pay'
+
+      c_Column
+        title: '出租金额'
+        dataIndex: 'money'
+
+      c_Column
+        title: '出租状态'
+        dataIndex: 'status'               
 
       c_Column
         title: '详细信息'
@@ -105,12 +117,13 @@ class StoryList extends Component
           ,
             c_a
               key: 'a1'
-              href: '#'            
+              href: '#'
             , 'Action —— ', record.name
 
       c_Column
         title: '操作'
         key: 'operating'
+        width: '105px'
 
         render: =>
           c_span
@@ -118,20 +131,18 @@ class StoryList extends Component
               float: 'right'
           ,
             c_a
-              key: 'a2' 
+              key: 'a2'
               style:
                 color: '#959595'
               href: '#'
               className: 'ant-dropdown-link'
             , '修改'
             c_Divider
-              key: 'Divider'            
-              type: 'vertical'            
+              key: 'Divider'
+              type: 'vertical'
             c_a
-              key: 'a3'            
-              style: 
+              key: 'a3'
+              style:
                 color: '#F00'
               href: '#'
-            , '删除'          
-
-export default StoryList
+            , '删除'

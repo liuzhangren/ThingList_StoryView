@@ -1,15 +1,16 @@
 import React from 'react'
 import { prefixDom } from 'cfx.dom'
-import SiderContent from '../Layout/SiderContent'
-import { Row, Col } from 'antd'
-import Menu from '../Menu'
-import Content from './Content'
+import Menu from './Menu'
+import {
+  SiderContent
+} from 'cfx.antd-wrapper'
+import Content from './index'
 
 CFX = prefixDom {
   SiderContent
   Menu
-  'div'
   Content
+  'div'
 }
 
 export default ->
@@ -17,15 +18,16 @@ export default ->
   {
     c_SiderContent
     c_Menu
-    c_div
     c_Content
+    c_div
   } = CFX
 
   c_SiderContent
+
     layout:
       style:
         minHeigh: '100vh'
-        
+
     sider:
       collapsible: true
       style:
@@ -37,18 +39,17 @@ export default ->
               key: 'logo'
               span: 8
               style:
-                background: '#eef0f4'
-                width: '100px'
-                height: '80px'
-                margin:'0 auto'
-                marginTop: '15px'
-                marginBottom: '20px'
+                height: '64px'
+                position: 'relative'
+                lineHeight: '64px'
+                paddingLeft: '24px'
+                transition: 'all .3s'
+                background: 'gray'
+                overflow: 'hidden'
           ,
             c_Menu
               key: 'menu'
         ]
-        
+
     content:
-      children:
-        c_Content {}
-        
+      children: ''

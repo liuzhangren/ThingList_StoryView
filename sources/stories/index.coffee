@@ -4,13 +4,19 @@ import 'antd/dist/antd.css'
 import './style.css'
 
 import Welcome from './Welcome'
-import Home from './Home'
+import Layout from './Layout'
+import Login from './Login'
 import Content from './Content'
-import Steps from './Steps'
 import Modal from './Modal'
+import Bed from './Bed'
+import Room from './Room'
+import Steps from './Steps'
 
 Welcome()
-Home()
+Layout()
+Login()
 Content()
-Steps()
 Modal()
+Bed()
+Room()
+Steps()

@@ -1,22 +1,21 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
-
-import Canvas from '../Components/Canvas'
+import Room from '../Components/Room'
 
 CFX = prefixDom {
-  Canvas 
+  Room
 }
 
 export default =>
 
-  storiesOf 'Canvas', module
+  storiesOf '房间详细信息', module
 
-  .add 'Canvas'
+  .add '房间详细'
 
   , =>
 
     {
-      c_Canvas
+      c_Room
     } = CFX
-    
-    c_Canvas {}
+
+    c_Room {}

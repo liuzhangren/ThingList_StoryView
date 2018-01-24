@@ -1,17 +1,18 @@
-import React from 'react'
 import { prefixDom } from 'cfx.dom'
-import Menu from '../Navigation/Menu'
+import {
+  Menu
+} from 'cfx.antd-wrapper'
 
 CFX = prefixDom {
-  Menu
   'div'
+  Menu
 }
 
-export default =>
+export default ->
 
   {
-    c_Menu
     c_div
+    c_Menu
   } = CFX
 
   c_Menu
@@ -33,3 +34,4 @@ export default =>
       '流水管理':
         k: '9'
         i: 'file'
+  

@@ -16,7 +16,6 @@ export default ->
   c_div
     style:
       minHeight: 570
-      background: '#FAFAFA'
   ,
     c_Table
       style:

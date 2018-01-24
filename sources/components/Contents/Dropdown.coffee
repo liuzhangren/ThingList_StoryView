@@ -52,31 +52,17 @@ class Drop extends Component
       ,
         c_Item
           key: '1'
-        , '新建分组1'
+        , '未分组'
         c_Item
           key: '2'
-        , '新建分组2'
-        c_Item
-          key: '3'
-        , '新建分组3'
+        , '新建分组'
     )
     c_div
       key: 'div'
       style:
-        background: '#FAFAFA'
         height: '32px'
         marginBottom: '16px'
     ,
-      # c_Row
-      #   key: 'Row'
-      #   type: 'flex'
-      #   justify: 'end'
-      # ,
-      #   c_Col
-      #     key: 'Col'
-      #     span: 6
-      #     pull: '1'
-      #   ,
       c_div
         style:
           height: '32px'

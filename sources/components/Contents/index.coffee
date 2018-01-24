@@ -1,32 +1,56 @@
+import React from 'react'
 import { prefixDom } from 'cfx.dom'
-import Dropdown from './Dropdown'
-import Table from './Table'
-import { Card } from 'antd'
+import Menu from './Menu'
+import {
+  SiderContent
+} from 'cfx.antd-wrapper'
+import Content from './Content'
 
 CFX = prefixDom {
+  SiderContent
+  Menu
+  Content
   'div'
-  Dropdown
-  Table
-  Card
 }
 
 export default ->
 
   {
+    c_SiderContent
+    c_Menu
+    c_Content
     c_div
-    c_Dropdown
-    c_Table
-    c_Card
   } = CFX
 
-  c_Card
-    key: 'div'
-    style:
-      minHeight: 570
-      background: '#FAFAFA'
-  ,
-    c_Dropdown {}
-    c_Table
-      key: 'Table'
+  c_SiderContent
+
+    layout:
       style:
-        marginTop: '20px'
+        minHeigh: '100vh'
+
+    sider:
+      collapsible: true
+      style:
+        overflow: 'auto'
+        height: '100vh'
+      children:
+        [
+            c_div
+              key: 'logo'
+              span: 8
+              style:
+                height: '64px'
+                position: 'relative'
+                lineHeight: '64px'
+                paddingLeft: '24px'
+                transition: 'all .3s'
+                background: 'gray'
+                overflow: 'hidden'
+          ,
+            c_Menu
+              key: 'menu'
+        ]
+
+    content:
+      children:
+        c_Content {}

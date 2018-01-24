@@ -134,24 +134,31 @@ class StoryList extends Component
                   background: 'black' 
               c_p
               , @state.ModalText
-            c_Divider
-              type: 'vertical'
+      c_Column
+        title: '操作'
+        key: 'operating'
+        width: '105px'
+
+        render: =>
+          c_span
+            style:
+              float: 'right'
+          ,
             c_a
-              style: 
-                color: '#F00'
-              href: '#'
-            ,
-              c_Icon
-                type: 'close-circle'
-            c_Divider
-              type: 'vertical'
-            c_a       
-              style: 
+              key: 'a2'
+              style:
                 color: '#959595'
               href: '#'
               className: 'ant-dropdown-link'
-            ,
-              c_Icon
-                type: 'edit'
+            , '修改'
+            c_Divider
+              key: 'Divider'
+              type: 'vertical'
+            c_a
+              key: 'a3'
+              style:
+                color: '#F00'
+              href: '#'
+            , '删除'            
 
 export default StoryList

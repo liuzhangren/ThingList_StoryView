@@ -1,47 +1,71 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
-import Content from '../components/Contents/index'
-import BedDetail from '../components/BedDetail/index'
-import RoomDetail from '../components/RoomDetail/index'
+import HouseCon from '../Components/Contents/HouseCon'
+import Dropdown from '../Components/Contents/Dropdown'
+import Table from '../Components/Contents/Table'
+import Header from '../Components/Contents/Header'
+import PageHeader from '../Components/Contents/PageHeader'
+import index from '../Components/Contents/index'
 
 CFX = prefixDom {
-  Content
-  BedDetail
-  RoomDetail
+  index
+  HouseCon 
+  Dropdown
+  Table
+  Header
+  PageHeader
 }
 
 export default =>
 
-  storiesOf 'Layout', module
+  storiesOf '房源管理', module
 
-  .add 'Content'
-
-  , =>
-
-    {
-      c_Content
-    } = CFX
-    
-    c_Content {}
-
-  .add 'Bed'
+  .add 'pg_主页'
 
   , =>
 
     {
-      c_BedDetail
+      c_HouseCon
     } = CFX
     
-    c_BedDetail {}
+    c_HouseCon {}
 
-  .add 'Room'
+  .add 'cp_按钮'
 
   , =>
 
     {
-      c_RoomDetail
+      c_Dropdown
     } = CFX
     
-    c_RoomDetail {}     
+    c_Dropdown {}
 
- 
+  .add 'cp_表格'
+
+  , =>
+
+    {
+      c_Table
+    } = CFX
+    
+    c_Table {}
+
+  .add 'cp_描述'
+
+  , =>
+
+    {
+      c_PageHeader
+    } = CFX
+    
+    c_PageHeader {}
+
+  # .add '主页'
+
+  # , =>
+
+  #   {
+  #     c_index
+  #   } = CFX
+    
+  #   c_index {}

@@ -1,22 +1,21 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
-
-import Modal from '../Components/Modal'
+import Bed from '../Components/Bed'
 
 CFX = prefixDom {
-  Modal
+  Bed
 }
 
 export default =>
 
-  storiesOf '房源详细信息', module
+  storiesOf '床位详细信息', module
 
-  .add '房源详细'
+  .add '床位详细'
 
   , =>
 
     {
-      c_Modal
+      c_Bed
     } = CFX
 
-    c_Modal {}
+    c_Bed {}
