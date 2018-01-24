@@ -1,6 +1,8 @@
 import { prefixDom } from 'cfx.dom'
 import { FormField } from 'cfx.antd-wrapper'
 import Steps from './Step'
+import pageHeader from '../Contents/PageHeader'
+
 import {
   Layout
   Card
@@ -18,8 +20,8 @@ Option = Select.Option
 {
   Header
   Sider
-  Content
 } = Layout
+content = Layout.Content
 
 CFX = prefixDom {
   'div'
@@ -27,7 +29,7 @@ CFX = prefixDom {
   Layout
   Header
   Sider
-  Content
+  content
   Steps
   Card
   Form
@@ -39,6 +41,7 @@ CFX = prefixDom {
   InputGrounp
   Option
   Select
+  pageHeader  
 }
 
 export default ->
@@ -51,7 +54,7 @@ export default ->
       c_Layout
       c_Header
       c_Sider
-      c_Content
+      c_content
       c_Card
       c_Form
       c_FormItem
@@ -63,12 +66,14 @@ export default ->
       c_InputGrounp
       c_Option
       c_Select
+      c_pageHeader      
     } = CFX
 
-    console.log c_Steps, '111'
+    c_pageHeader {}
+
     c_Layout {}
     ,
-      c_Content
+      c_content
         style:
           margin: '16px'
           padding: '24px'
