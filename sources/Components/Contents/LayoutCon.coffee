@@ -39,6 +39,8 @@ export default ->
         key: 'div'
         style:
           minHeight: 570
-    pageHeader: c_pageHeader {}
+    pageHeader: 
+      c_pageHeader
+        title: 0
     footer: '@footer'
       

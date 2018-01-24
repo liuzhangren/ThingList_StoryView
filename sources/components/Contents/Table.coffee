@@ -48,7 +48,7 @@ export default =>
       house: '武汉市江汉区'
       pay: '押一付三'
       money: '3000'  
-      status: '未租'      
+      status: '空置'      
     ,
       key: '4'
       address: '武汉'
@@ -57,7 +57,7 @@ export default =>
       house: '北京市朝阳区'
       pay: '押一付三'
       money: '4000'
-      status: '已租'        
+      status: '空置'        
   ]
 
   rowSelection:
@@ -107,18 +107,7 @@ export default =>
 
       c_Column
         title: '出租状态'
-        dataIndex: 'status'               
-
-      c_Column
-        title: '详细信息'
-        key: 'address2'
-        render: ( text, record ) =>
-          c_span {}
-          ,
-            c_a
-              key: 'a1'
-              href: '#'
-            , 'Action —— ', record.name
+        dataIndex: 'status'
 
       c_Column
         title: '操作'

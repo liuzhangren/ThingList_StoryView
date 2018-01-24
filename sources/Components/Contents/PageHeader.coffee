@@ -10,19 +10,80 @@ CFX = prefixDom {
   pageHeader
 }
 
-export default ->
+export default ({ props... }) ->
+
+  {
+    title
+  } = props
 
   {
     c_Content
     c_pageHeader
   } = CFX
 
-  c_Content
-    pageHeader:
-      c_pageHeader
-        breadcrumb: [
-          'user'
-          '123'
-        ]
-        title: '标题'
-        description: '这是描述'
+  if title is 0
+  then [
+    c_Content
+        pageHeader:
+          c_pageHeader
+            breadcrumb: [
+              'user'
+              '秦薇'
+            ]
+            title: '房源列表'
+  ]
+  else if title is 1
+  then [
+    c_Content
+        pageHeader:
+          c_pageHeader
+            breadcrumb: [
+              'user'
+              '秦薇'
+            ]
+            title: '添加房源'
+  ]
+  else if title is 'address'
+  then [
+    c_Content
+        pageHeader:
+          c_pageHeader
+            breadcrumb: [
+              'user'
+              '秦薇'
+            ]
+            title: '添加房源'
+  ]
+  else if title is 'user'
+  then [
+    c_Content
+        pageHeader:
+          c_pageHeader
+            breadcrumb: [
+              'user'
+              '秦薇'
+            ]
+            title: '房东信息'
+  ]
+  else if title is 'rents'
+  then [
+    c_Content
+        pageHeader:
+          c_pageHeader
+            breadcrumb: [
+              'user'
+              '秦薇'
+            ]
+            title: '整租方式'
+  ]
+  else if title is 'rent'
+  then [
+    c_Content
+        pageHeader:
+          c_pageHeader
+            breadcrumb: [
+              'user'
+              '秦薇'
+            ]
+            title: '分组方式'
+  ]    

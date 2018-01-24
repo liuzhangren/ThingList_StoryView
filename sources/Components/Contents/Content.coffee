@@ -1,7 +1,7 @@
 import { prefixDom } from 'cfx.dom'
 import Dropdown from './Dropdown'
 import Table from './Table'
-import pageHeader from './PageHeader'
+import HouseTitle from './HouseTitle'
 
 import {
   Content
@@ -17,7 +17,7 @@ CFX = prefixDom {
   Dropdown
   Table
   Card
-  pageHeader
+  HouseTitle
 }
 
 export default ->
@@ -29,13 +29,13 @@ export default ->
     c_Dropdown
     c_Table
     c_Card
-    c_pageHeader
+    c_HouseTitle
   } = CFX
-
   c_Content
-    header: c_header {}
+    header: ''
     content:
       c_Card
+        bordered: false
         key: 'div'
         style:
           minHeight: 570
@@ -46,6 +46,7 @@ export default ->
           style:
             marginTop: '20px'
 
-    pageHeader: c_pageHeader {}
+    pageHeader:
+      c_HouseTitle {}
     footer: '@footer'
       

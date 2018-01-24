@@ -1,9 +1,9 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
-import HouseCon from '../Components/Contents/HouseCon'
+import Content from '../Components/Contents/Content'
 import Dropdown from '../Components/Contents/Dropdown'
 import Table from '../Components/Contents/Table'
-import PageHeader from '../Components/Contents/PageHeader'
+import PageHeader from '../Components/Contents/HouseTitle'
 import index from '../Components/Contents/index'
 import Modal from '../Components/Modal'
 import Room from '../Components/Room'
@@ -18,7 +18,7 @@ CFX = prefixDom {
   Bed
   Room
   index
-  HouseCon 
+  Content 
   Dropdown
   Table
   PageHeader
@@ -31,6 +31,16 @@ CFX = prefixDom {
 export default =>
 
   storiesOf '房源管理', module
+
+  .add 'cp_房源列表标题'
+
+  , =>
+
+    {
+      c_PageHeader
+    } = CFX
+    
+    c_PageHeader {}
 
   .add 'cp_添加房源按钮'
 
@@ -51,6 +61,16 @@ export default =>
     } = CFX
     
     c_Table {}
+
+  .add 'pg_房源管理'
+
+  , =>
+
+    {
+      c_Content
+    } = CFX
+    
+    c_Content {}    
 
   .add 'cp_房源描述'
 
@@ -132,16 +152,6 @@ export default =>
     } = CFX
     
     c_Step03_2 {}
-
-  .add 'pg_主页'
-
-  , =>
-
-    {
-      c_HouseCon
-    } = CFX
-    
-    c_HouseCon {}        
 
   .add '主页'
 
