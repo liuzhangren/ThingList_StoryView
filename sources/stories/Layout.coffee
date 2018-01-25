@@ -1,9 +1,9 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
-import Header from '../Components/Contents/Header'
-import Sider from '../Components/Contents/SiderContent'
-import Footer from '../Components/Contents/Footer'
-import index from '../Components/Contents/Layout'
+import Header from '../Components/Layout/Header'
+import Sider from '../Components/Layout/SiderContent'
+import Footer from '../Components/Layout/Footer'
+import index from '../Components/Layout/Layout'
 
 CFX = prefixDom {
   Header

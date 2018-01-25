@@ -6,9 +6,9 @@ import './style.css'
 import Welcome from './Welcome'
 import Layout from './Layout'
 import Login from './Login'
-import Content from './Content'
+import House from './House'
 
 Welcome()
 Layout()
 Login()
-Content()
+House()

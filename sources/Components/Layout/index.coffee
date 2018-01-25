@@ -4,7 +4,7 @@ import Menu from './Menu'
 import {
   SiderContent
 } from 'cfx.antd-wrapper'
-import Content from './Content'
+import Content from '../House/HouseList/pg_House/pg_House'
 
 CFX = prefixDom {
   SiderContent

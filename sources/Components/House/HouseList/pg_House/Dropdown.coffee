@@ -8,6 +8,7 @@ import {
   message
   Row
   Col
+  Card
 } from 'antd'
 
 Item = Menu.Item
@@ -22,7 +23,8 @@ CFX = prefixDom {
   Icon
   Item
   Row
-  Col  
+  Col
+  Card
 }
 
 class Drop extends Component
@@ -43,7 +45,8 @@ class Drop extends Component
       c_Icon
       c_Item
       c_Row
-      c_Col      
+      c_Col
+      c_Card  
     } = CFX
 
     menu = (
@@ -57,34 +60,36 @@ class Drop extends Component
           key: '2'
         , '新建分组'
     )
-    c_div
-      key: 'div'
-      style:
-        height: '32px'
-        marginBottom: '16px'
-    ,
+    c_div {}
+    ,  
       c_div
+        key: 'div'
         style:
           height: '32px'
-          float: 'right'
+          marginBottom: '16px'
       ,
-        c_Dropdown
-          key: 'Dropdown'
-          overlay: menu
+        c_div
+          style:
+            height: '32px'
+            float: 'right'
         ,
-          c_Button
-            key: 'buttonw'
-            style:
-              marginRight: '20px'
+          c_Dropdown
+            key: 'Dropdown'
+            overlay: menu
           ,
-            '分组'
-            c_Icon
-              key: 'icon'
-              type: 'down'
+            c_Button
+              key: 'buttonw'
+              style:
+                marginRight: '20px'
+            ,
+              '分组'
+              c_Icon
+                key: 'icon'
+                type: 'down'
 
-        c_Button
-          key: 'primary'
-          type: 'primary'   
-        , '添加房源'
+          c_Button
+            key: 'primary'
+            type: 'primary'   
+          , '添加房源'
 
 export default Drop
