@@ -1,48 +1,43 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 import { Card } from 'antd'
-import HouseTitle from '../Components/House/HouseList/pg_House/HouseTitle'
-# import Dropdowns from '../Components/House/HouseList/pg_House/Dropdown'
-# import Table from '../Components/House/HouseList/pg_House/Table'
-# import pg_House from '../Components/House/HouseList/pg_House/pg_House'
-# import pg_Step01 from '../Components/House/HouseList/pg_Steps/pg_Step01'
-# import pg_Step02 from '../Components/House/HouseList/pg_Steps/pg_Step02'
-# import pg_Step03_1 from '../Components/House/HouseList/pg_Steps/pg_Step03_1'
-# import pg_Step03_2 from '../Components/House/HouseList/pg_Steps/pg_Step03_2'
-# import page_Card from '../Components/House/HouseList/pg_Detailed/Card'
-# import House_Room from '../Components/House/HouseList/pg_Detailed/House_Room'
-# import pg_Detailed from '../Components/House/HouseList/pg_Detailed'
-# import Room_Card from '../Components/House/HouseList/Room/Card'
-# import Room_House from '../Components/House/HouseList/Room/House_Room'
-# import Room from '../Components/House/HouseList/Room'
+import HouseTitle from '../Components/House/HouseList/HouseList/Title'
+import HouseButtons from '../Components/House/HouseList/HouseList/Buttons'
+import HouseTable from '../Components/House/HouseList/HouseList/Table'
+import House from '../Components/House/HouseList/HouseList'
+import Step01 from '../Components/House/HouseList/Step01'
+import Step02 from '../Components/House/HouseList/Step02'
+import Step03_1 from '../Components/House/HouseList/Step03_1'
+import Step03_2 from '../Components/House/HouseList/Step03_2'
+import HouseCard from '../Components/House/HouseList/HouseDetailed/Card'
+import HouseRoom from '../Components/House/HouseList/HouseDetailed/Table'
+import HouseDetailed from '../Components/House/HouseList/HouseDetailed'
+import RoomCard from '../Components/House/HouseList/RoomDetailed/Card'
+import RoomBed from '../Components/House/HouseList/RoomDetailed/Table'
+import RoomDetailed from '../Components/House/HouseList/RoomDetailed'
+import BedDetailed from '../Components/House/HouseList/BedDetailed'
 
 # import index from '../Components/Layout/index'
 
 # import Modal from '../Components/House/Modal'
 
-# import Bed from '../Components/House/Bed'
-
 CFX = prefixDom {
-  # Room
-  # Room_House
-  # Room_Card
-  # HouseTitle
-  # Dropdowns
-  # Table
-  # pg_House
-  # pg_Step01
-  # pg_Step02
-  # pg_Step03_1
-  # pg_Step03_2  
-  # Card
-  # page_Card
-  # House_Room
-  # pg_Detailed
-
-  # Modal
-  # Bed
-  # Room
-  # index
+  Card
+  HouseTitle
+  HouseButtons
+  HouseTable
+  House
+  Step01
+  Step02
+  Step03_1
+  Step03_2
+  HouseCard
+  HouseRoom
+  HouseDetailed
+  RoomCard
+  RoomBed
+  RoomDetailed
+  BedDetailed
 }
 
 export default =>
@@ -59,169 +54,169 @@ export default =>
     
     c_HouseTitle {}
 
-  # .add 'cp_添加房源按钮'
+  .add 'cp_添加房源按钮'
 
-  # , =>
+  , =>
 
-  #   {
-  #     c_Dropdowns
-  #     c_Card      
-  #   } = CFX
+    {
+      c_Card      
+      c_HouseButtons     
+    } = CFX
     
-  #   c_Card
-  #     bordered: false
-  #   ,  
-  #     c_Dropdowns {}
+    c_Card
+      bordered: false
+    ,  
+      c_HouseButtons {}
 
-  # .add 'cp_房源列表表格'
+  .add 'cp_房源列表表格'
 
-  # , =>
+  , =>
 
-  #   {
-  #     c_Card
-  #     c_Table
-  #   } = CFX
+    {
+      c_Card
+      c_HouseTable
+    } = CFX
     
-  #   c_Card
-  #     bordered: false
-  #   ,
-  #     c_Table {}
+    c_Card
+      bordered: false
+    ,
+      c_HouseTable {}
 
-  # .add 'pg_房源管理'
+  .add 'pg_房源列表'
 
-  # , =>
+  , =>
 
-  #   {
-  #     c_pg_House
-  #   } = CFX
+    {
+      c_House
+    } = CFX
     
-  #   c_pg_House {}
+    c_House {}
 
-  # .add 'pg_step01添加房源地址'
+  .add 'pg_step01添加房源地址'
 
-  # , =>
+  , =>
 
-  #   {
-  #     c_pg_Step01
-  #   } = CFX
+    {
+      c_Step01
+    } = CFX
     
-  #   c_pg_Step01 {}
+    c_Step01 {}
 
-  # .add 'pg_step02添加房东信息'
+  .add 'pg_step02添加房东信息'
 
-  # , =>
+  , =>
 
-  #   {
-  #     c_pg_Step02
-  #   } = CFX
+    {
+      c_Step02
+    } = CFX
     
-  #   c_pg_Step02 {}
+    c_Step02 {}
 
-  # .add 'pg_step03.1整租方式'
+  .add 'pg_step03_1整租方式'
 
-  # , =>
+  , =>
 
-  #   {
-  #     c_pg_Step03_1
-  #   } = CFX
+    {
+      c_Step03_1
+    } = CFX
     
-  #   c_pg_Step03_1 {}       
+    c_Step03_1 {}       
 
-  # .add 'pg_step03.2分组方式'
+  .add 'pg_step03_2分组方式'
 
-  # , =>
+  , =>
 
-  #   {
-  #     c_pg_Step03_2
-  #   } = CFX
+    {
+      c_Step03_2
+    } = CFX
     
-  #   c_pg_Step03_2 {}
+    c_Step03_2 {}
 
-  # .add 'cp_房源列表'
+  .add 'cp_房源详细'
 
-  # , =>
+  , =>
 
-  #   {
-  #     c_Card
-  #     c_page_Card
-  #   } = CFX
+    {
+      c_Card
+      c_HouseCard
+    } = CFX
 
-  #   c_Card  
-  #     bordered: false
-  #   ,  
-  #     c_page_Card {}
+    c_Card  
+      bordered: false
+    ,  
+      c_HouseCard {}
 
-  # .add 'cp_房源房间表格'
+  .add 'cp_房源房间表格'
 
-  # , =>
+  , =>
 
-  #   {
-  #     c_Card       
-  #     c_House_Room
-  #   } = CFX
+    {
+      c_Card       
+      c_HouseRoom
+    } = CFX
 
-  #   c_Card  
-  #     bordered: false
-  #   ,  
-  #     c_House_Room {}
+    c_Card  
+      bordered: false
+    ,  
+      c_HouseRoom {}
 
-  # .add 'pg_房源详细'
+  .add 'pg_房源详细信息'
 
-  # , =>
+  , =>
 
-  #   {
-  #     c_pg_Detailed
-  #   } = CFX
+    {
+      c_HouseDetailed
+    } = CFX
   
-  #   c_pg_Detailed {}
+    c_HouseDetailed {}
 
-  # .add 'cp_房间列表'
+  .add 'cp_房间详细'
 
-  # , =>
+  , =>
 
-  #   {
-  #     c_Card
-  #     c_Room_House
-  #   } = CFX
+    {
+      c_Card
+      c_RoomCard
+    } = CFX
 
-  #   c_Card  
-  #     bordered: false
-  #   ,
-  #   c_Room_House {}
+    c_Card  
+      bordered: false
+    ,
+    c_RoomCard {}
 
-  # .add 'cp_床位表格'
+  .add 'cp_房间床位表格'
 
-  # , =>
+  , =>
 
-  #   {
-  #     c_Card
-  #     c_Room_Card
-  #   } = CFX
+    {
+      c_Card
+      c_RoomBed
+    } = CFX
 
-  #   c_Card  
-  #     bordered: false
-  #   ,
-  #   c_Room_Card {}        
+    c_Card  
+      bordered: false
+    ,
+    c_RoomBed {}        
 
-  # .add 'pg_房间床位详细'
+  .add 'pg_房间详细信息'
 
-  # , =>
+  , =>
 
-  #   {
-  #     c_Room
-  #   } = CFX
+    {
+      c_RoomDetailed
+    } = CFX
 
-  #   c_Room {}
+    c_RoomDetailed {}
 
-  # .add 'pg_床位详细'
+  .add 'pg_床位详细信息'
 
-  # , =>
+  , =>
 
-  #   {
-  #     c_Bed
-  #   } = CFX
+    {
+      c_BedDetailed
+    } = CFX
 
-  #   c_Bed {}    
+    c_BedDetailed {}    
 
   # .add '主页'
 

@@ -112,16 +112,6 @@ export default ->
           dataIndex: 'way'
 
         c_Column
-          title: '详细信息'
-          render: ( text, record ) =>
-            c_span {}
-            ,
-              c_a
-                key: 'a1'
-                href: '#'
-              , 'Action', record.name
-
-        c_Column
           title: '操作'
           key: 'operating'
           width: '105px'

@@ -1,15 +1,15 @@
 import { prefixDom } from 'cfx.dom'
 import pageHeader from '../PageHeader'
-import Steps from './Step'
-import Form from './Form02'
 import ContentCard from '../ContentCard'
+import Steps from '../Steps'
+import Form from './Form'
 
 CFX = prefixDom {
   'div'
-  Steps
   pageHeader
+  ContentCard
+  Steps
   Form
-  ContentCard  
 }
 
 export default ->
@@ -18,16 +18,16 @@ export default ->
 
     {
       c_div
-      c_Steps
       c_pageHeader
-      c_Form
       c_ContentCard
+      c_Steps
+      c_Form
     } = CFX
 
     c_div {}
     ,
       c_pageHeader
-        title: 'user'    
+        title: 'user'
       c_ContentCard
         contentCard: [
           c_Steps

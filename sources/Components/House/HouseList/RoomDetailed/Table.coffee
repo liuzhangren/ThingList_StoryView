@@ -28,20 +28,20 @@ export default =>
   data: [
       key: '1'
       age: 2
-      name: '110'
-      house: '30平米'
+      name: 'A'
+      money: '2000'
       theway: '押一付三'
     ,
       key: '2'
       age: 6
-      name: '119'
-      house: '35平米'
+      name: 'B'
+      money: '1000'
       theway: '押一付三'      
     ,
       key: '3'
-      name: '120'
+      name: 'C'
       age: 4
-      house: '30平米'
+      money: '1000'
       theway: '押一付三'        
   ]
 
@@ -73,7 +73,7 @@ export default =>
           color: 'rgba(0,0,0,.85)'
           fontWeight: '500'
           marginBottom: '16px'
-      , '床位信息'
+      , '床位详细'
 
       c_Table
         dataSource: @data
@@ -90,8 +90,8 @@ export default =>
           key: 'age'
         c_Column
           title: '租金'
-          dataIndex: 'house'
-          key: 'house'
+          dataIndex: 'money'
+          key: 'money'
         c_Column
           title: '押付方式'
           dataIndex: 'theway'

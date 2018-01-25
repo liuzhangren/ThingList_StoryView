@@ -1,16 +1,15 @@
 import { prefixDom } from 'cfx.dom'
 import { Card } from 'antd'
 import ContentCard from '../ContentCard'
-import Dropdown from './Dropdown'
+import Buttons from './Buttons'
 import Table from './Table'
-import HouseTitle from './HouseTitle'
+import Title from './Title'
 
 CFX = prefixDom {
   'div'
-  Card
   ContentCard
-  HouseTitle
-  Dropdown
+  Title
+  Buttons
   Table
 }
 
@@ -18,19 +17,18 @@ export default ->
 
   {
     c_div
-    c_Card
     c_ContentCard
-    c_HouseTitle
-    c_Dropdown
+    c_Title
+    c_Buttons
     c_Table
   } = CFX
 
   c_div {}
   ,
-    c_HouseTitle {}
+    c_Title {}
     c_ContentCard
       contentCard: [
-        c_Dropdown {}
+        c_Buttons {}
         c_Table {}
       ]
 

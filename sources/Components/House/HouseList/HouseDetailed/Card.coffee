@@ -39,7 +39,7 @@ export default =>
           color: 'rgba(0,0,0,.85)'
           fontWeight: '500'
           marginBottom: '16px'
-      , '房源详细'
+      , '房源详细'    
       c_Row
         style:
           marginLeft: '-16px'

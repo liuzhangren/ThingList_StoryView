@@ -12,4 +12,4 @@ export default ->
   } = CFX
 
   c_pageHeader
-    title: 0
+    title: 'HouseList'

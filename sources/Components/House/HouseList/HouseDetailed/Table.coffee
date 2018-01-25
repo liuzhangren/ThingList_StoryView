@@ -27,22 +27,22 @@ export default =>
 
   data: [
       key: '1'
-      age: 2
-      name: '110'
+      age: '举手帮租'
+      name: 'A'
       house: '30平米'
       theway: '押一付三'
     ,
       key: '2'
-      age: 6
-      name: '119'
+      age: '举手帮租'
+      name: 'B'
       house: '35平米'
-      theway: '押一付三'      
+      theway: '押一付三'
     ,
       key: '3'
-      name: '120'
-      age: 4
+      name: 'C'
+      age: '举手帮租'
       house: '30平米'
-      theway: '押一付三'        
+      theway: '押一付三'
   ]
 
   rowSelection:
@@ -73,13 +73,11 @@ export default =>
           color: 'rgba(0,0,0,.85)'
           fontWeight: '500'
           marginBottom: '16px'
-      , '床位信息'
-
+      , '床位信息'    
       c_Table
         dataSource: @data
         rowSelection: @rowSelection
       ,
-
         c_Column
           title: '房间编号'
           dataIndex: 'name'
@@ -109,4 +107,4 @@ export default =>
                 style:
                   color: '#F00'
                 href: '#'
-              , '删除'  
+              , '删除'

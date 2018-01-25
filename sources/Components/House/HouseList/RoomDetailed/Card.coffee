@@ -1,13 +1,11 @@
 import { prefixDom } from 'cfx.dom'
 import title from '../PageHeader'
-
 import {
   Row
   Col
   Card
   Divider
 } from 'antd'
-
 
 CFX = prefixDom {
   'div' 
