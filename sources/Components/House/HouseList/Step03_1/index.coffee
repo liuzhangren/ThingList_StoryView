@@ -1,7 +1,7 @@
 import { prefixDom } from 'cfx.dom'
-import pageHeader from '../PageHeader'
-import ContentCard from '../ContentCard'
-import Steps from '../Steps'
+import pageHeader from '../public/PageHeader'
+import ContentCard from '../public/ContentCard'
+import Steps from '../public/Steps'
 import Form from './Form'
 
 CFX = prefixDom {

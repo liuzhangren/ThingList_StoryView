@@ -10,7 +10,7 @@ import Step02 from '../Components/House/HouseList/Step02'
 import Step03_1 from '../Components/House/HouseList/Step03_1'
 import Step03_2 from '../Components/House/HouseList/Step03_2'
 import HouseCard from '../Components/House/HouseList/HouseDetailed/Card'
-import HouseRoom from '../Components/House/HouseList/HouseDetailed/Table'
+import HouseRoom from '../Components/House/HouseList/public/Table'
 import HouseDetailed from '../Components/House/HouseList/HouseDetailed'
 import RoomCard from '../Components/House/HouseList/RoomDetailed/Card'
 import RoomBed from '../Components/House/HouseList/RoomDetailed/Table'
@@ -51,7 +51,7 @@ export default =>
     {
       c_HouseTitle
     } = CFX
-    
+
     c_HouseTitle {}
 
   .add 'cp_添加房源按钮'
@@ -59,13 +59,13 @@ export default =>
   , =>
 
     {
-      c_Card      
-      c_HouseButtons     
+      c_Card
+      c_HouseButtons
     } = CFX
-    
+
     c_Card
       bordered: false
-    ,  
+    ,
       c_HouseButtons {}
 
   .add 'cp_房源列表表格'
@@ -76,7 +76,7 @@ export default =>
       c_Card
       c_HouseTable
     } = CFX
-    
+
     c_Card
       bordered: false
     ,
@@ -89,7 +89,7 @@ export default =>
     {
       c_House
     } = CFX
-    
+
     c_House {}
 
   .add 'pg_step01添加房源地址'
@@ -99,7 +99,7 @@ export default =>
     {
       c_Step01
     } = CFX
-    
+
     c_Step01 {}
 
   .add 'pg_step02添加房东信息'
@@ -109,7 +109,7 @@ export default =>
     {
       c_Step02
     } = CFX
-    
+
     c_Step02 {}
 
   .add 'pg_step03_1整租方式'
@@ -119,8 +119,8 @@ export default =>
     {
       c_Step03_1
     } = CFX
-    
-    c_Step03_1 {}       
+
+    c_Step03_1 {}
 
   .add 'pg_step03_2分组方式'
 
@@ -129,7 +129,7 @@ export default =>
     {
       c_Step03_2
     } = CFX
-    
+
     c_Step03_2 {}
 
   .add 'cp_房源详细'
@@ -141,9 +141,9 @@ export default =>
       c_HouseCard
     } = CFX
 
-    c_Card  
+    c_Card
       bordered: false
-    ,  
+    ,
       c_HouseCard {}
 
   .add 'cp_房源房间表格'
@@ -151,13 +151,13 @@ export default =>
   , =>
 
     {
-      c_Card       
+      c_Card
       c_HouseRoom
     } = CFX
 
-    c_Card  
+    c_Card
       bordered: false
-    ,  
+    ,
       c_HouseRoom {}
 
   .add 'pg_房源详细信息'
@@ -167,7 +167,7 @@ export default =>
     {
       c_HouseDetailed
     } = CFX
-  
+
     c_HouseDetailed {}
 
   .add 'cp_房间详细'
@@ -179,7 +179,7 @@ export default =>
       c_RoomCard
     } = CFX
 
-    c_Card  
+    c_Card
       bordered: false
     ,
     c_RoomCard {}
@@ -193,10 +193,10 @@ export default =>
       c_RoomBed
     } = CFX
 
-    c_Card  
+    c_Card
       bordered: false
     ,
-    c_RoomBed {}        
+    c_RoomBed {}
 
   .add 'pg_房间详细信息'
 
@@ -216,7 +216,7 @@ export default =>
       c_BedDetailed
     } = CFX
 
-    c_BedDetailed {}    
+    c_BedDetailed {}
 
   # .add '主页'
 
@@ -225,5 +225,5 @@ export default =>
   #   {
   #     c_index
   #   } = CFX
-    
+
   #   c_index {}

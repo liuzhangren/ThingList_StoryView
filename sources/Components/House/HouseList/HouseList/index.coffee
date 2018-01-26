@@ -1,6 +1,6 @@
 import { prefixDom } from 'cfx.dom'
 import { Card } from 'antd'
-import ContentCard from '../ContentCard'
+import ContentCard from '../public/ContentCard'
 import Buttons from './Buttons'
 import Table from './Table'
 import Title from './Title'

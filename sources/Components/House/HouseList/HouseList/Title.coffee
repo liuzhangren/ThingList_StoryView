@@ -1,5 +1,5 @@
 import { prefixDom } from 'cfx.dom'
-import pageHeader from '../PageHeader'
+import pageHeader from '../public/PageHeader'
 
 CFX = prefixDom {
   pageHeader

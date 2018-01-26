@@ -1,9 +1,11 @@
 import { prefixDom } from 'cfx.dom'
 import {
+  Form
   Table
   Icon
   Divider
   Card
+  Button
 } from 'antd'
 
 {
@@ -11,6 +13,7 @@ import {
   ColumnGroup
 } = Table
 
+FormItem = Form.Item
 CFX = prefixDom {
   'div'
   'a'
@@ -21,6 +24,9 @@ CFX = prefixDom {
   Column
   ColumnGroup
   Card
+  Button
+  Form
+  FormItem
 }
 
 export default =>
@@ -63,6 +69,9 @@ export default =>
       c_Column
       c_ColumnGroup
       c_Card
+      c_Button
+      c_Form
+      c_FormItem
     } = CFX
 
     c_div {}
@@ -74,6 +83,14 @@ export default =>
           fontWeight: '500'
           marginBottom: '16px'
       , '床位详细'
+      c_FormItem {}
+      ,
+        c_Button
+          style:
+            float: 'right'
+          key: 'primary'
+          type: 'primary'
+        , '添加床位'
 
       c_Table
         dataSource: @data

@@ -1,11 +1,11 @@
 import { prefixDom } from 'cfx.dom'
-import Table from './Table'
-import ContentCard from '../ContentCard'
-import PageHeader from '../PageHeader'
+import Card from './Card'
+import ContentCard from '../public/ContentCard'
+import PageHeader from '../public/PageHeader'
 
 CFX = prefixDom {
   'div'
-  Table
+  Card
   ContentCard
   PageHeader
 }
@@ -14,7 +14,7 @@ export default ->
 
   {
     c_div
-    c_Table
+    c_Card
     c_ContentCard
     c_PageHeader
   } = CFX
@@ -25,6 +25,6 @@ export default ->
       title: 'Bed'
     c_ContentCard
       contentCard: [
-        c_Table {}
+        c_Card {}
       ]
 

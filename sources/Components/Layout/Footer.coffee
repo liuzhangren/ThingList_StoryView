@@ -1,5 +1,5 @@
 import { prefixDom } from 'cfx.dom'
-import pageHeader from '../House/HouseList/PageHeader'
+import pageHeader from '../House/HouseList/public/PageHeader'
 
 import {
   Content

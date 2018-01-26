@@ -1,8 +1,8 @@
 import { prefixDom } from 'cfx.dom'
 import Card from './Card'
 import Table from './Table'
-import ContentCard from '../ContentCard'
-import PageHeader from '../PageHeader'
+import ContentCard from '../public/ContentCard'
+import PageHeader from '../public/PageHeader'
 
 CFX = prefixDom {
   'div'
