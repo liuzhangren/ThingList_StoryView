@@ -98,11 +98,11 @@ export default =>
       ,
 
         c_Column
-          title: '房间编号'
+          title: '床位编号'
           dataIndex: 'name'
           key: 'name'
         c_Column
-          title: '房间别名'
+          title: '床位别名'
           dataIndex: 'age'
           key: 'age'
         c_Column

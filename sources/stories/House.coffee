@@ -1,7 +1,8 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 import { Card } from 'antd'
-import HouseTitle from '../Components/House/HouseList/HouseList/Title'
+import { pageHeader } from 'cfx.antd-wrapper'
+
 import HouseButtons from '../Components/House/HouseList/HouseList/Buttons'
 import HouseTable from '../Components/House/HouseList/HouseList/Table'
 import House from '../Components/House/HouseList/HouseList'
@@ -22,8 +23,8 @@ import BedDetailed from '../Components/House/HouseList/BedDetailed'
 # import Modal from '../Components/House/Modal'
 
 CFX = prefixDom {
+  pageHeader
   Card
-  HouseTitle
   HouseButtons
   HouseTable
   House
@@ -43,16 +44,6 @@ CFX = prefixDom {
 export default =>
 
   storiesOf '房源管理', module
-
-  .add 'cp_房源列表标题'
-
-  , =>
-
-    {
-      c_HouseTitle
-    } = CFX
-
-    c_HouseTitle {}
 
   .add 'cp_添加房源按钮'
 
@@ -87,50 +78,102 @@ export default =>
   , =>
 
     {
+      c_pageHeader
       c_House
     } = CFX
 
-    c_House {}
+    [
+      c_pageHeader
+        key: 'HouseList'
+        breadcrumb: [
+          '房源管理'
+          '房源列表'
+        ]
+        title: '房源列表'    
+      c_House {}
+    ]  
 
   .add 'pg_step01添加房源地址'
 
   , =>
 
     {
+      c_pageHeader
       c_Step01
     } = CFX
+    
+    [
+      c_pageHeader
+        key: 'address'
+        breadcrumb: [
+          '房源管理'
+          '添加房源地址'
+        ]
+        title: '添加房源地址'
+      c_Step01 {}           
+    ]
 
-    c_Step01 {}
 
   .add 'pg_step02添加房东信息'
 
   , =>
 
     {
+      c_pageHeader
       c_Step02
     } = CFX
 
-    c_Step02 {}
+    [
+      c_pageHeader
+        key: 'user'
+        breadcrumb: [
+          '房源管理'
+          '添加房东信息'
+        ]
+        title: '添加房东信息'
+      c_Step02 {}          
+    ]
+
 
   .add 'pg_step03_1整租方式'
 
   , =>
 
     {
+      c_pageHeader      
       c_Step03_1
     } = CFX
 
-    c_Step03_1 {}
+    [
+      c_pageHeader
+        key: 'rents'
+        breadcrumb: [
+          '房源管理'
+          '添加出租方式'
+        ]
+        title: '添加出租方式'    
+      c_Step03_1 {}
+    ]  
 
   .add 'pg_step03_2分组方式'
 
   , =>
 
     {
+      c_pageHeader      
       c_Step03_2
     } = CFX
 
-    c_Step03_2 {}
+    [
+      c_pageHeader
+        key: 'rents'
+        breadcrumb: [
+          '房源管理'
+          '添加出租方式'
+        ]
+        title: '添加出租方式' 
+      c_Step03_2 {}
+    ]  
 
   .add 'cp_房源详细'
 
@@ -165,10 +208,20 @@ export default =>
   , =>
 
     {
+      c_pageHeader
       c_HouseDetailed
     } = CFX
-
-    c_HouseDetailed {}
+  
+    [
+      c_pageHeader
+        key: 'Card'
+        breadcrumb: [
+          '房源管理'
+          '房源详细信息'
+        ]
+        title: '房源详细信息'
+      c_HouseDetailed {}
+    ]  
 
   .add 'cp_房间详细'
 
@@ -203,20 +256,40 @@ export default =>
   , =>
 
     {
+      c_pageHeader
       c_RoomDetailed
     } = CFX
 
-    c_RoomDetailed {}
+    [
+      c_pageHeader
+        key: 'Room'
+        breadcrumb: [
+          '房源管理'
+          '房间详细信息'
+        ]
+        title: '房间详细信息'
+      c_RoomDetailed {}        
+    ]   
 
   .add 'pg_床位详细信息'
 
   , =>
 
     {
+      c_pageHeader
       c_BedDetailed
     } = CFX
 
-    c_BedDetailed {}
+    [
+      c_pageHeader
+        key: 'Bed'
+        breadcrumb: [
+          '房源管理'
+          '床位详细信息'
+        ]
+        title: '床位详细信息'
+      c_BedDetailed {}
+    ]  
 
   # .add '主页'
 
