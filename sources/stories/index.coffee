@@ -7,8 +7,10 @@ import Welcome from './Welcome'
 import Layout from './Layout'
 import Login from './Login'
 import House from './House'
+import People from './People'
 
 Welcome()
 Layout()
 Login()
 House()
+People()
