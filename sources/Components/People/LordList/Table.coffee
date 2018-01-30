@@ -26,38 +26,40 @@ export default =>
 
   data: [
       key: '1'
-      address: '武汉'
-      name: '刘章仁'
-      rent: '套租'      
-      pay: '押一付三'
-      money: '1000'
-      status: '已租'
+      name: '李强'
+      iphone: '13988888888'
+      number: '**********'      
+      term: '1年'
+      way: '支付宝'
+      money: '2000'
+      deposit: '2000'
     ,
       key: '2'
-      address: '武汉'
-      name: '何文涛'
-      rent: '套租'      
-      pay: '押一付三'
+      name: '李强'
+      iphone: '13988888888'
+      number: '**********'      
+      term: '1年'
+      way: '支付宝'
       money: '2000'
-      status: '已租'           
+      deposit: '2000'     
     ,
       key: '3'
-      address: '武汉'
-      name: '张三'
-      rent: '套租'      
-      house: '武汉市江汉区'
-      pay: '押一付三'
-      money: '3000'  
-      status: '空置'      
+      name: '李强'
+      iphone: '13988888888'
+      number: '**********'      
+      term: '1年'
+      way: '支付宝'
+      money: '2000'
+      deposit: '2000'     
     ,
       key: '4'
-      address: '武汉'
-      name: '刘本义'
-      rent: '套租'      
-      house: '北京市朝阳区'
-      pay: '押一付三'
-      money: '4000'
-      status: '空置'        
+      name: '李强'
+      iphone: '13988888888'
+      number: '**********'      
+      term: '1年'
+      way: '支付宝'
+      money: '2000'
+      deposit: '2000'       
   ]
 
   rowSelection:
@@ -86,28 +88,32 @@ export default =>
     ,
 
       c_Column
-        title: '地址'
-        dataIndex: 'address'
-
-      c_Column
-        title: '房东'
+        title: '业主姓名'
         dataIndex: 'name'
 
       c_Column
-        title: '出租方式'
-        dataIndex: 'rent'
+        title: '手机号'
+        dataIndex: 'iphone'
 
       c_Column
-        title: '押付方式'
-        dataIndex: 'pay'
+        title: '身份证号码'
+        dataIndex: 'number'
 
       c_Column
-        title: '出租金额'
+        title: '租赁期限'
+        dataIndex: 'term'
+
+      c_Column
+        title: '付款方式'
+        dataIndex: 'way'
+
+      c_Column
+        title: '房屋租金'
         dataIndex: 'money'
 
       c_Column
-        title: '出租状态'
-        dataIndex: 'status'
+        title: '押金'
+        dataIndex: 'deposit'        
 
       c_Column
         title: '操作'

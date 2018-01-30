@@ -1,15 +1,13 @@
 import { prefixDom } from 'cfx.dom'
-import ContentCard from '../public/ContentCard'
-import Steps from '../public/Steps'
-import Buttons from './Buttons'
-import Table from '../public/Table'
+import ContentCard from '../../public/ContentCard'
+import Steps from '../../public/Steps'
+import Form from './Form'
 
 CFX = prefixDom {
   'div'
   ContentCard
   Steps
-  Buttons
-  Table
+  Form
 }
 
 export default ->
@@ -20,8 +18,7 @@ export default ->
       c_div
       c_ContentCard
       c_Steps
-      c_Buttons
-      c_Table
+      c_Form
     } = CFX
 
     c_div {}
@@ -29,7 +26,6 @@ export default ->
       c_ContentCard
         contentCard: [
           c_Steps
-            current: 2
-          c_Table {}
-          c_Buttons {}
+            current: 1
+          c_Form {}
         ]

@@ -1,6 +1,6 @@
 import { prefixDom } from 'cfx.dom'
-import ContentCard from '../public/ContentCard'
-import Steps from '../public/Steps'
+import ContentCard from '../../public/ContentCard'
+import Steps from '../../public/Steps'
 import Form from './Form'
 
 CFX = prefixDom {

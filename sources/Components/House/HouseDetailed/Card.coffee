@@ -1,5 +1,5 @@
 import { prefixDom } from 'cfx.dom'
-import title from '../public/PageHeader'
+import title from '../../public/ContentCard'
 
 import {
   Row
@@ -61,7 +61,7 @@ export default =>
               color: 'rgba(0,0,0,.85)'
               whiteSpace: 'nowrap'
               display: 'table-cell'
-          , '床位编号：'
+          , '地址：'
           c_div
             style:
               lineHeight: '22px'
@@ -69,7 +69,7 @@ export default =>
               paddingBottom: '16px'
               color: 'rgba(0,0,0,.65)'
               display: 'table-cell'
-          , '01'    
+          , '湖北省武汉市'    
         c_Col
           xs: 24
           sm: 12
@@ -86,7 +86,7 @@ export default =>
               color: 'rgba(0,0,0,.85)'
               whiteSpace: 'nowrap'
               display: 'table-cell'
-          , '床位别名：'
+          , '房东：'
           c_div
             style:
               lineHeight: '22px'
@@ -94,7 +94,7 @@ export default =>
               paddingBottom: '16px'
               color: 'rgba(0,0,0,.65)'
               display: 'table-cell'
-          , 'A'
+          , '李强'
         c_Col
           xs: 24
           sm: 12
@@ -111,7 +111,7 @@ export default =>
               color: 'rgba(0,0,0,.85)'
               whiteSpace: 'nowrap'
               display: 'table-cell'
-          , '租金：'
+          , '出租方式：'
           c_div
             style:
               lineHeight: '22px'
@@ -119,7 +119,7 @@ export default =>
               paddingBottom: '16px'
               color: 'rgba(0,0,0,.65)'
               display: 'table-cell'
-          , '1000'
+          , '整租/分租'
         c_Col
           xs: 24
           sm: 12
@@ -145,6 +145,57 @@ export default =>
               color: 'rgba(0,0,0,.65)'
               display: 'table-cell'
           , '押一付三'
+        c_Col
+          xs: 24
+          sm: 12
+          md: 8
+          style:
+            paddingLeft: '16px'
+            paddingRight: '16px'
+        ,
+          c_div
+            style:
+              lineHeight: '22px'
+              paddingBottom: '16px'
+              marginRight: '8px'
+              color: 'rgba(0,0,0,.85)'
+              whiteSpace: 'nowrap'
+              display: 'table-cell'
+          , '出租金额：'
+          c_div
+            style:
+              lineHeight: '22px'
+              width: '100%'
+              paddingBottom: '16px'
+              color: 'rgba(0,0,0,.65)'
+              display: 'table-cell'
+          , '1000'                      
+        c_Col
+          xs: 24
+          sm: 12
+          md: 8
+          style:
+            paddingLeft: '16px'
+            paddingRight: '16px'
+        ,
+          c_div
+            style:
+              lineHeight: '22px'
+              paddingBottom: '16px'
+              marginRight: '8px'
+              color: 'rgba(0,0,0,.85)'
+              whiteSpace: 'nowrap'
+              display: 'table-cell'
+          , '出租状态：'
+          c_div
+            style:
+              lineHeight: '22px'
+              width: '100%'
+              paddingBottom: '16px'
+              color: 'rgba(0,0,0,.65)'
+              display: 'table-cell'
+          , '已租/空置'
+
       c_Divider {}
 
 

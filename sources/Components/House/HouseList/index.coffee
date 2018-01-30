@@ -1,31 +1,30 @@
-import HouseList from './HouseList'
-import Step01 from './Step01'
-import Step02 from './Step02'
-import Step03_1 from './Step03_1'
-import Step03_2 from './Step03_2'
-import HouseDetailed from './HouseDetailed'
-import HouseRoom from './RoomDetailed'
-import BedDetailed from './BedDetailed'
+import { prefixDom } from 'cfx.dom'
+import { Card } from 'antd'
+import ContentCard from '../../public/ContentCard'
+import Buttons from './Buttons'
+import Table from './Table'
 
-export {
-  HouseList
-  Step01
-  Step02
-  Step03_1
-  Step03_2
-  HouseDetailed
-  HouseRoom
-  BedDetailed
+CFX = prefixDom {
+  'div'
+  ContentCard
+  Buttons
+  Table
 }
 
+export default ->
 
+  {
+    c_div
+    c_ContentCard
+    c_Buttons
+    c_Table
+  } = CFX
 
-
-
-
-
-
-
-
-
+  c_div {}
+  ,
+    c_ContentCard
+      contentCard: [
+        c_Buttons {}
+        c_Table {}
+      ]
 

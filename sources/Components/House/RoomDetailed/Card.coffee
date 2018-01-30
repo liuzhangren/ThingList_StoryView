@@ -1,5 +1,5 @@
 import { prefixDom } from 'cfx.dom'
-import title from '../public/PageHeader'
+import title from '../../public/ContentCard'
 import {
   Row
   Col
