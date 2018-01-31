@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
+import Table from './Table'
+import ContentCard from '../../public/ContentCard'
 
 CFX = prefixDom {
   'div'
+  Table
+  ContentCard
 }
 
 export default =>
@@ -11,7 +15,11 @@ export default =>
 
     {
       c_div
+      c_Table
+      c_ContentCard
     } = CFX
 
-    c_div {}
-    , '显示房客详细信息'
+    c_ContentCard
+      contentCard: [
+        c_Table {}
+      ]

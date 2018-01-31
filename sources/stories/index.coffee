@@ -8,9 +8,15 @@ import Layout from './Layout'
 import Login from './Login'
 import House from './House'
 import People from './People'
+import Thing from './Thing'
+
+import Test from './test'
 
 Welcome()
 Layout()
 Login()
 House()
 People()
+Thing()
+
+Test()

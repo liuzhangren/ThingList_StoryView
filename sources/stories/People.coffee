@@ -10,6 +10,7 @@ import LordDetailed from '../Components/People/LordDetailed'
 import LordEdit from '../Components/People/LordEdit'
 import TenantList from '../Components/People/TenantList'
 import TenantDetailed from '../Components/People/TenantDetailed'
+import TenantTable from '../Components/People/TenantDetailed/Table'
 import TenantEdit from '../Components/People/TenantEdit'
 
 CFX = prefixDom {
@@ -22,6 +23,7 @@ CFX = prefixDom {
   LordEdit
   TenantList
   TenantDetailed
+  TenantTable
   TenantEdit
 }
 
@@ -138,7 +140,23 @@ export default =>
       c_TenantList {}
     ]
 
-  .add 'pg_显示房客相信信息'
+  .add 'cp_显示房客详细信息表格'
+
+  , =>
+
+    {
+      c_Card
+      c_TenantTable
+    } = CFX
+
+    [
+      c_Card
+        bordered: false
+      ,
+      c_TenantTable {}
+    ]    
+
+  .add 'pg_显示房客详细信息'
 
   , =>
 
@@ -154,7 +172,7 @@ export default =>
           '人员管理'
           '显示房客相信信息'
         ]
-        title: '显示房客相信信息'    
+        title: '显示房客详细信息'    
       c_TenantDetailed {}
     ]
 
