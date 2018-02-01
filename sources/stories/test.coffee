@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 
-import test from '../Components/House/test/Table'
+import test from '../Components/House/test/EditionTable/index'
 
 CFX = prefixDom {
   test
