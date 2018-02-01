@@ -24,7 +24,7 @@ export default ->
     c_div {}
     ,
       PageContent
-        PageContent: [
+        Content: [
           c_Steps
             current: 0
           c_Form {}

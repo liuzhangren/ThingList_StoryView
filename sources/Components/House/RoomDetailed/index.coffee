@@ -22,7 +22,7 @@ export default ->
   c_div {}
   ,
     c_PageContent
-      PageContent: [
+      Content: [
         c_Card {}
         c_Table {}
       ]

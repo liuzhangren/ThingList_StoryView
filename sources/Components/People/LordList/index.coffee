@@ -23,7 +23,7 @@ export default ->
   c_div {}
   ,
     c_PageContent
-      PageContent: [
+      Content: [
         c_Buttons {}
         c_Table {}
       ]

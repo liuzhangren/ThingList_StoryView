@@ -20,6 +20,6 @@ export default =>
     } = CFX
 
     c_PageContent
-      PageContent: [
+      Content: [
         c_Table {}
       ]
