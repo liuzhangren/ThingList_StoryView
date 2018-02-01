@@ -9,9 +9,9 @@ CFX = prefixDom {
 
 export default =>
 
-  storiesOf 'Login', module
+  storiesOf '登录', module
 
-  .add 'Login'
+  .add '登录'
 
   , =>
 

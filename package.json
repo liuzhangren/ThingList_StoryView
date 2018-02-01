@@ -9,9 +9,10 @@
   },
   "dependencies": {
     "antd": "^3.0.3",
-    "cfx.antd-wrapper": "git+https://github.com/react-cfx/cfx.antd-wrapper",
+    "cfx.antd-wrapper": "git+https://github.com/react-cfx/cfx.antd-wrapper#member/zhangren",
     "cfx.dom": "^0.0.3",
     "normalize.css": "^7.0.0",
+    "cfx.style": "^0.0.4",    
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-particles-js": "^2.1.0",

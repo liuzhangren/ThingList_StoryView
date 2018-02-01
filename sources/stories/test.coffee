@@ -1,22 +1,22 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 
-import Content from '../Components/Content'
+import test from '../Components/House/test/Table'
 
 CFX = prefixDom {
-  Content 
+  test
 }
 
 export default =>
 
-  storiesOf 'Content', module
+  storiesOf '测试代码', module
 
-  .add 'Content'
+  .add 'test'
 
   , =>
 
     {
-      c_Content
+      c_test
     } = CFX
     
-    c_Content {}
+    c_test {}
