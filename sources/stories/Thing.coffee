@@ -5,6 +5,7 @@ import { PageHeader } from 'cfx.antd-wrapper'
 
 import LingleList from '../Components/Thing/LingleList'
 import LingleStyle from '../Components/Thing/LingleStyle'
+import LingleForm from '../Components/Thing/LingleWrite/Form'
 import LingleWrite from '../Components/Thing/LingleWrite'
 import LingleConf from '../Components/Thing/LingleConf'
 import OutLingle from '../Components/Thing/OutLingle'
@@ -19,6 +20,7 @@ CFX = prefixDom {
   Card
   LingleList
   LingleStyle
+  LingleForm
   LingleWrite
   LingleConf
   OutLingle
@@ -72,6 +74,20 @@ export default =>
         title: '选择工单类型'
       c_LingleStyle {}
     ]
+
+  .add 'cp_入住申请单表单'
+
+  , =>
+
+    {
+      c_Card
+      c_LingleForm
+    } = CFX
+
+    c_Card
+      bordered: false
+    ,
+      c_LingleForm {}
 
   .add 'pg_填写入住申请单'
 

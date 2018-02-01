@@ -25,6 +25,7 @@ export default ({
   if Content
   then [
     c_PageContent
+      key: 'PageContent'
       PageContent:
         c_Card
           bordered: false        

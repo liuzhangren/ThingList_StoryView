@@ -23,7 +23,7 @@ export default ->
 
     c_div {}
     ,
-      PageContent
+      c_PageContent
         Content: [
           c_Steps
             current: 0

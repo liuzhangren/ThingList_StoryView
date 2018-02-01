@@ -1,95 +1,93 @@
 import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
 import {
-  Button 
+  Button
   Menu
   Dropdown
   Icon
   message
-  Row
-  Col
-  Card
 } from 'antd'
 
+DropdownButton = Dropdown.Button
 Item = Menu.Item
 
 CFX = prefixDom {
   'div'
-  'a'
-  'span'
+  message
   Button
   Menu
   Dropdown
   Icon
   Item
-  Row
-  Col
-  Card
+  DropdownButton
 }
 
 class Drop extends Component
 
-  handleMenuClick: (e) -> 
-    message.info 'Click on menu item.'
-    console.log 'click', e
+  handleButtonClick: (e) ->
+    message.success '新建分组'
+    console.log '新建分组', e
+
+  handleMenuClick: (e) ->
+    message.success '选择分组'
+    console.log '选择分组', e
+
+  handleButton: (e) ->
+    message.success '添加房源'
+    console.log '添加房源', e
 
   render: ->
 
     {
-      c_a
-      c_span
       c_div
       c_Button
       c_Dropdown
       c_Menu
       c_Icon
       c_Item
-      c_Row
-      c_Col
-      c_Card  
+      c_DropdownButton
     } = CFX
 
-    menu = (
+    menu =
       c_Menu
+        key: 'Menu'
         onClick: @handleMenuClick
       ,
         c_Item
-          key: '1'
+          key: 'Item1'
         , '未分组'
-        c_Item
-          key: '2'
-        , '新建分组'
-    )
-    c_div {}
-    ,  
+
+    c_div
+      key: 'div1'
+      style:
+        height: '32px'
+        marginBottom: '16px'
+    ,
       c_div
-        key: 'div'
+        key: 'div22'
         style:
           height: '32px'
-          marginBottom: '16px'
+          float: 'right'
       ,
-        c_div
-          style:
-            height: '32px'
-            float: 'right'
+        c_Dropdown
+          key: 'Dropdown'
+          overlay: menu
         ,
-          c_Dropdown
-            key: 'Dropdown'
-            overlay: menu
-          ,
-            c_Button
-              key: 'buttonw'
-              style:
-                marginRight: '20px'
-            ,
-              '分组'
-              c_Icon
-                key: 'icon'
-                type: 'down'
-
           c_Button
-            key: 'primary'
-            type: 'primary'   
-          , '添加房源'
+            key: 'buttonw'
+            onClick: @handleButtonClick
+            style:
+              marginRight: '20px'
+          ,
+            '分组'
+            c_Icon
+              key: 'icon'
+              type: 'down'
+
+        c_Button
+          key: 'primary'
+          type: 'primary'
+          onClick: @handleButton
+        , '添加房源'
 
 export default Drop

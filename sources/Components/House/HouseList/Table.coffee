@@ -86,41 +86,49 @@ export default =>
     ,
 
       c_Column
+        key: 'address'
         title: '地址'
         dataIndex: 'address'
 
       c_Column
+        key: 'name'
         title: '房东'
         dataIndex: 'name'
 
       c_Column
+        key: 'rent'
         title: '出租方式'
         dataIndex: 'rent'
 
       c_Column
+        key: 'pay'
         title: '押付方式'
         dataIndex: 'pay'
 
       c_Column
+        key: 'money'
         title: '出租金额'
         dataIndex: 'money'
 
       c_Column
+        key: 'status'
         title: '出租状态'
         dataIndex: 'status'
 
       c_Column
+        key: 'operating'
         title: '操作'
         key: 'operating'
         width: '105px'
 
         render: =>
           c_span
+            key: 'span'
             style:
               float: 'right'
           ,
             c_a
-              key: 'a2'
+              key: 'a'
               style:
                 color: '#959595'
               href: '#'
@@ -130,7 +138,7 @@ export default =>
               key: 'Divider'
               type: 'vertical'
             c_a
-              key: 'a3'
+              key: 'a1'
               style:
                 color: '#F00'
               href: '#'

@@ -111,6 +111,24 @@ export default ({ props... }) ->
             c_Icon
               type: 'edit'
   ]
+  else if current is '02'
+  then [
+    c_Steps
+      style:
+        maxWidth: '750px'
+        margin: '16px auto'
+      current: 1
+        c_Step
+          title: '选择工单类型'
+          icon:
+            c_Icon
+              type: 'solution'
+        c_Step
+          title: '填写工单'
+          icon:
+            c_Icon
+              type: 'edit'
+  ]  
 
 
   # c_Steps

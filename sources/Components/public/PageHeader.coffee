@@ -21,7 +21,7 @@ export default ({ props... }) ->
   if title is 'HouseList'
   then [
     c_pageHeader
-      key: 'HouseList'
+      key: 'pageHeader'
       breadcrumb: [
         '房源管理'
         '房源列表'

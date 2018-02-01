@@ -20,11 +20,10 @@ export default ->
     c_Table
   } = CFX
 
-  c_div {}
-  ,
-    c_PageContent
-      Content: [
-        c_Buttons {}
-        c_Table {}
-      ]
-
+  c_PageContent
+    Content: [
+      c_Buttons
+        key: 'Buttons'
+      c_Table
+        key: 'Table'
+    ]

@@ -90,7 +90,8 @@ export default =>
           '房源列表'
         ]
         title: '房源列表'    
-      c_House {}
+      c_House
+        key: 'House'
     ]  
 
   .add 'pg_step01添加房源地址'
