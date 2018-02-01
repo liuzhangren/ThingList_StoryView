@@ -1,6 +1,4 @@
 import { prefixDom } from 'cfx.dom'
-import title from '../../public/ContentCard'
-
 import {
   Row
   Col
@@ -8,10 +6,8 @@ import {
   Divider
 } from 'antd'
 
-
 CFX = prefixDom {
   'div' 
-  title
   Row
   Col
   Card
@@ -25,7 +21,6 @@ export default =>
     {
       c_div
       c_Card
-      c_title
       c_Row
       c_Col
       c_Divider

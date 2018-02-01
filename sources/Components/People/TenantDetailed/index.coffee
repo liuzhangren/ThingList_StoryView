@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
 import Table from './Table'
-import ContentCard from '../../public/ContentCard'
+import PageContent from '../../public/PageContent'
 
 CFX = prefixDom {
   'div'
   Table
-  ContentCard
+  PageContent
 }
 
 export default =>
@@ -16,10 +16,10 @@ export default =>
     {
       c_div
       c_Table
-      c_ContentCard
+      c_PageContent
     } = CFX
 
-    c_ContentCard
-      contentCard: [
+    c_PageContent
+      PageContent: [
         c_Table {}
       ]

@@ -1,11 +1,11 @@
 import { prefixDom } from 'cfx.dom'
 import { Card } from 'antd'
-import ContentCard from '../../public/ContentCard'
+import PageContent from '../../public/PageContent'
 import Buttons from './Buttons'
 
 CFX = prefixDom {
   'div'
-  ContentCard
+  PageContent
   Buttons
 }
 
@@ -13,14 +13,14 @@ export default ->
 
   {
     c_div
-    c_ContentCard
+    c_PageContent
     c_Buttons
   } = CFX
 
   c_div {}
   ,
-    c_ContentCard
-      contentCard: [
+    c_PageContent
+      PageContent: [
         c_Buttons {}
       ]
 

@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 import { Card } from 'antd'
-import { pageHeader } from 'cfx.antd-wrapper'
+import { PageHeader } from 'cfx.antd-wrapper'
 
 import HouseButtons from '../Components/House/HouseList/Buttons'
 import HouseTable from '../Components/House/HouseList/Table'
@@ -23,7 +23,7 @@ import BedDetailed from '../Components/House/BedDetailed'
 # import Modal from '../Components/House/Modal'
 
 CFX = prefixDom {
-  pageHeader
+  PageHeader
   Card
   HouseButtons
   HouseTable
@@ -78,12 +78,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_House
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'HouseList'
         breadcrumb: [
           '房源管理'
@@ -98,12 +98,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_Step01
     } = CFX
     
     [
-      c_pageHeader
+      c_PageHeader
         key: 'address'
         breadcrumb: [
           '房源管理'
@@ -119,12 +119,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_Step02
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'user'
         breadcrumb: [
           '房源管理'
@@ -140,12 +140,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader      
+      c_PageHeader     
       c_Step03_1
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'rents'
         breadcrumb: [
           '房源管理'
@@ -160,12 +160,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader      
+      c_PageHeader     
       c_Step03_2
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'rents'
         breadcrumb: [
           '房源管理'
@@ -208,12 +208,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_HouseDetailed
     } = CFX
   
     [
-      c_pageHeader
+      c_PageHeader
         key: 'Card'
         breadcrumb: [
           '房源管理'
@@ -256,12 +256,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_RoomDetailed
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'Room'
         breadcrumb: [
           '房源管理'
@@ -276,12 +276,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_BedDetailed
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'Bed'
         breadcrumb: [
           '房源管理'

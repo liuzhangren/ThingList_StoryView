@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 import { Card } from 'antd'
-import { pageHeader } from 'cfx.antd-wrapper'
+import { PageHeader } from 'cfx.antd-wrapper'
 
 import People from '../Components/People/LordList'
 import PeopleButtons from '../Components/People/LordList/Buttons'
@@ -14,7 +14,7 @@ import TenantTable from '../Components/People/TenantDetailed/Table'
 import TenantEdit from '../Components/People/TenantEdit'
 
 CFX = prefixDom {
-  pageHeader
+  PageHeader
   Card
   People
   PeopleButtons
@@ -64,12 +64,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_People
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'PeopleList'
         breadcrumb: [
           '人员管理'
@@ -85,12 +85,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_LordDetailed
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'LordDetailed'
         breadcrumb: [
           '人员管理'
@@ -105,12 +105,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_LordEdit
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'LordEdit'
         breadcrumb: [
           '人员管理'
@@ -125,12 +125,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_TenantList
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'TenantList'
         breadcrumb: [
           '人员管理'
@@ -161,12 +161,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_TenantDetailed
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'TenantDetailed'
         breadcrumb: [
           '人员管理'
@@ -181,12 +181,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_TenantEdit
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'TenantEdit'
         breadcrumb: [
           '人员管理'

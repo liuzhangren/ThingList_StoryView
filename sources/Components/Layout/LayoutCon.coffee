@@ -1,10 +1,10 @@
 import { prefixDom } from 'cfx.dom'
-import pageHeader from '../public/PageHeader'
+import PageHeader from '../public/PageHeader'
 
 import {
   Content
-  header
-  pageContent
+  Header
+  PageContent
 } from 'cfx.antd-wrapper'
 
 import { Card } from 'antd'
@@ -12,9 +12,9 @@ import { Card } from 'antd'
 CFX = prefixDom {
   'div'
   Content
-  header
-  pageHeader
-  pageContent
+  Header
+  PageHeader
+  PageContent
 }
 
 export default ->
@@ -22,16 +22,16 @@ export default ->
   {
     c_div
     c_Content
-    c_header
-    c_pageHeader
-    c_pageContent
+    c_Header
+    c_PageHeader
+    c_PageContent
   } = CFX
 
   c_Content
-    header: c_header {}
+    header: c_Header {}
     content: ' '
     pageHeader: 
-      c_pageHeader
+      c_PageHeader
         title: 'HouseList'
     footer: '@footer'
       

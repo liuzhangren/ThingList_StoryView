@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 import { Card } from 'antd'
-import { pageHeader } from 'cfx.antd-wrapper'
+import { PageHeader } from 'cfx.antd-wrapper'
 
 import LingleList from '../Components/Thing/LingleList'
 import LingleStyle from '../Components/Thing/LingleStyle'
@@ -15,7 +15,7 @@ import UpdateLingle from '../Components/Thing/UpdateLingle'
 import UpdateConf from '../Components/Thing/UpdateConf'
 
 CFX = prefixDom {
-  pageHeader
+  PageHeader
   Card
   LingleList
   LingleStyle
@@ -38,12 +38,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_LingleList
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'LingleList'
         breadcrumb: [
           '工单管理'
@@ -58,12 +58,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_LingleStyle
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'LingleList'
         breadcrumb: [
           '工单管理'
@@ -78,12 +78,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_LingleWrite
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'LingleWrite'
         breadcrumb: [
           '工单管理'
@@ -98,12 +98,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_LingleConf
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'LingleConf'
         breadcrumb: [
           '工单管理'
@@ -118,12 +118,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_OutLingle
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'OutLingle'
         breadcrumb: [
           '工单管理'
@@ -138,12 +138,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_OutConf
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'OutConf'
         breadcrumb: [
           '工单管理'
@@ -158,12 +158,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_ChangeLingle
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'ChangeLingle'
         breadcrumb: [
           '工单管理'
@@ -178,12 +178,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_ChangeConf
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'ChangeConf'
         breadcrumb: [
           '工单管理'
@@ -198,12 +198,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_UpdateLingle
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'UpdateLingle'
         breadcrumb: [
           '工单管理'
@@ -218,12 +218,12 @@ export default =>
   , =>
 
     {
-      c_pageHeader
+      c_PageHeader
       c_UpdateConf
     } = CFX
 
     [
-      c_pageHeader
+      c_PageHeader
         key: 'UpdateConf'
         breadcrumb: [
           '工单管理'

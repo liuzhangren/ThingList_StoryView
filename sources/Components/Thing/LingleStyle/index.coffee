@@ -1,12 +1,12 @@
 import { prefixDom } from 'cfx.dom'
-import ContentCard from '../../public/ContentCard'
+import PageContent from '../../public/PageContent'
 import Steps from '../../public/Steps'
 import Radios from './Radios'
 
 CFX = prefixDom {
   'div'
   Steps
-  ContentCard
+  PageContent
   Radios
 }
 
@@ -16,15 +16,15 @@ export default ->
 
     {
       c_div
-      c_ContentCard
+      c_PageContent
       c_Steps
       c_Radios
     } = CFX
 
     c_div {}
     ,
-      ContentCard
-        contentCard: [
+      PageContent
+        PageContent: [
           c_Steps
             current: '01'
           c_Radios {}  

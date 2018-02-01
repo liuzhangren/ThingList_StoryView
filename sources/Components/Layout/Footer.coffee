@@ -1,5 +1,5 @@
 import { prefixDom } from 'cfx.dom'
-import pageHeader from '../public/PageHeader'
+import PageHeader from '../public/PageHeader'
 
 import {
   Content
@@ -10,7 +10,7 @@ CFX = prefixDom {
   'div'
   Content
   header
-  pageHeader
+  PageHeader
 }
 
 export default ->
@@ -19,7 +19,7 @@ export default ->
     c_div
     c_Content
     c_header
-    c_pageHeader
+    c_PageHeader
   } = CFX
 
   c_Content
