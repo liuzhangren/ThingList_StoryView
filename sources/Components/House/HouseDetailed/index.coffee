@@ -19,11 +19,9 @@ export default ->
     c_PageContent
   } = CFX
 
-  c_div {}
-  ,
-    c_PageContent
-      PageContent: [
-        c_Card {}
-        c_Table {}
-      ]
+  c_PageContent
+    Content: [
+      c_Card {}
+      c_Table {}
+    ]
 

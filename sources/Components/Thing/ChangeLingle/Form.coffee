@@ -8,6 +8,7 @@ import {
 } from 'antd'
 FormItem = Form.Item
 
+
 CFX = prefixDom {
   'div'
   Form
@@ -42,12 +43,11 @@ export default ->
           span: 5
         wrapperCol:
           span: 19
-        label: '业主姓名'
+        label: '身份证号'
       ,
         c_Input
           type: 'text'
-          placeholder: '请输入业主姓名'
-
+          placeholder: '请输入身份证号'
       c_FormItem
         labelCol:
           span: 5
@@ -58,62 +58,76 @@ export default ->
         c_Input
           type: 'text'
           placeholder: '请输入手机号'
-
       c_FormItem
         labelCol:
           span: 5
         wrapperCol:
           span: 19
-        label: '身份证号码'
+        label: '客户号'
       ,
         c_Input
           type: 'text'
-          placeholder: '请输入身份证号码'
-
+          placeholder: '请输入客户号'
       c_FormItem
         labelCol:
           span: 5
         wrapperCol:
           span: 19
-        label: '租赁期限'
+        label: '换租地址'
       ,
         c_Input
           type: 'text'
-          placeholder: '请输入租赁期限'
-
+          placeholder: '请输入换租地址'
       c_FormItem
         labelCol:
           span: 5
         wrapperCol:
           span: 19
-        label: '付款方式'
+        label: '房源编号'
       ,
         c_Input
           type: 'text'
-          placeholder: '请输入付款方式'
-
+          placeholder: '请输入房源编号'
       c_FormItem
         labelCol:
           span: 5
         wrapperCol:
           span: 19
-        label: '房屋租金'
+        label: '房间编号'
       ,
         c_Input
           type: 'text'
-          placeholder: '请输入房屋租金'
-
+          placeholder: '请输入房间编号'
       c_FormItem
         labelCol:
           span: 5
         wrapperCol:
           span: 19
-        label: '押金'
+        label: '床位编号'
       ,
         c_Input
           type: 'text'
-          placeholder: '请输入押金'
-
+          placeholder: '请输入床位编号'
+      c_FormItem
+        labelCol:
+          span: 5
+        wrapperCol:
+          span: 19
+        label: '换租日期'
+      ,
+        c_Input
+          type: 'text'
+          placeholder: '请输入换租日期'
+      c_FormItem
+        labelCol:
+          span: 5
+        wrapperCol:
+          span: 19
+        label: '租赁周期'
+      ,
+        c_Input
+          type: 'text'
+          placeholder: '请输入租赁周期'
       c_FormItem {}
       ,
         c_Row {}
@@ -121,22 +135,11 @@ export default ->
           c_Col
             xs: 24
             sm: 19
-            offset: 3
+            offset: 5
           ,
             c_Button
-              type: 'primary'
-              style:
-                float: 'left'
-            , '上一步'
-            c_Button
-              type: 'primary'
               style:
                 float: 'right'
-                marginLeft: '10px'
-                marginRight: '-40px'
-            , '整租'
-            c_Button
+              key: 'primary'
               type: 'primary'
-              style:
-                float: 'right'
-            , '分租'
+            , '完成'

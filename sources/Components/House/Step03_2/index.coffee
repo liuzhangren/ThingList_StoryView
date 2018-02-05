@@ -24,12 +24,13 @@ export default ->
       c_Table
     } = CFX
 
-    c_div {}
-    ,
-      c_PageContent
-        Content: [
-          c_Steps
-            current: 2
-          c_Table {}
-          c_Buttons {}
-        ]
+    c_PageContent
+      Content: [
+        c_Steps
+          key: 'Steps'
+          current: 2
+        c_Table
+          key: 'Table'
+        c_Buttons
+          key: 'Buttons'
+      ]

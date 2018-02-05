@@ -48,14 +48,12 @@ export default ->
     c_FormItem {}
     ,
       c_Button
+        type: 'primary'
         style:
           float: 'right'
-        key: 'primary'
-        type: 'primary'
       , '完成'
       c_Button
+        type: 'primary'
         style:
           float: 'left'
-        key: 'primary'
-        type: 'primary'
       , '上一步' 

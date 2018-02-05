@@ -34,6 +34,34 @@ CFX = prefixDom {
 
 export default =>
 
+  data: [
+      key: '1'
+      age: 2
+      name: 'A'
+      money: '2000'
+      theway: '押一付三'
+    ,
+      key: '2'
+      age: 6
+      name: 'B'
+      money: '1000'
+      theway: '押一付三'
+    ,
+      key: '3'
+      name: 'C'
+      age: 4
+      money: '1000'
+      theway: '押一付三'
+  ]
+
+  rowSelection:
+    onChange: (selectedRowKeys, selectedRows) =>
+      console.log("selectedRowKeys: #{selectedRowKeys}", 'selectedRows: ', selectedRows)
+    getCheckboxProps: (record) =>
+      disabled: record.name == 'Disabled User'
+
+  render: ->
+
     {
       c_a
       c_span
@@ -60,6 +88,7 @@ export default =>
           marginBottom: '16px'
       , '床位详细'
       c_EditableTable
+        rowSelection: false
         btn: '添加床位'
         Title1: '床位编号'
         Title2: '床位别名'
@@ -85,11 +114,6 @@ export default =>
             money: '1000'
             theway: '押一付三'
         ]
-        titleSource: [
-          '床位编号'
-          '床位别名'
-          '租金'
-          '压付方式'
-          '操作'
-        ]
 
+
+        

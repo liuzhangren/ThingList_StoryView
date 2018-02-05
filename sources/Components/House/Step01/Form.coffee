@@ -48,6 +48,7 @@ export default ->
         c_Input
           type: 'text'
           placeholder: '请输入省'
+
       c_FormItem
         labelCol:
           span: 5
@@ -58,6 +59,7 @@ export default ->
         c_Input
           type: 'text'
           placeholder: '请输入市'
+
       c_FormItem
         labelCol:
           span: 5
@@ -68,6 +70,7 @@ export default ->
         c_Input
           type: 'text'
           placeholder: '请输入区'
+
       c_FormItem
         labelCol:
           span: 5
@@ -78,6 +81,7 @@ export default ->
         c_Input
           type: 'text'
           placeholder: '请输入街道'
+
       c_FormItem
         labelCol:
           span: 5
@@ -88,6 +92,7 @@ export default ->
         c_Input
           type: 'text'
           placeholder: '请输入小区'
+
       c_FormItem
         labelCol:
           span: 5
@@ -98,6 +103,7 @@ export default ->
         c_Input
           type: 'text'
           placeholder: '请输入栋'
+
       c_FormItem
         labelCol:
           span: 5
@@ -108,6 +114,7 @@ export default ->
         c_Input
           type: 'text'
           placeholder: '请输入单元'
+
       c_FormItem
         labelCol:
           span: 5
@@ -118,6 +125,7 @@ export default ->
         c_Input
           type: 'text'
           placeholder: '请输入楼层'
+
       c_FormItem
         labelCol:
           span: 5
@@ -128,6 +136,7 @@ export default ->
         c_Input
           type: 'text'
           placeholder: '请输入房号'
+
       c_FormItem {}
       ,
         c_Row {}
@@ -138,8 +147,7 @@ export default ->
             offset: 5
           ,
             c_Button
+              type: 'primary'
               style:
                 float: 'right'
-              key: 'primary'
-              type: 'primary'
             , '下一步'

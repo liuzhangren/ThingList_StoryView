@@ -6,8 +6,8 @@ import {
   Row
   Col
 } from 'antd'
-
 FormItem = Form.Item
+
 
 CFX = prefixDom {
   'div'
@@ -43,21 +43,51 @@ export default ->
           span: 5
         wrapperCol:
           span: 19
-        label: '押付方式'
+        label: '身份证号'
       ,
         c_Input
           type: 'text'
-          placeholder: '请输入押付方式'
+          placeholder: '请输入身份证号'
       c_FormItem
         labelCol:
           span: 5
         wrapperCol:
           span: 19
-        label: '出租金额'
+        label: '手机号'
       ,
         c_Input
           type: 'text'
-          placeholder: '请输入出租金额'
+          placeholder: '请输入手机号'
+      c_FormItem
+        labelCol:
+          span: 5
+        wrapperCol:
+          span: 19
+        label: '客户号'
+      ,
+        c_Input
+          type: 'text'
+          placeholder: '请输入客户号'
+      c_FormItem
+        labelCol:
+          span: 5
+        wrapperCol:
+          span: 19
+        label: '退款方式'
+      ,
+        c_Input
+          type: 'text'
+          placeholder: '请输入退款方式'
+      c_FormItem
+        labelCol:
+          span: 5
+        wrapperCol:
+          span: 19
+        label: '退款金额'
+      ,
+        c_Input
+          type: 'text'
+          placeholder: '请输入退款金额'                 
       c_FormItem {}
       ,
         c_Row {}
@@ -68,13 +98,8 @@ export default ->
             offset: 5
           ,
             c_Button
-              type: 'primary'
               style:
                 float: 'right'
-            , '下一步'
-            c_Button
+              key: 'primary'
               type: 'primary'
-              style:
-                float: 'left'
-                marginLeft: '-70px'
-            , '上一步' 
+            , '完成'

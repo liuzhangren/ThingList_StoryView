@@ -20,9 +20,10 @@ import BedDetailed from '../Components/House/BedDetailed'
 
 # import index from '../Components/Layout/index'
 
-# import Modal from '../Components/House/Modal'
+import Radio from '../Components/House/test/Modal/Radio'
 
 CFX = prefixDom {
+  Radio
   PageHeader
   Card
   HouseButtons
@@ -44,6 +45,16 @@ CFX = prefixDom {
 export default =>
 
   storiesOf '房源管理', module
+
+  .add 'test'
+
+  , =>
+
+    {
+      c_Radio
+    } = CFX
+
+    c_Radio {}  
 
   .add 'cp_添加房源按钮'
 
@@ -90,7 +101,8 @@ export default =>
           '房源列表'
         ]
         title: '房源列表'    
-      c_House {}
+      c_House
+        key: 'House'
     ]  
 
   .add 'pg_step01添加房源地址'
@@ -110,9 +122,9 @@ export default =>
           '添加房源地址'
         ]
         title: '添加房源地址'
-      c_Step01 {}           
+      c_Step01
+        key: 'Step01'      
     ]
-
 
   .add 'pg_step02添加房东信息'
 
@@ -131,9 +143,9 @@ export default =>
           '添加房东信息'
         ]
         title: '添加房东信息'
-      c_Step02 {}          
+      c_Step02
+        key: 'Step03'
     ]
-
 
   .add 'pg_step03_1整租方式'
 
@@ -152,7 +164,8 @@ export default =>
           '添加出租方式'
         ]
         title: '添加出租方式'    
-      c_Step03_1 {}
+      c_Step03_1
+        key: 'Step03_1'
     ]  
 
   .add 'pg_step03_2分组方式'
@@ -172,7 +185,8 @@ export default =>
           '添加出租方式'
         ]
         title: '添加出租方式' 
-      c_Step03_2 {}
+      c_Step03_2
+        key: 'Step03_2'
     ]  
 
   .add 'cp_房源详细'
