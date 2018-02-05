@@ -5,7 +5,6 @@ import Buttons from './Buttons'
 import Table from './Table'
 
 CFX = prefixDom {
-  'div'
   PageContent
   Buttons
   Table
@@ -14,7 +13,6 @@ CFX = prefixDom {
 export default ->
 
   {
-    c_div
     c_PageContent
     c_Buttons
     c_Table

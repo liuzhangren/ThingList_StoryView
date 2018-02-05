@@ -42,13 +42,13 @@ export default =>
       age: 6
       name: 'B'
       money: '1000'
-      theway: '押一付三'      
+      theway: '押一付三'
     ,
       key: '3'
       name: 'C'
       age: 4
       money: '1000'
-      theway: '押一付三'        
+      theway: '押一付三'
   ]
 
   rowSelection:
@@ -126,4 +126,4 @@ export default =>
                 style:
                   color: '#F00'
                 href: '#'
-              , '删除'  
+              , '删除'

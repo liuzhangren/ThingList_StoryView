@@ -21,11 +21,11 @@ export default ->
       c_Form
     } = CFX
 
-    c_div {}
-    ,
-      c_PageContent
-        Content: [
-          c_Steps
-            current: 1
-          c_Form {}
-        ]
+    c_PageContent
+      Content: [
+        c_Steps
+          key: 'Steps'
+          current: 1
+        c_Form
+          key: 'Form'
+      ]

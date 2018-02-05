@@ -47,6 +47,7 @@ export default ->
         c_Input
           type: 'text'
           placeholder: '请输入业主姓名'
+
       c_FormItem
         labelCol:
           span: 5
@@ -57,6 +58,7 @@ export default ->
         c_Input
           type: 'text'
           placeholder: '请输入手机号'
+
       c_FormItem
         labelCol:
           span: 5
@@ -67,6 +69,7 @@ export default ->
         c_Input
           type: 'text'
           placeholder: '请输入身份证号码'
+
       c_FormItem
         labelCol:
           span: 5
@@ -77,6 +80,7 @@ export default ->
         c_Input
           type: 'text'
           placeholder: '请输入租赁期限'
+
       c_FormItem
         labelCol:
           span: 5
@@ -87,6 +91,7 @@ export default ->
         c_Input
           type: 'text'
           placeholder: '请输入付款方式'
+
       c_FormItem
         labelCol:
           span: 5
@@ -97,6 +102,7 @@ export default ->
         c_Input
           type: 'text'
           placeholder: '请输入房屋租金'
+
       c_FormItem
         labelCol:
           span: 5
@@ -107,6 +113,7 @@ export default ->
         c_Input
           type: 'text'
           placeholder: '请输入押金'
+
       c_FormItem {}
       ,
         c_Row {}
@@ -117,22 +124,19 @@ export default ->
             offset: 3
           ,
             c_Button
+              type: 'primary'
               style:
                 float: 'left'
-              key: 'primary'
-              type: 'primary'
             , '上一步'
             c_Button
+              type: 'primary'
               style:
                 float: 'right'
                 marginLeft: '10px'
                 marginRight: '-40px'
-              key: 'primary'
-              type: 'primary'
             , '整租'
             c_Button
+              type: 'primary'
               style:
                 float: 'right'
-              key: 'primary'
-              type: 'primary'
-            , '分租'    
+            , '分租'

@@ -43,14 +43,6 @@ class Test extends Component
         value
       }
 
-    # check = () =>
-    #   @setState {
-    #     editable: false
-    #   }
-    #   if (@props.onChange) {
-    #     @props.onChange(@state.value)
-    #   }
-
     c_div {}
     , 'HelloWorld!!!'
 

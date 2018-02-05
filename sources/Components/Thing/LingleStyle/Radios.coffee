@@ -21,7 +21,7 @@ CFX = prefixDom {
   Button
 }
 
-class Drop extends Component
+class Radios extends Component
 
   constructor: (props) ->
     super props
@@ -88,4 +88,4 @@ class Drop extends Component
               type: 'primary'
             , '确定'             
 
-export default Drop
+export default Radios

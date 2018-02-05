@@ -6,8 +6,8 @@ import {
   Row
   Col
 } from 'antd'
-FormItem = Form.Item
 
+FormItem = Form.Item
 
 CFX = prefixDom {
   'div'
@@ -68,15 +68,13 @@ export default ->
             offset: 5
           ,
             c_Button
+              type: 'primary'
               style:
                 float: 'right'
-              key: 'primary'
-              type: 'primary'
             , '下一步'
             c_Button
+              type: 'primary'
               style:
                 float: 'left'
                 marginLeft: '-70px'
-              key: 'primary'
-              type: 'primary'
             , '上一步' 
