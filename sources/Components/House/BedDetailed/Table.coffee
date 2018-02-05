@@ -60,13 +60,11 @@ export default =>
           marginBottom: '16px'
       , '床位详细'
       c_EditableTable
-        Title: [
-          '床位编号'
-          '床位别名'
-          '租金'
-          '压付方式'
-          '操作'
-        ]
+        Title1: '床位编号'
+        Title2: '床位别名'
+        Title3: '租金'
+        Title4: '压付方式'
+        Title5: '操作'
         dataSource: [
             key: '1'
             age: 2

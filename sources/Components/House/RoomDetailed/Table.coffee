@@ -61,6 +61,11 @@ export default =>
       , '床位详细'
       c_EditableTable
         btn: '添加床位'
+        Title1: '床位编号'
+        Title2: '床位别名'
+        Title3: '租金'
+        Title4: '压付方式'
+        Title5: '操作'
         dataSource: [
             key: '1'
             age: 2

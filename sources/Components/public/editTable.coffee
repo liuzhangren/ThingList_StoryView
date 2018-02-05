@@ -139,7 +139,7 @@ class EditableTable extends React.Component
 
     @columns = [
         key: 'name'
-        title: '床位编号'
+        title: @props.Title1
         dataIndex: 'name' 
         render: (text,record) =>
           c_EditableCell
@@ -147,7 +147,7 @@ class EditableTable extends React.Component
             onChange: @.onCellChange record.key, 'name'
       ,
         key: 'age'
-        title: '床位别名'
+        title: @props.Title2
         dataIndex: 'age'
         render: (text,record) =>
           c_EditableCell
@@ -155,7 +155,7 @@ class EditableTable extends React.Component
             onChange: @.onCellChange record.key, 'age'
       ,
         key: 'money'
-        title: '租金'
+        title: @props.Title3
         dataIndex: 'money'
         render: (text,record) =>
           c_EditableCell
@@ -163,7 +163,7 @@ class EditableTable extends React.Component
             onChange: @.onCellChange record.key, 'money'
       ,
         key: 'theway'
-        title: '压付方式'
+        title: @props.Title4
         dataIndex: 'theway'
         render: (text,record) =>
           c_EditableCell
@@ -171,7 +171,7 @@ class EditableTable extends React.Component
             onChange: @.onCellChange record.key, 'theway'
       ,
         key: 'operation'
-        title: '操作'
+        title: @props.Title5
         dataIndex: 'operation'
         render: (text,record) =>
           if @state.dataSource.length > 1
@@ -237,12 +237,17 @@ class EditableTable extends React.Component
     ,
       c_FormItem {}
       ,
-        c_Button {
-          (nb 'editable_add_btn')...
-          onClick: @.handleAdd
-          type: 'primary'
-        }
-        , @props.btn
+        if @props.btn
+        then [
+          c_Button {
+            key: 'addbtn'
+            (nb 'editable_add_btn')...
+            onClick: @.handleAdd
+            type: 'primary'
+          }
+          , @props.btn
+        ]
+        else []
       c_Table
         rowSelection: @rowSelection
         dataSource: @state.dataSource
