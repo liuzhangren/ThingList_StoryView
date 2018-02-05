@@ -89,6 +89,8 @@ class Buttons extends Component
       ,
         c_Item {}
         , '未分组'
+        c_Item {}
+        , '回收站'
 
     c_div
       style:

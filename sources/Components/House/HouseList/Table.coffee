@@ -26,7 +26,7 @@ export default =>
       key: '1'
       name: '刘章仁'
       num: '01'
-      rent: '间租'
+      rent: '套租'
       pay: '押一付三'
       money: '1000'
       status: '已租'
@@ -35,7 +35,7 @@ export default =>
       key: '2'
       name: '何文涛'
       num: '02'
-      rent: '间租'
+      rent: '分租'
       pay: '押一付三'
       money: '2000'
       status: '已租'
@@ -44,7 +44,7 @@ export default =>
       key: '3'
       name: '张三'
       num: '03'
-      rent: '间租'
+      rent: '分租'
       pay: '押一付三'
       money: '3000'
       status: '空置'
@@ -53,7 +53,7 @@ export default =>
       key: '4'
       name: '刘本义'
       num: '04'
-      rent: '间租'
+      rent: '分租'
       pay: '押一付三'
       money: '4000'
       status: '空置'
@@ -84,6 +84,10 @@ export default =>
       dataSource: @data
       rowSelection: @rowSelection
     ,
+      c_Column
+        key: 'rent'
+        title: '出租方式'
+        dataIndex: 'rent'
 
       c_Column
         key: 'name'
@@ -95,14 +99,9 @@ export default =>
           , record.name
 
       c_Column
-        key: 'rent'
-        title: '出租方式'
-        dataIndex: 'rent'
-
-      c_Column
         key: 'num'
         title: '床位编号'
-        dataIndex: 'num'        
+        dataIndex: 'num'
 
       c_Column
         key: 'pay'

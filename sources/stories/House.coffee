@@ -2,6 +2,11 @@ import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 import { Card } from 'antd'
 import { PageHeader } from 'cfx.antd-wrapper'
+import editTable from '../Components/public/editTable'
+import Steps from '../Components/public/Steps'
+import PageContent from '../Components/public/PageContent'
+import Buttons from '../Components/House/Step03_2/Buttons'
+
 
 import HouseButtons from '../Components/House/HouseList/Buttons'
 import HouseTable from '../Components/House/HouseList/Table'
@@ -9,7 +14,7 @@ import House from '../Components/House/HouseList'
 import Step01 from '../Components/House/Step01'
 import Step02 from '../Components/House/Step02'
 import Step03_1 from '../Components/House/Step03_1'
-import Step03_2 from '../Components/House/Step03_2'
+# import Step03_2 from '../Components/House/Step03_2'
 import HouseCard from '../Components/House/HouseDetailed/Card'
 import HouseRoom from '../Components/public/Table'
 import HouseDetailed from '../Components/House/HouseDetailed'
@@ -23,16 +28,20 @@ import BedDetailed from '../Components/House/BedDetailed'
 import Radio from '../Components/House/test/Modal/Radio'
 
 CFX = prefixDom {
+  Buttons
+  PageContent
+  editTable
   Radio
   PageHeader
   Card
   HouseButtons
   HouseTable
   House
+  Steps
   Step01
   Step02
   Step03_1
-  Step03_2
+  # Step03_2
   HouseCard
   HouseRoom
   HouseDetailed
@@ -173,8 +182,11 @@ export default =>
   , =>
 
     {
-      c_PageHeader     
-      c_Step03_2
+      c_PageHeader
+      c_PageContent
+      c_Steps
+      c_editTable
+      c_Buttons
     } = CFX
 
     [
@@ -184,10 +196,29 @@ export default =>
           '房源管理'
           '添加出租方式'
         ]
-        title: '添加出租方式' 
-      c_Step03_2
-        key: 'Step03_2'
-    ]  
+        title: '添加出租方式'
+      c_PageContent
+        Content: [
+          c_Steps
+            current: 2
+          c_editTable
+            btn: '添加房间'
+            Title1: '房间编号'
+            Title2: '房间别名'
+            Title3: '押金'
+            Title4: '押付方式'
+            Title5: '操作'
+            dataSource: [
+              key: '1'
+              name: 'A'
+              age: '10'
+              money: '2000'
+              theway: '押一付三'
+            ]
+            key: 'Step03'
+          c_Buttons {}
+        ]
+    ]
 
   .add 'cp_房源详细'
 
@@ -282,7 +313,7 @@ export default =>
           '房间详细信息'
         ]
         title: '房间详细信息'
-      c_RoomDetailed {}        
+      c_RoomDetailed {}
     ]   
 
   .add 'pg_床位详细信息'

@@ -26,6 +26,6 @@ export default ->
     header: ''
     content: ''
 
-    pageHeader: ''
+    PageHeader: ''
     footer: '@footer'
       

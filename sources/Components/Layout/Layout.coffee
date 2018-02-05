@@ -3,7 +3,6 @@ import { prefixDom } from 'cfx.dom'
 import Menu from './Menu'
 import {
   SiderContent
-  header  
 } from 'cfx.antd-wrapper'
 import Content from './LayoutCon'
 

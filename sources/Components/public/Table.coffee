@@ -55,12 +55,6 @@ export default ->
       way: '押一付三'      
   ]
 
-  rowSelection:
-    onChange: (selectedRowKeys, selectedRows) =>
-      console.log("selectedRowKeys: #{selectedRowKeys}", 'selectedRows: ', selectedRows)
-    getCheckboxProps: (record) =>
-      disabled: record.name == 'Disabled User'
-
   render: ->
 
     {
@@ -95,11 +89,11 @@ export default ->
             float: 'right'
           key: 'primary'
           type: 'primary'
-        , '添加房间'              
+        , '添加房间'
+          
       c_Table
         key: 'Table'
         dataSource: @data
-        rowSelection: @rowSelection
       ,
 
         c_Column
