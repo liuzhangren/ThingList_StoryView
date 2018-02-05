@@ -3,13 +3,13 @@ import PageHeader from '../public/PageHeader'
 
 import {
   Content
-  Header
+  header
 } from 'cfx.antd-wrapper'
 
 CFX = prefixDom {
   'div'
   Content
-  Header
+  header
   PageHeader
 }
 
@@ -18,14 +18,14 @@ export default ->
   {
     c_div
     c_Content
-    c_Header
+    c_header
     c_PageHeader
   } = CFX
 
   c_Content
-    Header: ''
+    header: ''
     content: ''
 
-    PageHeader: ''
+    pageHeader: ''
     footer: '@footer'
       

@@ -1,11 +1,11 @@
 import { prefixDom } from 'cfx.dom'
 import {
-  PageHeader
+  pageHeader
 } from 'cfx.antd-wrapper'
 
 CFX = prefixDom {
   'div'
-  PageHeader
+  pageHeader
 }
 
 export default ({ props... }) ->
@@ -15,13 +15,13 @@ export default ({ props... }) ->
   } = props
 
   { 
-    c_PageHeader
+    c_pageHeader
   } = CFX
 
   if title is 'HouseList'
   then [
-    c_PageHeader
-      key: 'PageHeader'
+    c_pageHeader
+      key: 'pageHeader'
       breadcrumb: [
         '房源管理'
         '房源列表'
@@ -30,7 +30,7 @@ export default ({ props... }) ->
   ]
   else if title is 1
   then [
-    c_PageHeader
+    c_pageHeader
       key: 'House'
       breadcrumb: [
         '房源管理'
@@ -40,7 +40,7 @@ export default ({ props... }) ->
   ]
   else if title is 'address'
   then [
-    c_PageHeader
+    c_pageHeader
       key: 'address'
       breadcrumb: [
         '房源管理'
@@ -50,7 +50,7 @@ export default ({ props... }) ->
   ]
   else if title is 'user'
   then [
-    c_PageHeader
+    c_pageHeader
       key: 'user'
       breadcrumb: [
         '房源管理'
@@ -60,7 +60,7 @@ export default ({ props... }) ->
   ]
   else if title is 'rents'
   then [
-    c_PageHeader
+    c_pageHeader
       key: 'rents'
       breadcrumb: [
         '房源管理'
@@ -70,7 +70,7 @@ export default ({ props... }) ->
   ]
   else if title is 'rent'
   then [
-    c_PageHeader
+    c_pageHeader
       key: 'rent'
       breadcrumb: [
         '房源管理'
@@ -80,7 +80,7 @@ export default ({ props... }) ->
   ]
   else if title is 'Card'
   then [
-    c_PageHeader
+    c_pageHeader
       key: 'Card'
       breadcrumb: [
         '房源管理'
@@ -90,7 +90,7 @@ export default ({ props... }) ->
   ]
   else if title is 'Room'
   then [
-    c_PageHeader
+    c_pageHeader
       key: 'Room'
       breadcrumb: [
         '房源管理'
@@ -100,7 +100,7 @@ export default ({ props... }) ->
   ]
   else if title is 'Bed'
   then [
-    c_PageHeader
+    c_pageHeader
       key: 'Bed'
       breadcrumb: [
         '房源管理'

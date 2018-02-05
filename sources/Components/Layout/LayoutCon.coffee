@@ -30,7 +30,7 @@ export default ->
   c_Content
     header: c_Header {}
     content: ' '
-    PageHeader: 
+    pageHeader: 
       c_PageHeader
         title: 'HouseList'
     footer: '@footer'

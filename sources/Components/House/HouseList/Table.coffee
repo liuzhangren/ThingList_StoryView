@@ -2,7 +2,6 @@ import { prefixDom } from 'cfx.dom'
 import {
   Table
   Icon
-  Divider
   Card
 } from 'antd'
 
@@ -17,7 +16,6 @@ CFX = prefixDom {
   'span'
   Table
   Icon
-  Divider
   Column
   ColumnGroup
 }

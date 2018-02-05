@@ -3,7 +3,6 @@ import {
   Row
   Col
   Card
-  Divider
 } from 'antd'
 
 CFX = prefixDom {
@@ -11,7 +10,7 @@ CFX = prefixDom {
   Row
   Col
   Card
-  Divider
+
 }
 
 export default =>
@@ -23,7 +22,6 @@ export default =>
       c_Card
       c_Row
       c_Col
-      c_Divider
     } = CFX
 
     c_div {}  
@@ -191,6 +189,5 @@ export default =>
               display: 'table-cell'
           , '已租/空置'
 
-      c_Divider {}
 
 

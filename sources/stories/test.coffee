@@ -1,22 +1,22 @@
-# import { storiesOf } from '@storybook/react'
-# import { prefixDom } from 'cfx.dom'
+import { storiesOf } from '@storybook/react'
+import { prefixDom } from 'cfx.dom'
 
-# import test from '../Components/House/test/EditionTable/index'
+import test from '../Components/House/test/Table'
 
-# CFX = prefixDom {
-#   test
-# }
+CFX = prefixDom {
+  test
+}
 
-# export default =>
+export default =>
 
-#   storiesOf '测试代码', module
+  storiesOf '测试代码', module
 
-#   .add 'test'
+  .add 'test'
 
-#   , =>
+  , =>
 
-#     {
-#       c_test
-#     } = CFX
+    {
+      c_test
+    } = CFX
     
-#     c_test {}
+    c_test {}

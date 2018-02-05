@@ -4,7 +4,6 @@ import {
   Row
   Col
   Card
-  Divider
 } from 'antd'
 
 
@@ -13,7 +12,6 @@ CFX = prefixDom {
   Row
   Col
   Card
-  Divider
 }
 
 export default =>
@@ -25,7 +23,6 @@ export default =>
       c_Card
       c_Row
       c_Col
-      c_Divider
     } = CFX
 
     c_div {}  
@@ -142,6 +139,5 @@ export default =>
               color: 'rgba(0,0,0,.65)'
               display: 'table-cell'
           , '押一付三'
-      c_Divider {}
 
 
