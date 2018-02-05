@@ -36,7 +36,10 @@ style =
       color: '#108ee9' 
 
   editable_add_btn:
-    marginBottom: '8px'
+    float: 'right'
+    
+    
+
 
 export default styl style
 ,

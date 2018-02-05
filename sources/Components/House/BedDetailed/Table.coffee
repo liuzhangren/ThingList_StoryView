@@ -60,7 +60,13 @@ export default =>
           marginBottom: '16px'
       , '床位详细'
       c_EditableTable
-        btn: '添加床位'
+        Title: [
+          '床位编号'
+          '床位别名'
+          '租金'
+          '压付方式'
+          '操作'
+        ]
         dataSource: [
             key: '1'
             age: 2
@@ -79,12 +85,5 @@ export default =>
             age: 4
             money: '1000'
             theway: '押一付三'
-        ]
-        titleSource: [
-          '床位编号'
-          '床位别名'
-          '租金'
-          '压付方式'
-          '操作'
         ]
 

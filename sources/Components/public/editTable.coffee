@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import nb from './style'
 import {
   Table
+  Form
   Input
   Icon
   Button
@@ -17,8 +18,9 @@ CFX = prefixDom {
   Icon
   Button
   Popconfirm
+  Form
 }
-
+FormItem = Form.Item
 class EditableCell extends React.Component
   constructor: (props) ->
     super props
@@ -50,6 +52,7 @@ class EditableCell extends React.Component
       value
       editable
     } = @state
+
 
     {
       c_div
@@ -107,7 +110,10 @@ CFX = prefixDom {
   Button
   Popconfirm
   EditableCell
+  Form
+  FormItem
 }
+FormItem = Form.Item
 class EditableTable extends React.Component
   {
     c_div
@@ -118,45 +124,54 @@ class EditableTable extends React.Component
     c_Button
     c_Popconfirm
     c_EditableCell
+    c_Form
+    c_FormItem
   } = CFX
-
+  
+  
   constructor: (props) ->
     super props
+    console.log props
     @state =
-      dataSource: [
-          key: '0'
-          name: 'Edward King 0'
-          age: '32'
-          address: 'London, Park Lane no. 0'
-        ,
-          key: '1'
-          name: 'Edward King 1'
-          age: '32'
-          address: 'London, Park Lane no. 1'
-      ]
+      dataSource: props.dataSource
       count: 2
     @
 
     @columns = [
         key: 'name'
-        title: 'name'
-        dataIndex: 'name'
-        width: '30%'
+        title: '床位编号'
+        dataIndex: 'name' 
         render: (text,record) =>
           c_EditableCell
             value: text
             onChange: @.onCellChange record.key, 'name'
       ,
         key: 'age'
-        title: 'age'
+        title: '床位别名'
         dataIndex: 'age'
+        render: (text,record) =>
+          c_EditableCell
+            value: text
+            onChange: @.onCellChange record.key, 'age'
       ,
-        key: 'address'
-        title: 'address'
-        dataIndex: 'address'
+        key: 'money'
+        title: '租金'
+        dataIndex: 'money'
+        render: (text,record) =>
+          c_EditableCell
+            value: text
+            onChange: @.onCellChange record.key, 'money'
+      ,
+        key: 'theway'
+        title: '压付方式'
+        dataIndex: 'theway'
+        render: (text,record) =>
+          c_EditableCell
+            value: text
+            onChange: @.onCellChange record.key, 'theway'
       ,
         key: 'operation'
-        title: 'operation'
+        title: '操作'
         dataIndex: 'operation'
         render: (text,record) =>
           if @state.dataSource.length > 1
@@ -168,8 +183,10 @@ class EditableTable extends React.Component
             ,
               c_a
                 key: 'btn'
+                style:
+                  color: '#F00'
                 href: '#'
-              , 'Delete'
+              , '删除'
           ]
           else null
     ]
@@ -196,29 +213,40 @@ class EditableTable extends React.Component
   handleAdd: () =>
     newData = {
       key: @state.count
-      name: "Edward King #{@state.count}"
-      age: '32'
-      address: "London,Park Lane no. #{@state.count}"
+      name: "#{@state.count}"
+      age: "#{@state.count}"
+      money: "2000"
+      theway: '压一付三'
     }
     @setState {
       dataSource: [ @state.dataSource... , newData ]
       conunt: @state.count++
     }
-  render: ->
-
+  rowSelection:
+    onChange: (selectedRowKeys, selectedRows) =>
+      console.log("selectedRowKeys: #{selectedRowKeys}", 'selectedRows: ', selectedRows)
+    getCheckboxProps: (record) =>
+      disabled: record.name == 'Disabled User'
+  
+  render: (props) ->
+    
     { dataSource } = @state
     columns = @columns
-    
+
     c_div {}
     ,
-      c_Button {
-        (nb 'editable_add_btn')...
-        onClick: @.handleAdd
-      }
-      , 'Add'
+      c_FormItem {}
+      ,
+        c_Button {
+          (nb 'editable_add_btn')...
+          onClick: @.handleAdd
+          type: 'primary'
+        }
+        , @props.btn
       c_Table
-        bordered: true
+        rowSelection: @rowSelection
         dataSource: @state.dataSource
         columns: @columns
 
 export default EditableTable
+ 
