@@ -248,10 +248,19 @@ class EditableTable extends React.Component
           , @props.btn
         ]
         else []
-      c_Table
-        rowSelection: @rowSelection
-        dataSource: @state.dataSource
-        columns: @columns
+      if @props.rowSelection is true
+      then [
+        c_Table
+          rowSelection: @rowSelection
+          dataSource: @state.dataSource
+          columns: @columns
+      ]
+      else [
+        c_Table
+          dataSource: @state.dataSource
+          columns: @columns
+      ]
+      
 
 export default EditableTable
  

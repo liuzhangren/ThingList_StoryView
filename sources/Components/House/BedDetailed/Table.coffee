@@ -60,6 +60,7 @@ export default =>
           marginBottom: '16px'
       , '床位详细'
       c_EditableTable
+        rowSelection: false
         Title1: '床位编号'
         Title2: '床位别名'
         Title3: '租金'
