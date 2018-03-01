@@ -31,10 +31,10 @@ export default =>
       c_div
         style:
           fontSize: '16px'
-          color: 'rgba(0,0,0,.85)'
+          color: 'rgba(0, 0, 0, .85)'
           fontWeight: '500'
           marginBottom: '16px'
-      , '房源详细'    
+      , '房源详细'
       c_Row
         style:
           marginLeft: '-16px'
@@ -64,7 +64,8 @@ export default =>
               paddingBottom: '16px'
               color: 'rgba(0,0,0,.65)'
               display: 'table-cell'
-          , '湖北省武汉市'    
+          , '湖北省武汉市'
+
         c_Col
           xs: 24
           sm: 12
@@ -190,6 +191,7 @@ export default =>
               color: 'rgba(0,0,0,.65)'
               display: 'table-cell'
           , '已租/空置'
-        c_Divider {}
+
+      c_Divider {}
 
 

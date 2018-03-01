@@ -1,10 +1,9 @@
 import { prefixDom } from 'cfx.dom'
-import PageContent from '../../public/PageContent'
-import Steps from '../../public/Steps'
+import PageContent from '../../../Components/public/PageContent'
+import Steps from './Steps'
 import Form from './Form'
 
 CFX = prefixDom {
-  'div'
   PageContent
   Steps
   Form
@@ -15,7 +14,6 @@ export default ->
   render: ->
 
     {
-      c_div
       c_PageContent
       c_Steps
       c_Form
@@ -25,7 +23,6 @@ export default ->
       Content: [
         c_Steps
           key: 'Steps'
-          current: 1
         c_Form
           key: 'Form'
       ]

@@ -2,6 +2,7 @@ import { prefixDom } from 'cfx.dom'
 import {
   Table
   Icon
+  Divider
   Card
 } from 'antd'
 
@@ -16,6 +17,7 @@ CFX = prefixDom {
   'span'
   Table
   Icon
+  Divider
   Column
   ColumnGroup
 }
@@ -65,6 +67,7 @@ export default =>
       c_span
       c_Table
       c_Icon
+      c_Divider
       c_div
       c_Column
       c_ColumnGroup
@@ -73,7 +76,6 @@ export default =>
     c_Table
       key: 'Table'
       dataSource: @data
-      pagination: false
       rowSelection: @rowSelection
     ,
 
@@ -114,6 +116,9 @@ export default =>
               href: '#'
               className: 'ant-dropdown-link'
             , '修改'
+            c_Divider
+              key: 'Divider'
+              type: 'vertical'
             c_a
               key: 'a3'
               style:

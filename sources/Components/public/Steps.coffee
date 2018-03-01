@@ -146,7 +146,7 @@ export default ({ props... }) ->
           icon:
             c_Icon
               type: 'edit'
-  ]  
+  ]
 
 
   # c_Steps

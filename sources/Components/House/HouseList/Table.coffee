@@ -1,156 +1,100 @@
+import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
-import {
-  Table
-  Icon
-  Divider
-  Card
-} from 'antd'
-
-{
-  Column
-  ColumnGroup
-} = Table
+import { Table } from 'cfx.antd-wrapper-ch'
 
 CFX = prefixDom {
   'div'
-  'a'
-  'span'
   Table
-  Icon
-  Column
-  Divider
-  ColumnGroup
 }
 
-export default =>
-
-  data: [
-      key: '1'
-      name: '刘章仁'
-      num: '01'
-      rent: '套租'
-      pay: '押一付三'
-      money: '1000'
-      status: '已租'
-      address: '武汉市武昌区聚华豪庭'
-    ,
-      key: '2'
-      name: '何文涛'
-      num: '02'
-      rent: '分租'
-      pay: '押一付三'
-      money: '2000'
-      status: '已租'
-      address: '武汉市武昌区聚华豪庭'
-    ,
-      key: '3'
-      name: '张三'
-      num: '03'
-      rent: '分租'
-      pay: '押一付三'
-      money: '3000'
-      status: '空置'
-      address: '武汉市武昌区聚华豪庭'
-    ,
-      key: '4'
-      name: '刘本义'
-      num: '04'
-      rent: '分租'
-      pay: '押一付三'
-      money: '4000'
-      status: '空置'
-      address: '武汉市武昌区聚华豪庭'
-  ]
-
-  rowSelection:
-    onChange: (selectedRowKeys, selectedRows) =>
-      console.log("selectedRowKeys: #{selectedRowKeys}", 'selectedRows: ', selectedRows)
-    getCheckboxProps: (record) =>
-      disabled: record.name == 'Disabled User'
+export default ->
 
   render: ->
 
     {
-      c_a
-      c_span
-      c_Table
-      c_Icon
-      c_Divider
       c_div
-      c_Column
-      c_ColumnGroup
+      c_Table
     } = CFX
 
     c_Table
       key: 'Table'
-      dataSource: @data
-      pagination: false
-      rowSelection: @rowSelection
-    ,
-      c_Column
-        key: 'rent'
-        title: '出租方式'
-        dataIndex: 'rent'
+      addChildren: true
+      # editPen: true
+      header:
+        landlord: '房东'
+        theway: '出租方式'
+        pays: '押付方式'
+        moneys: '出租金额'
+        status: '出租状态'
+        address: '地址'
+      dataSource: [
+          key: '01'
+          landlord: '张三'
+          theway: '套租'
+          pays: '押一付三'
+          moneys: '1000'
+          status: '已租'
+          address: '武汉市武昌区'
+        ,
+          key: '02'
+          landlord: '李四'
+          theway: '套租'                
+          pays: '押一付三'
+          moneys: '2000'
+          status: '空置'
+          address: '武汉市武昌区'
+        ,  
+          key: '03'
+          landlord: '王五'
+          theway: '套租'                
+          pays: '押一付三'
+          moneys: '3000'
+          status: '空置'
+          address: '武汉市武昌区'
+        ,  
+          key: '04'
+          landlord: '赵六'
+          theway: '套租'
+          pays: '押一付三'
+          moneys: '4000'
+          status: '套组'
+          address: '武汉市武昌区'                                
+      ]              
+      chhildrenHeader:
+        number: '房间编号'
+        name: '房间别名'
+        money: '押金'
+        status: '押付方式'
 
-      c_Column
-        key: 'name'
-        title: '房东'
-        dataIndex: 'name'
-        render: (text, record) =>
-          c_a
-            href: '#'
-          , record.name
 
-      c_Column
-        key: 'num'
-        title: '床位编号'
-        dataIndex: 'num'
+# import { storiesOf } from '@storybook/react'
+# import { prefixDom } from 'cfx.dom'
 
-      c_Column
-        key: 'pay'
-        title: '押付方式'
-        dataIndex: 'pay'
+# import { linkTo } from '@storybook/addon-links'
+# # import Header from '../routes/Users'
 
-      c_Column
-        key: 'money'
-        title: '出租金额'
-        dataIndex: 'money'
+# CFX = prefixDom { 'button' }
 
-      c_Column
-        key: 'status'
-        title: '出租状态'
-        dataIndex: 'status'
+# export default =>
 
-      c_Column
-        key: 'address'
-        title: '地址'
-        dataIndex: 'address'
+#   storiesOf 'Btn', module
 
-      c_Column
-        key: 'operating'
-        title: '操作'
-        key: 'operating'
-        width: '105px'
+#   .add 'First'
 
-        render: =>
-          c_span
-            key: 'span'
-            style:
-              float: 'right'
-          ,
-            c_a
-              key: 'a'
-              style:
-                color: '#959595'
-              href: '#'
-              className: 'ant-dropdown-link'
-            , '详细'
-            c_Divider
-              key: 'Divider'
-              type: 'vertical'
-            c_a
-              key: 'a1'
-              style:
-                color: '#F00'
-              href: '#'
-            , '删除'
+#   , =>
+
+#     { c_button } = CFX
+
+#     c_button
+#       onClick: linkTo 'Btn','Second'
+#     , '点击我舔砖第二个按钮'
+  
+#   .add 'Second'
+
+#   , =>
+
+#     { c_button } = CFX
+
+#     c_button
+#       onClick: linkTo 'Btn','First'
+#     , '点击我舔砖第一个按钮'

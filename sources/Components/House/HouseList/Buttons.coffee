@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { linkTo } from '@storybook/addon-links'
 import { prefixDom } from 'cfx.dom'
 import {
   Modal
@@ -60,9 +61,9 @@ class Buttons extends Component
     message.info '选择分组'
     console.log '选择分组', e
 
-  handleButton: (e) ->
-    message.success '添加房源'
-    console.log '添加房源', e
+  handleButton: () ->
+    linkTo '房源管理', 'pg_step01添加房源地址'
+    console.log '123'
 
   render: ->
 
@@ -116,7 +117,10 @@ class Buttons extends Component
 
         c_Button
           type: 'primary'
-          onClick: @handleButton
+          onClick:
+            if @props.linkto
+            then linkTo @props.linkto[0], @props.linkto[1]
+            else []  
         , '添加房源'                 
 
       c_Modal
@@ -128,6 +132,7 @@ class Buttons extends Component
         onCancel: @handleCancel
       ,
         c_Form {}
+        ,
           c_FormItem {}
           ,
             c_Row {}

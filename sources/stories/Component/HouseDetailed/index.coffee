@@ -1,27 +1,27 @@
 import { prefixDom } from 'cfx.dom'
-import { Card } from 'antd'
-import PageContent from '../../public/PageContent'
-import Buttons from './Buttons'
+import Cards from './Cards'
 import Table from './Table'
+import PageContent from '../../../Components/public/PageContent'
 
 CFX = prefixDom {
-  PageContent
-  Buttons
+  Cards
   Table
+  PageContent
 }
 
 export default ->
 
   {
-    c_PageContent
-    c_Buttons
+    c_Cards
     c_Table
+    c_PageContent
   } = CFX
 
   c_PageContent
     Content: [
-      c_Buttons
-        key: 'Buttons'
+      c_Cards
+        key: 'Cards'
       c_Table
         key: 'Table'
     ]
+

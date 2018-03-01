@@ -1,4 +1,5 @@
 import { prefixDom } from 'cfx.dom'
+import { linkTo } from '@storybook/addon-links'
 import {
   Form
   Input
@@ -14,12 +15,8 @@ FormItem = Form.Item
 } = Table
 
 CFX = prefixDom {
-  'div'
-  'span'
-  'a'
   Form
   FormItem
-  Input
   Button
   Row
   Col
@@ -49,11 +46,13 @@ export default ->
     ,
       c_Button
         type: 'primary'
+        onClick: linkTo @props.linkto[0], @props.linkto[1]
         style:
           float: 'right'
-      , '完成'
+      , @props.btn
       c_Button
         type: 'primary'
+        onClick: linkTo @props.linktoup[0], @props.linktoup[1]
         style:
           float: 'left'
-      , '上一步' 
+      , @props.btnup

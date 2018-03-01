@@ -71,9 +71,7 @@ export default ->
       c_Column
     } = CFX
 
-    c_Form
-      style:
-        margin: '40px auto 0'
+    c_Form {}
     ,
       c_div
         style:
@@ -93,7 +91,6 @@ export default ->
           
       c_Table
         key: 'Table'
-        pagination: false
         dataSource: @data
       ,
 

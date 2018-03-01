@@ -1,13 +1,10 @@
 import { prefixDom } from 'cfx.dom'
-import React, { Component } from 'react'
 import {
   Form
   Input
   Button
   Row
   Col
-  AutoComplete
-  DatePicker
 } from 'antd'
 FormItem = Form.Item
 
@@ -20,32 +17,12 @@ CFX = prefixDom {
   Button
   Row
   Col
-  AutoComplete
-  DatePicker
 }
 
-class WriteForm extends Component
-  constructor: (props) ->
-      super props
-      @state =
-        dataSource: []
-      @
- 
-  onSelect: (value) =>
-    console.log 'onSelect',value
-  handleSearch: (value) =>
-    @setState {
-      dataSource:
-        if value
-        then [
-          value
-          value+value
-          value+value+value
-        ]
-        else []
-    }
+export default ->
+
   render: ->
-    console.log @
+
     {
       c_div
       c_Form
@@ -54,8 +31,6 @@ class WriteForm extends Component
       c_Button
       c_Row
       c_Col
-      c_AutoComplete
-      c_DatePicker
     } = CFX
 
     c_Form
@@ -70,9 +45,8 @@ class WriteForm extends Component
           span: 19
         label: '房客姓名'
       ,
-        c_AutoComplete
-          dataSource: @state.dataSource
-          onSearch: @handleSearch
+        c_Input
+          type: 'text'
           placeholder: '请输入房客姓名'
       c_FormItem
         labelCol:
@@ -111,7 +85,8 @@ class WriteForm extends Component
           span: 19
         label: '签约日期'
       ,
-        c_DatePicker
+        c_Input
+          type: 'text'
           placeholder: '请输入签约日期'
       c_FormItem
         labelCol:
@@ -120,7 +95,8 @@ class WriteForm extends Component
           span: 19
         label: '入住日期'
       ,
-        c_DatePicker
+        c_Input
+          type: 'text'
           placeholder: '请输入入住日期'
       c_FormItem
         labelCol:
@@ -142,6 +118,16 @@ class WriteForm extends Component
         c_Input
           type: 'text'
           placeholder: '请输入入住地址'
+      c_FormItem
+        labelCol:
+          span: 5
+        wrapperCol:
+          span: 19
+        label: '房源编号'
+      ,
+        c_Input
+          type: 'text'
+          placeholder: '请输入房源编号'
       c_FormItem
         labelCol:
           span: 5
@@ -177,5 +163,3 @@ class WriteForm extends Component
               key: 'primary'
               type: 'primary'
             , '完成'
-
-export default WriteForm

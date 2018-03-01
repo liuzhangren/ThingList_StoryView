@@ -2,14 +2,15 @@ import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 import { Card } from 'antd'
 import { PageHeader } from 'cfx.antd-wrapper'
+import PeopleTable from './Component/LordList/Table'
 
-import People from '../Components/People/LordList'
-import PeopleButtons from '../Components/People/LordList/Buttons'
-import PeopleTable from '../Components/People/LordList/Table'
-import LordDetailed from '../Components/People/LordDetailed'
+import People from './Component/LordList'
+
+import LordDetailed from './Component/LordDetailed'
 import LordEdit from '../Components/People/LordEdit'
-import TenantList from '../Components/People/TenantList'
-import TenantDetailed from '../Components/People/TenantDetailed'
+import TenantList from './Component/TenantList'
+
+import TenantDetailed from './Component/TenantDetailed'
 import TenantTable from '../Components/People/TenantDetailed/Table'
 import TenantEdit from '../Components/People/TenantEdit'
 
@@ -17,7 +18,6 @@ CFX = prefixDom {
   PageHeader
   Card
   People
-  PeopleButtons
   PeopleTable
   LordDetailed
   LordEdit
@@ -30,20 +30,6 @@ CFX = prefixDom {
 export default =>
 
   storiesOf '人员管理', module
-
-  .add 'cp_添加房东按钮'
-
-  , =>
-
-    {
-      c_Card
-      c_PeopleButtons
-    } = CFX
-
-    c_Card
-      bordered: false
-    ,
-      c_PeopleButtons {}
 
   .add 'cp_房东列表表格'
 
@@ -76,7 +62,8 @@ export default =>
           '房东列表'
         ]
         title: '房东列表'    
-      c_People {}
+      c_People
+        key: 'People'
     ]
 
 
@@ -91,13 +78,14 @@ export default =>
 
     [
       c_PageHeader
-        key: 'LordDetailed'
+        key: 'PageHeader'
         breadcrumb: [
           '人员管理'
           '显示房东详细信息'
         ]
         title: '显示房东详细信息'    
-      c_LordDetailed {}
+      c_LordDetailed
+        key: 'LordDetailed'
     ]
 
   .add 'pg_编辑房东详细'
