@@ -94,6 +94,7 @@ export default =>
       , '房客入住历史列表'
       c_Table
         dataSource: @data
+        pagination: false
         rowSelection: @rowSelection
       ,
         c_Column

@@ -93,6 +93,7 @@ export default ->
           
       c_Table
         key: 'Table'
+        pagination: false
         dataSource: @data
       ,
 

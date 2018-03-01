@@ -1,10 +1,13 @@
 import { prefixDom } from 'cfx.dom'
+import React, { Component } from 'react'
 import {
   Form
   Input
   Button
   Row
   Col
+  AutoComplete
+  DatePicker
 } from 'antd'
 FormItem = Form.Item
 
@@ -17,12 +20,32 @@ CFX = prefixDom {
   Button
   Row
   Col
+  AutoComplete
+  DatePicker
 }
 
-export default ->
-
+class WriteForm extends Component
+  constructor: (props) ->
+      super props
+      @state =
+        dataSource: []
+      @
+ 
+  onSelect: (value) =>
+    console.log 'onSelect',value
+  handleSearch: (value) =>
+    @setState {
+      dataSource:
+        if value
+        then [
+          value
+          value+value
+          value+value+value
+        ]
+        else []
+    }
   render: ->
-
+    console.log @
     {
       c_div
       c_Form
@@ -31,6 +54,8 @@ export default ->
       c_Button
       c_Row
       c_Col
+      c_AutoComplete
+      c_DatePicker
     } = CFX
 
     c_Form
@@ -45,8 +70,9 @@ export default ->
           span: 19
         label: '房客姓名'
       ,
-        c_Input
-          type: 'text'
+        c_AutoComplete
+          dataSource: @state.dataSource
+          onSearch: @handleSearch
           placeholder: '请输入房客姓名'
       c_FormItem
         labelCol:
@@ -85,8 +111,7 @@ export default ->
           span: 19
         label: '签约日期'
       ,
-        c_Input
-          type: 'text'
+        c_DatePicker
           placeholder: '请输入签约日期'
       c_FormItem
         labelCol:
@@ -95,8 +120,7 @@ export default ->
           span: 19
         label: '入住日期'
       ,
-        c_Input
-          type: 'text'
+        c_DatePicker
           placeholder: '请输入入住日期'
       c_FormItem
         labelCol:
@@ -118,16 +142,6 @@ export default ->
         c_Input
           type: 'text'
           placeholder: '请输入入住地址'
-      c_FormItem
-        labelCol:
-          span: 5
-        wrapperCol:
-          span: 19
-        label: '房源编号'
-      ,
-        c_Input
-          type: 'text'
-          placeholder: '请输入房源编号'
       c_FormItem
         labelCol:
           span: 5
@@ -163,3 +177,5 @@ export default ->
               key: 'primary'
               type: 'primary'
             , '完成'
+
+export default WriteForm

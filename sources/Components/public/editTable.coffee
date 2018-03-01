@@ -252,11 +252,13 @@ class EditableTable extends React.Component
       then [
         c_Table
           rowSelection: @rowSelection
+          pagination: false
           dataSource: @state.dataSource
           columns: @columns
       ]
       else [
         c_Table
+          pagination: false
           dataSource: @state.dataSource
           columns: @columns
       ]

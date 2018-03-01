@@ -73,6 +73,7 @@ export default =>
     c_Table
       key: 'Table'
       dataSource: @data
+      pagination: false
       rowSelection: @rowSelection
     ,
 

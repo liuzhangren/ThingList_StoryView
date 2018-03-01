@@ -2,6 +2,7 @@ import { prefixDom } from 'cfx.dom'
 import {
   Table
   Icon
+  Divider
   Card
 } from 'antd'
 
@@ -17,6 +18,7 @@ CFX = prefixDom {
   Table
   Icon
   Column
+  Divider
   ColumnGroup
 }
 
@@ -82,6 +84,7 @@ export default =>
     c_Table
       key: 'Table'
       dataSource: @data
+      pagination: false
       rowSelection: @rowSelection
     ,
       c_Column

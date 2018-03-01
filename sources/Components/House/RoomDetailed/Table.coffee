@@ -94,6 +94,7 @@ export default =>
 
       c_Table
         dataSource: @data
+        pagination: false
         rowSelection: @rowSelection
       ,
 
