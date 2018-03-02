@@ -20,11 +20,15 @@ export default =>
       c_Steps
       c_Radios
     } = CFX
-
-    PageContent
-      many: false
-      Content: [
-        c_Steps
-          current: '01'
-        c_Radios {}
-      ]
+    c_div {}
+    ,
+      c_Steps
+        current: '01'
+      c_Radios {}
+    # PageContent
+    #   many: false
+    #   Content: [
+    #     c_Steps
+    #       current: '01'
+    #     c_Radios {}
+    #   ]

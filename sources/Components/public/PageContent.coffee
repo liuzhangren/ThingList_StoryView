@@ -38,6 +38,7 @@ export default ->
           ]
           else [
             c_Card
+              key: 'Card2'
               style:
                 bordered: false
             ,
