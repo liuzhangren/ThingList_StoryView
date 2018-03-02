@@ -61,7 +61,7 @@ export default =>
           '人员管理'
           '房东列表'
         ]
-        title: '房东列表'    
+        title: '房东列表'
       c_People
         key: 'People'
     ]
