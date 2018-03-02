@@ -28,7 +28,10 @@ export default =>
     c_PageContent
       many: true
       Content: [
-        c_Gust {}
-        c_Time {}
-        c_House {}
+        c_Gust
+          key: 'Gust'
+        c_Time
+          key: 'Time'
+        c_House
+          key: 'House'
       ]

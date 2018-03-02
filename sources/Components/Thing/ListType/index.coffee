@@ -23,8 +23,10 @@ export default =>
     c_div {}
     ,
       c_Steps
+        key: 'Steps'
         current: '01'
-      c_Radios {}
+      c_Radios
+        key: 'Radios'
     # PageContent
     #   many: false
     #   Content: [
