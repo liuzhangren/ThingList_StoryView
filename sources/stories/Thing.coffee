@@ -5,7 +5,7 @@ import { PageHeader } from 'cfx.antd-wrapper'
 
 import LingleList from '../Components/Thing/ThingList/index'
 import LingleStyle from '../Components/Thing/ListType/index'
-import LingleForm from '../Components/Thing/WriteLive/Form'
+import LingleForm from '../Components/Thing/WriteLive/index'
 import LingleWrite from '../Components/Thing/WriteLive/index'
 import LingleConf from '../Components/Thing/LiveConfirm/index'
 import OutLingle from '../Components/Thing/WriteRetire/index'

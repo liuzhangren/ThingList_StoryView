@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 
-import test from '../Components/House/test/Modal/Table'
+import test from '../Components/House/test/index'
 
 CFX = prefixDom {
   test
@@ -18,5 +18,10 @@ export default =>
     {
       c_test
     } = CFX
-    
-    c_test {}
+  
+    c_test
+      title: [
+        '1'
+        '2'
+        '3'
+      ]

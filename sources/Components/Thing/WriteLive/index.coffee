@@ -2,12 +2,14 @@ import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
 import PageContent from '../../public/PageContent'
 import Steps from '../../public/Steps'
-import Form from './Form'
-
+import Gust from './Gust'
+import Time from './Time'
+import House from './HouseDetail'
 CFX = prefixDom {
   'div'
-  Steps
-  Form
+  Gust
+  Time
+  House
   PageContent
 }
 
@@ -18,15 +20,15 @@ export default =>
     {
       c_PageContent
       c_div
-      c_Steps
-      c_Form
+      c_Gust
+      c_Time
+      c_House
     } = CFX
 
-    c_div {}
-    ,
-      c_PageContent
-        Content: [
-          c_Steps
-            current: '02'
-          c_Form {}
-        ]
+    c_PageContent
+      many: true
+      Content: [
+        c_Gust {}
+        c_Time {}
+        c_House {}
+      ]

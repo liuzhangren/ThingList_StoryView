@@ -22,7 +22,6 @@ export default =>
 
     {
       c_div
-      c_Card
       c_Row
       c_Col
       c_Divider

@@ -9,26 +9,44 @@ CFX = prefixDom {
   PageContent
 }
 
-export default ({
-  props...
-}) ->
+export default ->
+  render: ->
+    {
+      c_Card
+      c_PageContent
+    } = CFX
 
-  {
-    Content
-  } = props
-
-  {
-    c_Card
-    c_PageContent
-  } = CFX
-
-  if Content
-  then [
-    c_PageContent
-      key: 'PageContent'
-      PageContent:
-        c_Card
-          bordered: false        
-        , Content
-  ]
-  else []
+    if @props.Content 
+    then [
+      c_PageContent
+        key: 'PageContent'
+        PageContent:
+          if @props.many is true
+          then [
+            @props.Content.reduce (r,c,i) =>
+              [
+                r...
+                c_Card
+                  key: "Card_#{i}"
+                  style: 
+                    marginBottom: 20
+                  bordered: false
+                ,
+                  c
+              ]
+            , []
+          ]
+          else [
+            c_Card
+              style:
+                bordered: false
+            ,
+              @props.Content.reduce (r,c) =>
+                [
+                  r...
+                  c
+                ]
+              , []
+          ]
+    ]
+    else []

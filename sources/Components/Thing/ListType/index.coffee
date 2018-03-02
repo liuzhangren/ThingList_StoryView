@@ -10,7 +10,7 @@ CFX = prefixDom {
   Radios
 }
 
-export default ->
+export default =>
 
   render: ->
 
@@ -21,11 +21,10 @@ export default ->
       c_Radios
     } = CFX
 
-    c_div {}
-    ,
-      PageContent
-        Content: [
-          c_Steps
-            current: '01'
-          c_Radios {}  
-        ]
+    PageContent
+      many: false
+      Content: [
+        c_Steps
+          current: '01'
+        c_Radios {}
+      ]
