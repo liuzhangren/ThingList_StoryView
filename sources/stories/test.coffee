@@ -1,10 +1,13 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 
-import test from '../Components/House/test/index'
-
+import Cards from '../Components/public/card'
+import Form from '../Components/public/Form1'
+import PageContent from '../Components/public/PageContent'
 CFX = prefixDom {
-  test
+  Cards
+  Form
+  PageContent
 }
 
 export default =>
@@ -16,12 +19,14 @@ export default =>
   , =>
 
     {
-      c_test
+      c_Cards
+      c_Form
+      c_PageContent
     } = CFX
-  
-    c_test
-      title: [
-        '1'
-        '2'
-        '3'
-      ]
+    c_PageContent
+      Content:  
+        c_Cards
+          search: true
+          title: 'Hello World!!'
+          CardContent:
+            c_Form {}
