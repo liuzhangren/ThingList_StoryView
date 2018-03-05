@@ -93,7 +93,7 @@ class PrjForm extends Component
     c_Form.apply @, [
       style:
         margin: '40px auto 0'
-        maxWidth: '500px'
+        minWidth: '500px'
     ,
       c_Row
         style: 
