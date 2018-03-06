@@ -11,8 +11,11 @@ import {
   AutoComplete
   DatePicker
   Cascader
+  Select
+  InputNumber
 } from 'antd'
 
+Option = Select.Option
 FormItem = Form.Item
 
 CFX = prefixDom {
@@ -26,6 +29,9 @@ CFX = prefixDom {
   AutoComplete
   DatePicker
   Cascader
+  Select
+  Option
+  InputNumber
 }
 
 class PrjForm extends Component
@@ -57,6 +63,31 @@ class PrjForm extends Component
         ]
       ]
   ]
+  {
+    c_Option
+    c_Select
+  } = CFX
+  selectAfter: 
+    c_Select
+      defaultValue: '默认'
+      style:
+        width: '80px'
+    ,
+      c_Option
+        value: '日'
+      , '日'
+      c_Option
+        value: '月'
+      , '月'
+      c_Option
+        value: '年'
+      , '年'
+
+
+  onChangeSelect: (value) ->
+    console.log 'changed',value
+  onChange3: (value) ->
+    console.log "selected#{value}"
   onChange2: (value) ->
     console.log value
   onChange: (date, dateString) ->
@@ -88,6 +119,9 @@ class PrjForm extends Component
       c_AutoComplete
       c_DatePicker
       c_Cascader
+      c_Select
+      c_Option
+      c_InputNumber
     } = CFX
     if @props.Layout is 'vertical'
     then [
@@ -101,127 +135,86 @@ class PrjForm extends Component
             marginLeft: '-8px'
             marginRight: '-8px'
         ,
-          c_Col
-            sm: 
-              span: 24
-            md:
-              span: 12
-            lg:
-              span: 6
-            style:
-              paddingLeft: '8px'
-              paddingRight: '8px'
-          ,
-            c_FormItem
-              label: @props.title[0].keys
-            ,
-              if @props.title[0].type is 'date'
-              then [
-                c_DatePicker
-                  key: "select"
-                  # style:
-                  #   width: '396px'
-                  onChange: @onChange
-                  placeholder: "请输入#{@props.title[0].keys}"
-              ]
-              else if @props.title[0].type is 'address'
-              then [
-                c_Cascader
-                  key: "Cascader"
-                  options: @options
-                  onChange: @onChange2
-                  placeholder: "请输入#{@props.title[0].keys}"
-              ]
-              else [
-                c_AutoComplete
-                  key: "AutoComp"
-                  dataSource: @state.dataSource
-                  onSearch: @handleSearch
-                  placeholder: "请输入#{@props.title[0].keys}"
-              ]
-
-          c_Col
-            sm:
-              span: 24
-            md:
-              span: 12
-            lg:
-              span: 8
-            xl:
-              span: 6
-              offset: 2
-            style:
-              paddingLeft: 8
-              paddingRight: 8
-          ,
-            c_FormItem
-              label: @props.title[1].keys
-            ,
-              if @props.title[1].type is 'date'
-              then [
-                c_DatePicker
-                  key: "select"
-                  # style:
-                  #   width: '396px'
-                  onChange: @onChange
-                  placeholder: "请输入#{@props.title[1].keys}"
-              ]
-              else if @props.title[1].type is 'address'
-              then [
-                c_Cascader
-                  key: "Cascader"
-                  options: @options
-                  onChange: @onChange2
-                  placeholder: "请输入#{@props.title[1].keys}"
-              ]
-              else [
-                c_AutoComplete
-                  key: "AutoComp"
-                  dataSource: @state.dataSource
-                  onSearch: @handleSearch
-                  placeholder: "请输入#{@props.title[1].keys}"
-              ]
-          c_Col
-            sm:
-              span: 24
-            md:
-              span: 24
-            lg:
-              span: 8
-            xl:
-              span: 8
-              offset: 2
-            style: 
-              paddingLeft: 8
-              paddingRight: 8
-          ,
-            c_FormItem
-              label: @props.title[2].keys
-            ,
-              if @props.title[2].type is 'date'
-              then [
-                c_DatePicker
-                  key: "select"
-                  style:
-                    width: '396px'
-                  onChange: @onChange
-                  placeholder: "请输入#{@props.title[2].keys}"
-              ]
-              else if @props.title[2].type is 'address'
-              then [
-                c_Cascader
-                  key: "Cascader"
-                  options: @options
-                  onChange: @onChange2
-                  placeholder: "请输入#{@props.title[2].keys}"
-              ]
-              else [
-                c_AutoComplete
-                  key: "AutoComp"
-                  dataSource: @state.dataSource
-                  onSearch: @handleSearch
-                  placeholder: "请输入#{@props.title[2].keys}"
-              ]      
+          @props.title.reduce (r,c,i) =>
+            [
+              r...
+              c_Col
+                sm: 
+                  span: 24
+                md:
+                  span: 12
+                lg:
+                  span: 8
+                xl:
+                  span: 6
+                  offset: 2
+                style:
+                  paddingLeft: '8px'
+                  paddingRight: '8px'
+              ,
+                c_FormItem
+                  label: c.keys
+                ,
+                  if c.type is 'data'
+                  then [
+                    c_DatePicker
+                      key: "select"
+                      style:
+                        width: '396px'
+                      onChange: @onChange
+                      placeholder: "请输入#{c.keys}"
+                  ]
+                  else if c.type is 'address'
+                  then [
+                    c_Cascader
+                      key: "Cascader"
+                      options: @options
+                      onChange: @onChange2
+                      placeholder: "请输入#{c.keys}"
+                  ]
+                  else if c.type is 'select'
+                  then [
+                    c_Select
+                      defaultValue: '默认'
+                      style:
+                        width: '120px'
+                      onChange: @onChange3
+                    ,
+                      c_Option
+                        value: '支付宝'
+                      , '支付宝'
+                      c_Option
+                        value: '微信'
+                      , '微信'
+                      c_Option
+                        value: '网上银行'
+                      , '网上银行'
+                  ]
+                  else if c.type is 'inputSelect'
+                  then [
+                    c_Input
+                      addonAfter: @selectAfter
+                      placeholder: '请输入租赁时间'
+                  ]
+                  else if c.type is 'number'
+                  then [
+                    c_InputNumber
+                      style:
+                        width: '196px'
+                      min: '0'
+                      max: '10'
+                      step: '0.1'
+                      formatter: (value) => "￥(千)    #{value}"       
+                  ]
+                  else [
+                    c_AutoComplete
+                      key: "AutoComp"
+                      dataSource: @state.dataSource
+                      onSearch: @handleSearch
+                      placeholder: "请输入#{c.keys}"
+                  ]
+            ]
+          , []
       ]
 
     else [
@@ -246,7 +239,7 @@ class PrjForm extends Component
                   c_DatePicker
                     key: "select#{i}"
                     style:
-                      width: '396px'
+                      width: '196px'
                     onChange: @onChange
                     placeholder: "请输入#{c.keys}"
                 ]
@@ -257,6 +250,41 @@ class PrjForm extends Component
                     options: @options
                     onChange: @onChange2
                     placeholder: "请输入#{c.keys}"
+                ]
+                else if c.type is 'select'
+                then [
+                  c_Select
+                    defaultValue: '默认'
+                    style:
+                      width: '196px'
+                    onChange: @onChange3
+                  ,
+                    c_Option
+                      value: '支付宝'
+                    , '支付宝'
+                    c_Option
+                      value: '微信'
+                    , '微信'
+                    c_Option
+                      value: '网上银行'
+                    , '网上银行'
+                ]
+                else if c.type is 'inputSelect'
+                then [
+                  c_Input
+                    addonAfter: @selectAfter
+                    placeholder: '请输入租赁时间'
+                ]
+                else if c.type is 'number'
+                then [
+                  c_InputNumber
+                    style:
+                      width: '196px'
+                    min: '0'
+                    max: '10'
+                    step: '0.1'
+                    formatter: (value) => "￥(千)   #{value}"
+                    onChange: @onChangeSelect
                 ]
                 else [
                   c_AutoComplete

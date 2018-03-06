@@ -17,21 +17,18 @@ export default ->
       c_Form
       c_Cards
     } = CFX
-    # '房客姓名'
-    # '手机号'
-    # '身份证号'
+
     c_Cards
-      title: '房客详细'
+      title: '周期详情'          
       search: true
       CardContent:
         c_Form
           title: [
-              keys: '房客姓名'
-              type: 'normal'
+              keys: '换租日期'
+              type: 'date'
             ,
-              keys: '手机号'
-              type: 'normal'
-            ,
-              keys: '身份证号'
-              type: 'normal'
+              keys: '租赁周期'
+              type: 'inputSelect'
           ]
+          btnright: '确认'
+    

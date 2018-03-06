@@ -1,6 +1,6 @@
 import { prefixDom } from 'cfx.dom'
 import { Cards } from 'cfx.antd-wrapper-ch'
-import Form from '../../public/Form'
+import Form from  '../../public/Form'
 
 CFX = prefixDom {
   'div'
@@ -17,21 +17,21 @@ export default ->
       c_Form
       c_Cards
     } = CFX
-    # '房客姓名'
-    # '手机号'
-    # '身份证号'
+    # '房源地址'
+    # '房间编号'
+    # '床位编号'
     c_Cards
-      title: '房客详细'
+      title: '换租地址'          
       search: true
       CardContent:
         c_Form
           title: [
-              keys: '房客姓名'
+              keys: '房源地址'
+              type: 'address'
+            ,
+              keys: '房间编号'
               type: 'normal'
             ,
-              keys: '手机号'
-              type: 'normal'
-            ,
-              keys: '身份证号'
+              keys: '床位编号'
               type: 'normal'
           ]

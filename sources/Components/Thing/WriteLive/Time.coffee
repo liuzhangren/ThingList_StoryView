@@ -1,5 +1,5 @@
 import { prefixDom } from 'cfx.dom'
-import Cards from '../../public/card'
+import { Cards } from 'cfx.antd-wrapper-ch'
 import Form from '../../public/Form'
 
 CFX = prefixDom {
@@ -22,7 +22,7 @@ export default ->
     # '租赁周期'
     c_Cards
       title: '房间详细'          
-      btn: true
+      search: true
       CardContent:
         c_Form
           title: [
@@ -33,6 +33,6 @@ export default ->
               type: 'date'
             ,
               keys: '租赁周期'
-              type: 'normal'
+              type: 'inputSelect'
           ]
     

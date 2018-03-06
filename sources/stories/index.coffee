@@ -10,7 +10,7 @@ import House from './House'
 import People from './People'
 import Thing from './Thing'
 
-import Test from './test'
+# import Test from './test'
 
 Welcome()
 Layout()
@@ -19,4 +19,4 @@ House()
 People()
 Thing()
 
-Test()
+# Test()
