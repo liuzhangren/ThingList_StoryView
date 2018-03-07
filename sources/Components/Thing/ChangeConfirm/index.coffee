@@ -10,9 +10,14 @@ CFX = prefixDom {
   PageContent
 }
 
-export default =>
+export default ({
+  props...
+}) =>
 
   render: ->
+    {
+      data2
+    } = props
 
     {
       c_div

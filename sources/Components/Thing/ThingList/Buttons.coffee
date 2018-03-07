@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
 import { Button } from 'antd'
-
+import nb from './Style'
 CFX = prefixDom {
   'div'
   Button
@@ -25,11 +25,11 @@ class Drop extends Component
         height: '32px'
         marginBottom: '16px'
     ,
-      c_Button
-        style:
-          float: 'right'
+      c_Button {
+        ( nb 'AddList' )...
         key: 'primary'
         type: 'primary'
+      }    
       , '添加工单'
 
 export default Drop

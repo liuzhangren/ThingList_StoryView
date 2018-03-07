@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import nb from './Style'
 import { prefixDom } from 'cfx.dom'
 import {
   Radio
@@ -51,12 +52,11 @@ class Radios extends Component
     ,
       c_FormItem {}
       ,
-        c_RadioGroup
-          style:
-            display: 'flex'
-            justifyContent: 'center'
+        c_RadioGroup {
+          ( nb 'RadioGroup' )...
           onChange: @onChange
           value: @state.value
+        }   
         ,
           c_Radio
             key: 'R1'
