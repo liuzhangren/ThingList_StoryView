@@ -31,6 +31,7 @@ export default ({
       Content: [
         c_Buttons {}
         c_Table
+          alink: '详情'
           editPen: true
           header:
             Name: '房客姓名'

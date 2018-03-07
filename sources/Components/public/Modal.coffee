@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
-import Pop from './Modal'
 import {
   Modal
   Button
@@ -24,7 +23,6 @@ CFX = prefixDom {
   Form
   FormItem
   Input
-  Pop
 }
 
 class PopModal extends Component
@@ -61,7 +59,6 @@ class PopModal extends Component
       c_Form
       c_FormItem
       c_Input
-      c_Pop
     } = CFX
 
     c_div {}
@@ -71,8 +68,31 @@ class PopModal extends Component
         onClick: @showModal
       , '房源详细信息'
 
-      c_Pop
-        Visible: @state.visible
-        OnOk: @handleOk
-        
+      c_Modal
+        title: '新建分组'
+        okText: '确定'
+        cancelText: '取消'
+        visible: @state.visible
+        onOk: @handleOk
+        onCancel: @handleCancel
+      ,
+        c_Form {}
+          c_FormItem {}
+          ,
+            c_Row {}
+            ,
+              c_Col
+                span: 5
+              ,  
+                c_FormItem
+                  label: '新建分组'
+              c_Col
+                span: 15
+              ,
+                c_FormItem {}
+                ,
+                  c_Input
+                    type: 'text'
+                    placeholder: '请新建分组'
+
 export default PopModal

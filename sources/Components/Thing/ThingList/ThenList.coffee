@@ -31,6 +31,7 @@ export default ({
       Content: [
         c_Buttons {}
         c_Table
+          alink: '详情'
           editPen: true
           header:
             IdCard: '身份证号'
