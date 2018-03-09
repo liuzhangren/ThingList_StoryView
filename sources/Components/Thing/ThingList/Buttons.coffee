@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
+import { linkTo } from '@storybook/addon-links'
 import { Button } from 'antd'
 import nb from './Style'
 CFX = prefixDom {
@@ -29,6 +30,7 @@ class Drop extends Component
         ( nb 'AddList' )...
         key: 'primary'
         type: 'primary'
+        onClick: @props.LinkTo
       }    
       , '添加工单'
 

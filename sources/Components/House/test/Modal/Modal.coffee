@@ -38,7 +38,6 @@ class PopModal extends Component
       visible: true
 
   handleOk: (e) =>
-    message.success '新建成功'
     @setState
       visible: false
       
@@ -64,35 +63,21 @@ class PopModal extends Component
     c_div {}
     ,
       c_Button
-        type: 'primary'
+        shape: @props.shape
+        icon: @props.icon
+        type: @props.type
         onClick: @showModal
-      , '房源详细信息'
+        style: @props.style
+      , @props.BtnTitle
 
       c_Modal
-        title: '新建分组'
+        title: @props.ModalTitle
         okText: '确定'
         cancelText: '取消'
-        visible: @props.Visible
+        visible: @state.visible
         onOk: @handleOk
         onCancel: @handleCancel
       ,
-        c_Form {}
-          c_FormItem {}
-          ,
-            c_Row {}
-            ,
-              c_Col
-                span: 5
-              ,
-                c_FormItem
-                  label: '新建分组'
-              c_Col
-                span: 15
-              ,
-                c_FormItem {}
-                ,
-                  c_Input
-                    type: 'text'
-                    placeholder: '请新建分组'
+        @props.ModalContent
 
 export default PopModal

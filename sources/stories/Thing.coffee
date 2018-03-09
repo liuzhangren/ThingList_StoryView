@@ -1,14 +1,13 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 import { Card } from 'antd'
-import { PageHeader } from 'cfx.antd-wrapper'
+import { PageHeader } from 'cfx.antd-wrapper-ch'
 
 import LingleList1 from '../Components/Thing/ThingList/ChangeList'
 import LingleList2 from '../Components/Thing/ThingList/LiveList'
 import LingleList3 from '../Components/Thing/ThingList/RetireList'
 import LingleList4 from '../Components/Thing/ThingList/ThenList'
 import LingleStyle from '../Components/Thing/ListType/index'
-import LingleForm from '../Components/Thing/WriteLive/index'
 import LingleWrite from '../Components/Thing/WriteLive/index'
 import LingleConf from '../Components/Thing/LiveConfirm/index'
 import OutLingle from '../Components/Thing/WriteRetire/index'
@@ -26,7 +25,6 @@ CFX = prefixDom {
   LingleList3
   LingleList4
   LingleStyle
-  LingleForm
   LingleWrite
   LingleConf
   OutLingle
@@ -60,6 +58,10 @@ export default =>
         ]
         title: '工单列表'
       c_LingleList1
+        links: [
+          '工单管理'
+          'pg_填写换租申请单'
+        ]
         data: [
           Name: '房客姓名'
           Tel: '手机号'
@@ -103,6 +105,10 @@ export default =>
           RoomNum: '911'
           BedNum: '999'
         ]
+        links: [
+          '工单管理'
+          'pg_填写入住申请单'
+        ]
     ]
 
   .add 'pg_工单列表_退租列表'
@@ -129,6 +135,10 @@ export default =>
           RetireWay: '退款方式'
           RetireMoney: '退款金额'
         ]
+        links: [
+          '工单管理'
+          'pg_填写退租申请单'
+        ]
     ]
   .add 'pg_工单列表_续租列表'
 
@@ -153,6 +163,10 @@ export default =>
           GuestId: '客户号'
           ThenTime: '续租周期'
         ]
+        links: [
+          '工单管理'
+          'pg_填写续租申请单'
+        ]
     ]
 
   .add 'pg_选择工单类型'
@@ -172,22 +186,22 @@ export default =>
           '选择工单类型'
         ]
         title: '选择工单类型'
-      c_LingleStyle {}
+      c_LingleStyle
+        links: [
+            Father: '工单管理'
+            Child: 'pg_工单列表_入住列表'
+          ,
+            Father:'工单管理'
+            Child:'pg_工单列表_退租列表'
+          ,
+            Father:'工单管理'
+            Child: 'pg_工单列表_换租列表'
+          ,
+            Father:'工单管理'
+            Child: 'pg_工单列表_续租列表'
+        ]
     ]
 
-  .add 'cp_入住申请单表单'
-
-  , =>
-
-    {
-      c_Card
-      c_LingleForm
-    } = CFX
-
-    c_Card
-      bordered: false
-    ,
-      c_LingleForm {}
 
   .add 'pg_填写入住申请单'
 
@@ -206,7 +220,11 @@ export default =>
           '填写入住工单'
         ]
         title: '填写入住工单'
-      c_LingleWrite {}
+      c_LingleWrite
+        links: [
+          '工单管理'
+          'pg_确认入住申请单'
+        ]
     ]
 
   .add 'pg_确认入住申请单'
@@ -226,7 +244,11 @@ export default =>
           '确认入住申请单'
         ]
         title: '填写入住工单'
-      c_LingleConf {}
+      c_LingleConf
+        links: [
+          '工单管理'
+          'pg_工单列表_入住列表'
+        ]
     ]
 
   .add 'pg_填写退租申请单'
@@ -246,7 +268,11 @@ export default =>
           '填写退租申请单'
         ]
         title: '填写退租申请单'
-      c_OutLingle {}
+      c_OutLingle
+        links: [
+          '工单管理'
+          'pg_确认退租申请单'
+        ]
     ]
 
   .add 'pg_确认退租申请单'
@@ -266,7 +292,11 @@ export default =>
           '确认退租申请单'
         ]
         title: '确认退租申请单'
-      c_OutConf {}
+      c_OutConf
+        links: [
+          '工单管理'
+          'pg_填写退租申请单'
+        ]
     ]
 
   .add 'pg_填写换租申请单'
@@ -286,7 +316,11 @@ export default =>
           '填写换租申请单'
         ]
         title: '填写换租申请单'
-      c_ChangeLingle {}
+      c_ChangeLingle
+        links: [
+          '工单管理'
+          'pg_确认换租申请单'
+        ]
     ]
 
   .add 'pg_确认换租申请单'
@@ -306,7 +340,11 @@ export default =>
           '确认换租申请单'
         ]
         title: '确认换租申请单'
-      c_ChangeConf {}
+      c_ChangeConf
+        links: [
+          '工单管理'
+          'pg_工单列表_换租列表'
+        ]
     ]
 
   .add 'pg_填写续租申请单'
@@ -326,7 +364,11 @@ export default =>
           '填写续租申请单'
         ]
         title: '填写续租申请单'
-      c_UpdateLingle {}
+      c_UpdateLingle
+        links: [
+          '工单管理'
+          'pg_确认续租申请单'
+        ]
     ]
 
   .add 'pg_确认续租申请单'
@@ -346,6 +388,10 @@ export default =>
           '填写续租申请单'
         ]
         title: '确认续租申请单'
-      c_UpdateConf {}
+      c_UpdateConf
+        links: [
+          '工单管理'
+          'pg_确认续租申请单'
+        ]
     ]
 

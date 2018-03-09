@@ -1,4 +1,5 @@
 import { prefixDom } from 'cfx.dom'
+import { linkTo } from '@storybook/addon-links'
 import { Cards } from 'cfx.antd-wrapper-ch'
 import Form from  '../../public/Form'
 
@@ -25,6 +26,7 @@ export default ->
       search: true
       CardContent:
         c_Form
+          linktoComfirm: linkTo @props.links[0],@props.links[1]
           title: [
               keys: '房源地址'
               type: 'address'

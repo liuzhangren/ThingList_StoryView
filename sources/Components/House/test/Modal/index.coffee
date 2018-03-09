@@ -29,26 +29,26 @@ CFX = prefixDom {
 
 class PopModal extends Component
 
-  constructor: (props) ->
-    super props
-    @state =
-      visible: false
-    @
+  # constructor: (props) ->
+  #   super props
+  #   @state =
+  #     visible: false
+  #   @
 
-  showModal: () =>
-    @setState
-      visible: true
+  # showModal: () =>
+  #   @setState
+  #     visible: true
 
-  handleOk: (e) =>
-    message.success '新建成功'
-    @setState
-      visible: false
+  # handleOk: (e) =>
+  #   message.success '新建成功'
+  #   @setState
+  #     visible: false
       
 
-  handleCancel: (e) =>
-    console.log 'Clicked cancel button'
-    @setState
-      visible: false
+  # handleCancel: (e) =>
+  #   console.log 'Clicked cancel button'
+  #   @setState
+  #     visible: false
 
   render: ->
 
@@ -63,16 +63,24 @@ class PopModal extends Component
       c_Input
       c_Pop
     } = CFX
-
-    c_div {}
+    c_div
+      style:
+        float: 'right'
     ,
-      c_Button
-        type: 'primary'
-        onClick: @showModal
-      , '房源详细信息'
-
-      c_Pop
-        Visible: @state.visible
-        OnOk: @handleOk
-        
+      if @props.search is true
+      then [
+        c_Pop
+          key: 'Button'
+          type: 'primary'
+          shape: 'circle'
+          icon: 'search'
+          ModalTitle: '搜索补全信息'
+          ModalContent:
+            c_div {}
+            , 'Hello World!!!'
+          style:
+            float: 'right'
+            marginBottom: '16px'
+      ]
+      else []
 export default PopModal

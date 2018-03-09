@@ -1,13 +1,18 @@
 import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
-import List from '../../public/List'
-import { Cards } from 'cfx.antd-wrapper-ch'
-import PageContent from '../../public/PageContent'
+import { linkTo } from '@storybook/addon-links'
+import {
+  List
+  Cards
+  ContentPage
+} from 'cfx.antd-wrapper-ch'
+import Btn from '../../public/Button'
 CFX = prefixDom {
   'div'
   List
   Cards
-  PageContent
+  Btn
+  ContentPage
 }
 
 export default ({
@@ -23,16 +28,16 @@ export default ({
       c_div
       c_Cards
       c_List
-      c_PageContent
+      c_Btn
+      c_ContentPage
     } = CFX
 
     c_div {}
     ,
-      c_PageContent
+      c_ContentPage
         Content: [
           c_Cards
             title: '确认换租申请单'
-            btn: '完成'
             CardContent:
               c_List
                 data: [
@@ -60,4 +65,7 @@ export default ({
                     keys: '租赁周期'
                     values: '3'
                 ]
+          
+          c_Btn {}
+            LinkTo: linkTo @props.links[0],@props.links[1]
         ]

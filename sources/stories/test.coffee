@@ -17,4 +17,5 @@ export default =>
     {
       c_test
     } = CFX
-    c_test {}
+    c_test
+      search: true

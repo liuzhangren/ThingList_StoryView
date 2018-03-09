@@ -48,7 +48,9 @@ class Radios extends Component
       c_Button
     } = CFX
 
-    c_Form {}
+    c_Form {
+      ( nb 'RadioGroup' )...
+    }
     ,
       c_FormItem {}
       ,
@@ -86,6 +88,16 @@ class Radios extends Component
             c_Button
               key: 'primary'
               type: 'primary'
+              onClick:
+                if @state.value is '1'
+                then @props.LinkTo1
+                else if @state.value is '2'
+                then @props.LinkTo2
+                else if @state.value is '3'
+                then @props.LinkTo3
+                else if @state.value is '4'
+                then @props.LinkTo4
+                else null
             , '确定'             
 
 export default Radios

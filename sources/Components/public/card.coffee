@@ -1,5 +1,6 @@
 import { prefixDom } from 'cfx.dom'
 import { linkTo } from '@storybook/addon-links'
+import Pop from '../House/test/Modal/Modal'
 import {
   Row
   Col
@@ -22,6 +23,7 @@ CFX = prefixDom {
   FormItem
   Divider
   Button
+  Pop
 }
 
 export default ({
@@ -42,6 +44,7 @@ export default ({
       c_FormItem
       c_Input
       c_Button
+      c_Pop
     } = CFX
 
     c_div {}
@@ -49,7 +52,6 @@ export default ({
       c_div
         style:
           fontSize: '16px'
-          # float: 'left'
           color: 'rgba(0, 0, 0, .85)'
           fontWeight: '500'
           marginBottom: '16px'
@@ -61,11 +63,13 @@ export default ({
       ,
         if @props.search is true
         then [
-          c_Button
+          c_Pop
             key: 'Button'
             type: 'primary'
             shape: 'circle'
             icon: 'search'
+            ModalTitle: '搜索补全信息'
+            ModalContent: @props.ModalContent
             style:
               float: 'right'
               marginBottom: '16px'

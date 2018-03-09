@@ -1,5 +1,5 @@
 import { prefixDom } from 'cfx.dom'
-import { Cards } from 'cfx.antd-wrapper-ch'
+import  Cards  from '../../public/card'
 import Form from '../../public/Form'
 
 CFX = prefixDom {
@@ -23,6 +23,9 @@ export default ->
     c_Cards
       title: '房客详细'
       search: true
+      ModalContent:
+        c_div {}
+        , 'Hello World!!!'
       CardContent:
         c_Form
           title: [

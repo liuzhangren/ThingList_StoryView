@@ -358,6 +358,8 @@ class PrjForm extends Component
                   onClick:
                     if @props.linktodown
                     then linkTo @props.linktodown[0], @props.linktodown[1]
+                    else if @props.linktoComfirm
+                    then @props.linktoComfirm
                     else @onSelect
                   style:
                     float: 'right'
