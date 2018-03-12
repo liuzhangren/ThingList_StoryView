@@ -3,10 +3,8 @@ import { prefixDom } from 'cfx.dom'
 import { Card } from 'antd'
 import { PageHeader } from 'cfx.antd-wrapper-ch'
 
-import LingleList1 from '../Components/Thing/ThingList/ChangeList'
-import LingleList2 from '../Components/Thing/ThingList/LiveList'
-import LingleList3 from '../Components/Thing/ThingList/RetireList'
-import LingleList4 from '../Components/Thing/ThingList/ThenList'
+import LingleList from '../Components/Thing/ThingList/index'
+
 import LingleStyle from '../Components/Thing/ListType/index'
 import LingleWrite from '../Components/Thing/WriteLive/index'
 import LingleConf from '../Components/Thing/LiveConfirm/index'
@@ -20,10 +18,7 @@ import UpdateConf from '../Components/Thing/ThenConfirm/index'
 CFX = prefixDom {
   PageHeader
   Card
-  LingleList1
-  LingleList2
-  LingleList3
-  LingleList4
+  LingleList
   LingleStyle
   LingleWrite
   LingleConf
@@ -39,13 +34,13 @@ export default =>
 
   storiesOf '工单管理', module
 
-  .add 'pg_工单列表_换租列表'
+  .add 'pg_工单列表'
 
   , =>
 
     {
       c_PageHeader
-      c_LingleList1
+      c_LingleList
     } = CFX
 
     [
@@ -57,42 +52,8 @@ export default =>
           '换租列表'
         ]
         title: '工单列表'
-      c_LingleList1
-        links: [
-          '工单管理'
-          'pg_填写换租申请单'
-        ]
-        data: [
-          Name: '房客姓名'
-          Tel: '手机号'
-          IdCard: '身份证号'
-          HouseAddress: '房源地址'
-          RoomNum: '房间编号'
-          BedNum: '床位编号'
-          ChangeNum: '换租日期'
-          RentNum: '租赁周期'
-        ]
-    ]
-  
-  .add 'pg_工单列表_入住列表'
-
-  , =>
-    {
-      c_PageHeader
-      c_LingleList2
-    } = CFX
-
-    [
-      c_PageHeader
-        key: 'LingleList2'
-        breadcrumb: [
-          '工单管理'
-          '工单列表'
-          '入住列表'
-        ]
-        title: '工单列表'
-      c_LingleList2
-        data: [
+      c_LingleList
+        data1: [
           Name: '陈欢'
           Tel: '110'
           IdCard: '120'
@@ -104,68 +65,31 @@ export default =>
           HouseNum: '119'
           RoomNum: '911'
           BedNum: '999'
+          
         ]
-        links: [
-          '工单管理'
-          'pg_填写入住申请单'
+        data2: [
+          IdCard: '110'
+          Tel: '189'
+          GuestId: '10'
+          ThenTime: '3'   
         ]
-    ]
-
-  .add 'pg_工单列表_退租列表'
-
-  , =>
-    {
-      c_PageHeader
-      c_LingleList3
-    } = CFX
-    [
-      c_PageHeader
-        key: 'LingleList3'
-        breadcrumb: [
-          '工单管理'
-          '工单列表'
-          '退租列表'
+        data3: [
+          IdCard: '110'
+          Tel: '189'
+          GuestId: '120'
+          RetireWay: '支付宝'
+          RetireMoney: '2000'
         ]
-        title: '工单列表'
-      c_LingleList3
-        data: [
-          IdCard: '身份证'
-          Tel: '手机号'
-          GuestId: '客户号'
-          RetireWay: '退款方式'
-          RetireMoney: '退款金额'
-        ]
-        links: [
-          '工单管理'
-          'pg_填写退租申请单'
-        ]
-    ]
-  .add 'pg_工单列表_续租列表'
-
-  , =>
-    {
-      c_PageHeader
-      c_LingleList4
-    } = CFX
-    [
-      c_PageHeader
-        key: 'LingleList4'
-        breadcrumb: [
-          '工单管理'
-          '工单列表'
-          '续租列表'
-        ]
-        title: '工单列表'
-      c_LingleList4
-        data: [
-          IdCard: '身份证号'
-          Tel: '手机号'
-          GuestId: '客户号'
-          ThenTime: '续租周期'
-        ]
-        links: [
-          '工单管理'
-          'pg_填写续租申请单'
+        data4: [
+          Name: '陈欢'
+          Tel: '110'
+          IdCard: '120'
+          HouseAddress: '武昌'
+          RoomNum: '119'
+          BedNum: '911'
+          ChangeNum: '2017-12-28'
+          RentNum: '3'
+          
         ]
     ]
 

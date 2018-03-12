@@ -3,47 +3,42 @@ import React,{ Component } from 'react'
 
 import {
   ContentPage
-  Table
 } from 'cfx.antd-wrapper-ch'
-
-import {
-  Tabs
-} from 'antd'
-TabPane = Tabs.TabPane
+import Tab from './Tab'
+import Buttons from './Buttons'
 
 CFX = prefixDom {
   'div'
-  Tabs
+  ContentPage
+  Buttons
+  Tab
 }
 
-class ThingList extends React.Component
+export default ->
+  
+  {
+    c_div
+    c_ContentPage
+    c_Buttons
+    c_Tab
+  } = CFX
 
-
-  callback: (key) =>
-    console.log key
   render: ->
-
-    {
-      c_div
-      c_Tabs
-      c_TabPane
-    } = CFX
-
     c_div {}
     ,
-      c_Tabs
-        defaultActiveKey: '1'
-        onChange: @callback
-      ,
-        c_TabPane
-          tab: '入住列表'
-          key: '1'
-        c_TabPane
-          tab: '续租列表'
-          key: '2'
-        c_TabPane
-          tab: '换租列表'
-          key: '3'
-        c_TabPane
-          tab: '退租列表'
-          key: '4'
+      c_ContentPage
+        Content: [
+          c_Tab
+            data1: @props.data1
+            data2: @props.data2
+            data3: @props.data3
+            data4: @props.data4
+
+          c_Buttons {}
+
+        ]
+
+
+
+
+

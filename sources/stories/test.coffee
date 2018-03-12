@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react'
 import { prefixDom } from 'cfx.dom'
 
-import test from '../Components/House/test/Modal/index'
+import test from '../Components/public/Modal'
 CFX = prefixDom {
   test
 }
@@ -17,5 +17,4 @@ export default =>
     {
       c_test
     } = CFX
-    c_test
-      search: true
+    c_test {}
