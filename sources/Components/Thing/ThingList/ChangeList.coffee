@@ -1,5 +1,6 @@
 import { prefixDom } from 'cfx.dom'
 import { Card } from 'antd'
+import select from './Select'
 import { linkTo } from '@storybook/addon-links'
 import {
   ContentPage
@@ -11,6 +12,7 @@ CFX = prefixDom {
   ContentPage
   Buttons
   Table
+  select
 }
 
 export default =>
@@ -21,12 +23,15 @@ export default =>
       c_ContentPage
       c_Buttons
       c_Table
+      c_select
     } = CFX
 
     c_div {}
     ,
       c_ContentPage
         Content: [
+          c_select
+            default: '换租工单'
           c_Buttons
             LinkTo: linkTo @props.links[0],@props.links[1]
           c_Table

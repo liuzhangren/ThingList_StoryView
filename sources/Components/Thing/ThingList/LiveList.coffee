@@ -6,12 +6,14 @@ import {
   Table
 } from 'cfx.antd-wrapper-ch'
 import Buttons from './Buttons'
+import select from './Select'
 
 CFX = prefixDom {
   'div'
   ContentPage
   Buttons
   Table
+  select
 }
 
 export default =>
@@ -22,12 +24,15 @@ export default =>
       c_ContentPage
       c_Buttons
       c_Table
+      c_select
     } = CFX
 
     c_div {}
     ,
       c_ContentPage
         Content: [
+          c_select
+            default: ''     
           c_Buttons
             LinkTo: linkTo @props.links[0],@props.links[1]
           c_Table
