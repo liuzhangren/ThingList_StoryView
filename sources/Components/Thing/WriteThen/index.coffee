@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
 # import PageContent from '../../public/PageContent'
 import Steps from './Steps'
-import { Form,ContentPage } from 'cfx.antd-wrapper-ch'
+import { PrjForm,ContentPage } from 'cfx.antd-wrapper-ch'
 import Button from './button'
 
 CFX = prefixDom {
   'div'
   Steps
-  Form
+  PrjForm
   ContentPage
   Button
 }
@@ -21,7 +21,7 @@ export default =>
       c_ContentPage
       c_div
       c_Steps
-      c_Form
+      c_PrjForm
       c_Button
     } = CFX
 
@@ -31,7 +31,7 @@ export default =>
         Content: [
           c_Steps
             current: '02'
-          c_Form
+          c_PrjForm
             title: [
                 keys: '身份证号'
                 type: 'normal'

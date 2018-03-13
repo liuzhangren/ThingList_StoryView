@@ -4,10 +4,10 @@ import { prefixDom } from 'cfx.dom'
 import Button from './button'
 import Steps from './Steps'
 # import Form from '../../public/Form'
-import { Cards,Form,ContentPage } from 'cfx.antd-wrapper-ch'
+import { Cards,ContentPage,PrjForm } from 'cfx.antd-wrapper-ch'
 CFX = prefixDom {
   'div'
-  Form
+  PrjForm
   Cards
   ContentPage
   Button
@@ -20,7 +20,7 @@ export default =>
     {
       c_ContentPage
       c_div
-      c_Form
+      c_PrjForm
       c_Cards
       c_Button
     } = CFX
@@ -35,7 +35,7 @@ export default =>
             c_div {}
             , 'Hello World!!!'
           CardContent:
-            c_Form
+            c_PrjForm
               title: [
                   keys: '房客姓名'
                   type: 'normal'
@@ -50,7 +50,7 @@ export default =>
           title: '房间详细'          
           search: true
           CardContent:
-            c_Form
+            c_PrjForm
               title: [
                   keys: '签约日期'
                   type: 'date'
@@ -65,7 +65,7 @@ export default =>
           title: '房间详细'          
           search: true
           CardContent: [
-            c_Form
+            c_PrjForm
               title: [
                   keys: '房源地址'
                   type: 'address'

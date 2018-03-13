@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
 import Button from './button'
 import Steps from './Steps'
-import { Cards,Form,ContentPage } from 'cfx.antd-wrapper-ch'
+import { Cards,PrjForm,ContentPage } from 'cfx.antd-wrapper-ch'
 CFX = prefixDom {
   'div'
   Steps
   Cards
-  Form
+  PrjForm
   ContentPage
   Button
 }
@@ -20,7 +20,7 @@ export default =>
       c_ContentPage
       c_div
       c_Steps
-      c_Form
+      c_PrjForm
       c_Cards
       c_Button
     } = CFX
@@ -36,7 +36,7 @@ export default =>
             title: '客户详情'
             search: true
             CardContent:
-              c_Form
+              c_PrjForm
                 title: [
                     keys: '房客姓名'
                     type: 'normal'
@@ -51,7 +51,7 @@ export default =>
           title: '换租地址'          
           search: true
           CardContent:
-            c_Form
+            c_PrjForm
               title: [
                   keys: '房源地址'
                   type: 'address'
@@ -66,7 +66,7 @@ export default =>
           title: '周期详情'          
           search: true
           CardContent: [
-            c_Form
+            c_PrjForm
               title: [
                   keys: '换租日期'
                   type: 'date'
