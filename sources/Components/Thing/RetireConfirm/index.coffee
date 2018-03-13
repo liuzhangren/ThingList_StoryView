@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
-import { linkTo } from '@storybook/addon-links'
 import {
   List
   Cards

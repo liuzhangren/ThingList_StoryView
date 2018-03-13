@@ -1,6 +1,6 @@
 import { prefixDom } from 'cfx.dom'
 import { ContentPage } from 'cfx.antd-wrapper-ch'
-import Steps from '../../public/Steps'
+import Steps from './Steps'
 import Radios from './Radios'
 
 CFX = prefixDom {
@@ -11,7 +11,7 @@ CFX = prefixDom {
 }
 
 export default =>
-
+  console.log Steps
   render: ->
 
     {
@@ -25,7 +25,7 @@ export default =>
       c_ContentPage
         Content: [
           c_Steps
-            current: '01'
+            current: 0
           c_Radios
             key: 'Radios'
             LinkTo1: @props.AddThingListType_Live

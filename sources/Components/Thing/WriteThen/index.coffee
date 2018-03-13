@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
-import PageContent from '../../public/PageContent'
-import Steps from '../../public/Steps'
-import Form from '../../public/Form'
+# import PageContent from '../../public/PageContent'
+import Steps from './Steps'
+import { Form,ContentPage } from 'cfx.antd-wrapper-ch'
 import Button from './button'
-import { linkTo } from '@storybook/addon-links'
+
 CFX = prefixDom {
   'div'
   Steps
   Form
-  PageContent
+  ContentPage
   Button
 }
 
@@ -18,7 +18,7 @@ export default =>
   render: ->
 
     {
-      c_PageContent
+      c_ContentPage
       c_div
       c_Steps
       c_Form
@@ -27,7 +27,7 @@ export default =>
 
     c_div {}
     ,
-      c_PageContent
+      c_ContentPage
         Content: [
           c_Steps
             current: '02'

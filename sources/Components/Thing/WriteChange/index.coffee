@@ -1,16 +1,14 @@
 import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
-import PageContent from '../../public/PageContent'
 import Button from './button'
-import Steps from '../../public/Steps'
-import Form from '../../public/Form'
-import { Cards } from 'cfx.antd-wrapper-ch'
+import Steps from './Steps'
+import { Cards,Form,ContentPage } from 'cfx.antd-wrapper-ch'
 CFX = prefixDom {
   'div'
   Steps
   Cards
   Form
-  PageContent
+  ContentPage
   Button
 }
 
@@ -19,7 +17,7 @@ export default =>
   render: ->
 
     {
-      c_PageContent
+      c_ContentPage
       c_div
       c_Steps
       c_Form
@@ -27,7 +25,7 @@ export default =>
       c_Button
     } = CFX
 
-    c_PageContent
+    c_ContentPage
       many: true
       Content: [
         c_div {}

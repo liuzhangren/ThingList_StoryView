@@ -13,7 +13,6 @@ export default =>
     {
       c_Steps
     } = CFX
-  
     c_Steps
       current: @props.current
       title: [
