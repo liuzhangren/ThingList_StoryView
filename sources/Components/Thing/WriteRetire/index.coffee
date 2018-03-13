@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
+import Button from './button'
 import PageContent from '../../public/PageContent'
 import Steps from '../../public/Steps'
 import Form from '../../public/Form'
@@ -8,6 +9,7 @@ CFX = prefixDom {
   'div'
   Steps
   Form
+  Button
   PageContent
 }
 
@@ -20,6 +22,7 @@ export default =>
       c_div
       c_Steps
       c_Form
+      c_Button
     } = CFX
 
     c_div {}
@@ -45,6 +48,7 @@ export default =>
                 keys: '退款金额'
                 type: 'number'
             ]
-            btnright: '确认'
-            linktoComfirm: linkTo @props.links[0],@props.links[1]
+          c_Button
+            ConfirmRetire: @props.ConfirmRetire
+          , '确认'
         ]

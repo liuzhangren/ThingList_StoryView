@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
 import PageContent from '../../public/PageContent'
-import { linkTo } from '@storybook/addon-links'
+import Button from './button'
 import Steps from '../../public/Steps'
 import Form from '../../public/Form'
 import { Cards } from 'cfx.antd-wrapper-ch'
@@ -11,6 +11,7 @@ CFX = prefixDom {
   Cards
   Form
   PageContent
+  Button
 }
 
 export default =>
@@ -23,6 +24,7 @@ export default =>
       c_Steps
       c_Form
       c_Cards
+      c_Button
     } = CFX
 
     c_PageContent
@@ -65,9 +67,8 @@ export default =>
         c_Cards
           title: '周期详情'          
           search: true
-          CardContent:
+          CardContent: [
             c_Form
-              linktoComfirm: linkTo @props.links[0],@props.links[1]
               title: [
                   keys: '换租日期'
                   type: 'date'
@@ -75,5 +76,8 @@ export default =>
                   keys: '租赁周期'
                   type: 'inputSelect'
               ]
-              btnright: '确认'
+            c_Button
+              ConfirmChange: @props.ConfirmChange
+            , '确认'
+          ]
       ]

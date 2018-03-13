@@ -3,12 +3,14 @@ import { prefixDom } from 'cfx.dom'
 import PageContent from '../../public/PageContent'
 import Steps from '../../public/Steps'
 import Form from '../../public/Form'
+import Button from './button'
 import { linkTo } from '@storybook/addon-links'
 CFX = prefixDom {
   'div'
   Steps
   Form
   PageContent
+  Button
 }
 
 export default =>
@@ -20,6 +22,7 @@ export default =>
       c_div
       c_Steps
       c_Form
+      c_Button
     } = CFX
 
     c_div {}
@@ -42,6 +45,8 @@ export default =>
                 keys: '续租周期'
                 type: 'inputSelect'
             ]
-            btnright: '确认'
-            linktoComfirm: linkTo @props.links[0],@props.links[1]
+
+          c_Button
+            ConfirmThen: @props.ConfirmThen
+
         ]

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
+
 CFX = prefixDom {
   'div'
 }
@@ -10,18 +11,18 @@ export default ->
       CFX...
       (
         prefixDom
-          AddThingList: @props.AddThingList
+          ConfirmChange: @props.ConfirmChange
       )...
     }
     
     {
       c_div
-      c_AddThingList
+      c_ConfirmChange
     } = CFX
     c_div
       style:
         height: '32px'
         marginBottom: '16px'
     ,
-      c_AddThingList {}
-      , '添加工单'
+      c_ConfirmChange {}
+      , '确定'

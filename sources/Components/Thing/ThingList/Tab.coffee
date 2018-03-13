@@ -24,10 +24,7 @@ class Tab extends React.Component
   callback: (key) ->
     console.log key
   render: ->
-    console.log @props.data1
-    console.log @props.data2
-    console.log @props.data3
-    console.log @props.data4
+
     {
       c_div
       c_Tabs
@@ -47,6 +44,13 @@ class Tab extends React.Component
           key: '1'
         , 
           c_Table
+            footlabel:
+              c_a
+                key: 'a'
+                href: '#'
+                style:
+                  color: '#959595'
+              , '详细'
             editPen: true
             header:
               Name: '房客姓名'
@@ -67,12 +71,13 @@ class Tab extends React.Component
           key: '2'
         ,
           c_Table
-            # footlabel:
-            #   key: 'a'
-            #   href: '#'
-            #   style:
-            #     color: '#959595'
-            # , '详细'
+            footlabel:
+              c_a
+                key: 'a'
+                href: '#'
+                style:
+                  color: '#959595'
+              , '详细'
             editPen: true
             header:
               IdCard: '身份证号'
@@ -85,12 +90,13 @@ class Tab extends React.Component
           key: '3'
         ,
           c_Table
-            # footlabel:
-            #   key: 'a'
-            #   href: '#'
-            #   style:
-            #     color: '#959595'
-            # , '详细'
+            footlabel:
+              c_a
+                key: 'a'
+                href: '#'
+                style:
+                  color: '#959595'
+              , '详细'
             editPen: true
             header:
               IdCard: '身份证号'
@@ -104,12 +110,13 @@ class Tab extends React.Component
           key: '4'
         ,
           c_Table
-            # footlabel:
-            #   key: 'a'
-            #   href: '#'
-            #   style:
-            #     color: '#959595'
-            # , '详细'
+            footlabel:
+              c_a
+                key: 'a'
+                href: '#'
+                style:
+                  color: '#959595'
+              , '详细'
             editPen: true
             header:
               Name: '房客姓名'

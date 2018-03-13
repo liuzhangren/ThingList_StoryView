@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
 import PageContent from '../../public/PageContent'
-import { linkTo } from '@storybook/addon-links'
+import Button from './button'
 import Steps from '../../public/Steps'
 import Form from '../../public/Form'
 import { Cards } from 'cfx.antd-wrapper-ch'
@@ -10,6 +10,7 @@ CFX = prefixDom {
   Form
   Cards
   PageContent
+  Button
 }
 
 export default =>
@@ -21,6 +22,7 @@ export default =>
       c_div
       c_Form
       c_Cards
+      c_Button
     } = CFX
 
     c_PageContent
@@ -62,9 +64,8 @@ export default =>
         c_Cards
           title: '房间详细'          
           search: true
-          CardContent:
+          CardContent: [
             c_Form
-              linktoComfirm: linkTo @props.links[0],@props.links[1]
               title: [
                   keys: '房源地址'
                   type: 'address'
@@ -75,5 +76,9 @@ export default =>
                   keys: '床位编号'
                   type: 'normal'
               ]
-              btnright: '确认'
+              
+            c_Button
+              ConfirmLive: @props.ConfirmLive
+            , '确认'
+          ]     
       ]

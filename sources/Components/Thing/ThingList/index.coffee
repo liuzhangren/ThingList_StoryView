@@ -34,7 +34,10 @@ export default ->
             data3: @props.data3
             data4: @props.data4
 
-          c_Buttons {}
+          c_Buttons
+            key: 'btn'
+            btn: '添加房源'
+            AddThingList: @props.AddThingList
 
         ]
 

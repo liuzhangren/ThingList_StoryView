@@ -6,7 +6,7 @@ import {
   Cards
   ContentPage
 } from 'cfx.antd-wrapper-ch'
-import Btn from '../../public/Button'
+import Btn from './button'
 CFX = prefixDom {
   'div'
   List
@@ -50,5 +50,5 @@ export default =>
                     values: '微信'
                 ]
           c_Btn
-            LinkTo: linkTo @props.links[0], @props.links[1]
+            CompleteRetire: @props.CompleteRetire
         ]

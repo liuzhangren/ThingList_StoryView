@@ -6,7 +6,7 @@ import {
   Cards
   ContentPage
 } from 'cfx.antd-wrapper-ch'
-import Btn from '../../public/Button'
+import Btn from './button'
 CFX = prefixDom {
   'div'
   List
@@ -66,6 +66,7 @@ export default ({
                     values: '3'
                 ]
           
-          c_Btn {}
-            LinkTo: linkTo @props.links[0],@props.links[1]
+          c_Btn
+            CompleteChange: @props.CompleteChange
+            
         ]

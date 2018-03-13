@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import { prefixDom } from 'cfx.dom'
-import { linkTo } from '@storybook/addon-links'
+
 import {
   List
   Cards
   ContentPage
 } from 'cfx.antd-wrapper-ch'
-import Btn from '../../public/Button'
+
+import Btn from './button'
+
 CFX = prefixDom {
   'div'
   List
@@ -33,7 +35,6 @@ export default =>
         Content: [
           c_Cards
             title: '确认入住申请表'
-            btn: '完成'
             CardContent:
               c_List
                 data: [
@@ -53,7 +54,7 @@ export default =>
                     values: '2012.12.28'
                   ,
                     keys: '租赁周期:'
-                    values: '4年' 
+                    values: '4年'
                   ,
                     keys: '身份证号:'
                     values: '110'
@@ -62,5 +63,5 @@ export default =>
                     values: '武汉'
                 ]
           c_Btn
-            LinkTo: linkTo @props.links[0],@props.links[1]
+            CompleteLive: @props.CompleteLive
         ]

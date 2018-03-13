@@ -6,7 +6,6 @@ import {
   Row
   Col
   Form
-  Button
 } from 'antd'
 FormItem = Form.Item
 RadioGroup = Radio.Group
@@ -19,7 +18,6 @@ CFX = prefixDom {
   Col
   Form
   FormItem
-  Button
 }
 
 class Radios extends Component
@@ -36,6 +34,16 @@ class Radios extends Component
       value: e.target.value
 
   render: ->
+    CFX = {
+      CFX...
+      (
+        prefixDom
+          AddThingListType_Live: @props.LinkTo1
+          AddThingListType_Retire: @props.LinkTo2
+          AddThingListType_Then: @props.LinkTo3
+          AddThingListType_Change: @props.LinkTo4
+      )...
+    }
 
     {
       c_div
@@ -46,6 +54,11 @@ class Radios extends Component
       c_Radio
       c_RadioGroup
       c_Button
+      
+      c_AddThingListType_Live
+      c_AddThingListType_Retire
+      c_AddThingListType_Then
+      c_AddThingListType_Change
     } = CFX
 
     c_Form {
@@ -85,19 +98,27 @@ class Radios extends Component
             sm: 19
             offset: 16
           ,
-            c_Button
-              key: 'primary'
-              type: 'primary'
-              onClick:
-                if @state.value is '1'
-                then @props.LinkTo1
-                else if @state.value is '2'
-                then @props.LinkTo2
-                else if @state.value is '3'
-                then @props.LinkTo3
-                else if @state.value is '4'
-                then @props.LinkTo4
-                else null
-            , '确定'             
+            if @state.value is '1'
+            then [
+              c_AddThingListType_Live {}
+              , '确定'
+            ]
+            else if @state.value is '2'
+            then [
+              c_AddThingListType_Retire {}
+              , '确定'
+            ]
+            else if @state.value is '3'
+            then [
+              c_AddThingListType_Change {}
+              
+              , '确定'
+            ]
+            else if @state.value is '4'
+            then [
+              c_AddThingListType_Then {}
+              , '确定'
+            ]
+            else null                       
 
 export default Radios
