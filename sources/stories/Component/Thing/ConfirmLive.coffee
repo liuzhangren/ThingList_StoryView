@@ -33,6 +33,31 @@ export default =>
         title: '填写入住列表'
       
       c_LiveConfirm
+        data: [
+            keys: '房客姓名:'
+            values: '陈欢'
+          ,
+            keys: '手机号:'
+            values: '120'
+          ,
+            keys: '身份证号:'
+            values: '110'
+          ,
+            keys: '签约日期:'
+            values: '2012.12.28'
+          ,
+            keys: '入住日期:'
+            values: '2012.12.28'
+          ,
+            keys: '租赁周期:'
+            values: '4年'
+          ,
+            keys: '身份证号:'
+            values: '110'
+          ,
+            keys: '房源地址:'
+            values: '武汉'
+        ]
         CompleteLive: CompleteLive
     ]
     

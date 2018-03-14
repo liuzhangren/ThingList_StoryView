@@ -36,19 +36,7 @@ export default =>
             btn: '确认'
             CardContent:
               c_List
-                data: [
-                    keys: '身份证号:'
-                    values: '110'
-                  ,
-                    keys: '手机号:'
-                    values: '120'
-                  ,
-                    keys: '客户号:'
-                    values: '119'
-                  ,
-                    keys: '续租周期:'
-                    values: '3'
-                ]
+                data: @props.data
           c_Btn
             CompleteThen: @props.CompleteThen
         ]

@@ -35,19 +35,7 @@ export default =>
             btn: '确认'
             CardContent:
               c_List
-                data: [
-                    keys: '房客姓名:'
-                    values: '陈欢'
-                  ,
-                    keys: '手机号:'
-                    values: '120'
-                  ,
-                    keys: '身份证号:'
-                    values: '110'
-                  ,
-                    keys: '退款方式:'
-                    values: '微信'
-                ]
+                data: @props.data
           c_Btn
             CompleteRetire: @props.CompleteRetire
         ]

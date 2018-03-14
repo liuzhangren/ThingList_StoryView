@@ -33,6 +33,19 @@ export default =>
         title: '填写入住列表'
       
       c_RetireConfirm
+        data: [
+            keys: '房客姓名:'
+            values: '陈欢'
+          ,
+            keys: '手机号:'
+            values: '120'
+          ,
+            keys: '身份证号:'
+            values: '110'
+          ,
+            keys: '退款方式:'
+            values: '微信'
+        ]
         CompleteRetire: CompleteRetire
     ]
     

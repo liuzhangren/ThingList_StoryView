@@ -19,7 +19,7 @@ CFX = prefixDom {
 }
 
 class Tab extends React.Component
-  
+
 
   callback: (key) ->
     console.log key

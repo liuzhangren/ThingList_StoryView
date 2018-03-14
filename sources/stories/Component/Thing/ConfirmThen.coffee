@@ -33,6 +33,19 @@ export default =>
         title: '填写入住列表'
       
       c_ThenConfirm
+        data: [
+            keys: '身份证号:'
+            values: '110'
+          ,
+            keys: '手机号:'
+            values: '120'
+          ,
+            keys: '客户号:'
+            values: '119'
+          ,
+            keys: '续租周期:'
+            values: '3'
+        ]
         CompleteThen: CompleteThen
     ]
     
