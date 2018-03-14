@@ -11,6 +11,7 @@ CFX = prefixDom {
   Cards
   ContentPage
   Button
+  Steps
 }
 
 export default =>
@@ -23,6 +24,7 @@ export default =>
       c_PrjForm
       c_Cards
       c_Button
+      c_Steps
     } = CFX
 
     c_ContentPage
@@ -34,7 +36,10 @@ export default =>
           ModalContent:
             c_div {}
             , 'Hello World!!!'
-          CardContent:
+          CardContent: [
+            c_Steps
+              current: '02'
+
             c_PrjForm
               title: [
                   keys: '房客姓名'
@@ -46,6 +51,7 @@ export default =>
                   keys: '身份证号'
                   type: 'normal'
               ]
+          ]     
         c_Cards
           title: '房间详细'          
           search: true
