@@ -5,7 +5,7 @@ import {
 import ChangeConfirm from '../../../Components/Thing/ChangeConfirm/index'
 import {
   CompleteChange
-} from '../../../Components/public/Link'
+} from '../../Link'
 
 CFX = prefixDom {
   'div'

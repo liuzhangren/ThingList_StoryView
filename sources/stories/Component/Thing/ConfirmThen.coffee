@@ -5,7 +5,7 @@ import {
 import ThenConfirm from '../../../Components/Thing/ThenConfirm/index'
 import {
   CompleteThen
-} from '../../../Components/public/Link'
+} from '../../Link'
 
 CFX = prefixDom {
   'div'

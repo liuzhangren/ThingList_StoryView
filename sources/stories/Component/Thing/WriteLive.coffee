@@ -5,7 +5,7 @@ import {
 import WriteLive from '../../../Components/Thing/WriteLive/index'
 import {
   ConfirmLive
-} from '../../../Components/public/Link'
+} from '../../Link'
 
 CFX = prefixDom {
   'div'

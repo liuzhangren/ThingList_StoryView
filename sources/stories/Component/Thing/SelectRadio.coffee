@@ -6,7 +6,7 @@ import {
   AddThingListType_Retire
   AddThingListType_Then
   AddThingListType_Change
-} from '../../../Components/public/Link'
+} from '../../Link'
 
 CFX = prefixDom {
   'div'

@@ -5,8 +5,7 @@ import {
 import LiveConfirm from '../../../Components/Thing/LiveConfirm/index'
 import {
   CompleteLive
-} from '../../../Components/public/Link'
-
+} from '../../Link'
 CFX = prefixDom {
   'div'
   LiveConfirm

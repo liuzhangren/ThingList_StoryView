@@ -5,7 +5,7 @@ import {
 import WriteChange from '../../../Components/Thing/WriteChange/index'
 import {
   ConfirmChange
-} from '../../../Components/public/Link'
+} from '../../Link'
 
 CFX = prefixDom {
   'div'

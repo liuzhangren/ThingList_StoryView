@@ -3,7 +3,7 @@ import ThingList from '../../../Components/Thing/ThingList/index'
 import { PageHeader } from 'cfx.antd-wrapper-ch'
 import {
   AddThingList
-} from '../../../Components/public/Link'
+} from '../../Link'
 
 CFX = prefixDom {
   'div'

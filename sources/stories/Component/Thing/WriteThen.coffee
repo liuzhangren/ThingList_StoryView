@@ -5,7 +5,7 @@ import {
 import WriteThen from '../../../Components/Thing/WriteThen/index'
 import {
   ConfirmThen
-} from '../../../Components/public/Link'
+} from '../../Link'
 
 CFX = prefixDom {
   'div'

@@ -5,7 +5,7 @@ import {
 import RetireConfirm from '../../../Components/Thing/RetireConfirm/index'
 import {
   CompleteRetire
-} from '../../../Components/public/Link'
+} from '../../Link'
 
 CFX = prefixDom {
   'div'
